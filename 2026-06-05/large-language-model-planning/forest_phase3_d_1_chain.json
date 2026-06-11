@@ -1,0 +1,72 @@
+{
+  "direction": {
+    "direction_id": "d_1",
+    "type": "convergent_gap",
+    "priority": 0.9,
+    "mode": "single_tree",
+    "title": "Online Calibration of LLM Evaluations via State-Novelty-Aware Bias Correction",
+    "rationale": "Multiple branches (A, D, F, G, H) rely on zero-shot LLM action evaluations without adaptation, leading to brittleness when domain knowledge is lacking. The frontier adds memory but does not correct inherent LLM biases. Future work should learn a bias correction function conditioned on state novelty and trajectory statistics, updated online without fine-tuning the entire LLM. This targets a structural limitation: the assumption that pre-trained LLM evaluations are universally reliable.",
+    "evidence_tree_ids": [
+      "0"
+    ],
+    "evidence_branch_ids": [
+      "A",
+      "D",
+      "F",
+      "G",
+      "H"
+    ],
+    "meta_gap": "Pre-trained LLM zero-shot evaluations are used without any mechanism to adapt to task-specific distribution shifts or systematic biases.",
+    "shared_mechanism": "All these branches assume the LLM can provide useful action evaluations without task-specific adaptation, relying solely on pre-training.",
+    "trend": "",
+    "trend_endpoint": "",
+    "implied_next_problem": "",
+    "source_tree_id": "",
+    "target_tree_id": "",
+    "source_branch_id": "",
+    "target_branch_id": "",
+    "what_to_transfer": "",
+    "active_battle": "",
+    "common_failure_mode": "",
+    "non_obvious_property": "Property: The bias correction must be a function of both state features and trajectory statistics, learned via a meta-learner that avoids interference with the LLM's pre-trained knowledge. Obvious composition that fails: Fine-tuning the LLM on task data (e.g., RLHF) fails because it requires many trial-and-error interactions and can overwrite general knowledge. Prior work 'Self-Consistency' (Wang et al., 2022) merely averages samples and does not correct systematic bias. Why prior work has not formalized this property: The community has focused on in-context learning and fine-tuning, not on online calibration of evaluation biases without weight updates."
+  },
+  "chain_output": {
+    "per_trend_predictions": [
+      {
+        "direction": "We propose to correct LLM evaluations in tree search by learning a state-novelty-dependent bias function online, exploiting the monotonic relationship between bias and visit count. The correction model is lightweight and updateable during search, enabling task-specific calibration without fine-tuning.",
+        "rationale": "LLM evaluations suffer from systematic bias that varies with state novelty; this bias can be estimated and corrected using local tree statistics (visit counts, depth). The approach is sample-efficient because the bias function is low-dimensional and exploits tree structure.",
+        "builds_on": "Monte Carlo Planning with Large Language Model for Text-Based Game Agents",
+        "builds_on_pid": "t0__a32688780cc763b1d0b2d59f9677521779ee6612",
+        "persistent_gap": "Zero-shot LLM evaluations are used without any adaptation to task-specific distribution shifts or systematic biases.",
+        "why_still_open": "Existing methods either rely on static pre-training, expensive fine-tuning, or simple heuristics that do not correct bias in a principled way. No prior work models the bias-novelty coupling in tree search.",
+        "candidate_action": "extend",
+        "bridge_keep": "The tree search and memory-augmented LLM evaluation framework.",
+        "bridge_remove": "The assumption that raw LLM scores are directly usable; remove reliance on zero-shot evaluation without correction.",
+        "bridge_add": "We add an online learned bias correction term that is a function of state novelty (visit count and depth). The correction parameters are updated via gradient descent on the error between corrected LLM score and Monte Carlo returns from simulations. The correction is applied before using evaluations in tree search.",
+        "non_obvious_property": "Property: The bias in LLM evaluations is monotonically decreasing with state familiarity (visit count and depth). Why prior work cannot exploit it: Prior methods either use raw LLM scores or add exploration bonuses (e.g., UCB) which only encourage exploration, not correct bias. The monotonicity allows a simple parametric correction with few parameters that can be learned online. Why composition fails: A reviewer might propose 'count-based exploration + LLM evaluation'. This combination adds a bonus to values, but does not remove systematic over/underconfidence; it only changes exploration behavior. Our method directly subtracts an estimated bias, which is a fundamentally different operation.",
+        "obvious_composition_check": "Shortest description: 'count-based bias correction + LLM evaluation'. This is inaccurate because count-based methods typically add a bonus, not subtract a learned bias. The load-bearing piece is the online learning of the bias function from prediction errors, which is not present in standard exploration bonuses. However, to avoid any residual similarity, we emphasize that the correction is learned from local tree dynamics using prediction errors, not a fixed formula.",
+        "forest_mode": "single_tree",
+        "source_trend_ids": [
+          "0"
+        ],
+        "source_branch_ids": [
+          "A",
+          "D",
+          "F",
+          "G",
+          "H"
+        ],
+        "is_cross_tree": false,
+        "is_cross_branch": true,
+        "forest_direction_type": "convergent_gap",
+        "forest_meta_gap": "Pre-trained LLM zero-shot evaluations are used without any mechanism to adapt to task-specific distribution shifts or systematic biases.",
+        "forest_shared_mechanism": "All these branches assume the LLM can provide useful action evaluations without task-specific adaptation, relying solely on pre-training.",
+        "forest_implied_next_problem": "",
+        "forest_what_to_transfer": "",
+        "forest_active_battle": "",
+        "forest_common_failure_mode": ""
+      }
+    ]
+  },
+  "synthetic_root": "t0__a32688780cc763b1d0b2d59f9677521779ee6612"
+}

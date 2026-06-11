@@ -1,0 +1,123 @@
+[
+  {
+    "tree_id": "0",
+    "frontier_title": "Thinking in Character: Advancing Role-Playing Agents with Role-Aware Reasoning",
+    "frontier_year": 2025,
+    "frontier_pid": "0a646808002d3a629c60330178cb5b85fa6c77dd",
+    "residual_gaps": [
+      {
+        "gap_text": "The frontier's Role Identity Activation and Reasoning Style Optimization require high-quality character profiles as input, failing to establish profile-independent reasoning consistency; the method cannot infer identity from minimal dialogue.",
+        "structural_property_name": "profile-free reasoning consistency",
+        "ancestor_assumption_blocking_it": "LLMs + Persona-Plug (2024) assumes explicit external persona information must be provided upfront and cannot be learned from limited data.",
+        "why_evolution_did_not_close_it": "The evolution replaced static embedding with dynamic activation but still required explicit profile injection, thus inheriting the ancestor's assumption.",
+        "why_not_resolved": "The shared assumption that persona must be externally provided prevents automatic profile inference."
+      },
+      {
+        "gap_text": "The frontier does not address the survey-identified challenge of dynamic personal profiles; its profile injection mechanism assumes static, high-quality profiles are always available.",
+        "structural_property_name": "dynamic profile adaptation",
+        "ancestor_assumption_blocking_it": "The Oscars of AI Theater: A Survey on Role-Playing with Language Models (2024) (background) identifies dynamic profiles as a challenge but does not propose a solution; the frontier inherits the assumption of static profiles from surveyed methods.",
+        "why_evolution_did_not_close_it": "The frontier shifts from passive survey to active reasoning but still relies on static profile injection, leaving the dynamic profile challenge unresolved.",
+        "why_not_resolved": "The survey's call for dynamic profiles remains unaddressed."
+      },
+      {
+        "gap_text": "The frontier's dynamic reasoning still requires explicit identity features from profiles, failing to establish identity-agnostic role consistency; it cannot handle roles with minimal or no predefined identity.",
+        "structural_property_name": "identity-agnostic role consistency",
+        "ancestor_assumption_blocking_it": "Identity-Driven Hierarchical Role-Playing Agents (2024) (background) conditions responses on static identity features, assuming detailed profiles are available.",
+        "why_evolution_did_not_close_it": "The frontier replaces static identity conditioning with dynamic reasoning but still requires explicit profile input, inheriting the need for predefined identity.",
+        "why_not_resolved": "The assumption of available identity features persists."
+      },
+      {
+        "gap_text": "The frontier's style distillation relies on high-quality character profiles, failing to establish style consistency from scarce or implicit cues; it assumes representative quotations or profiles are available.",
+        "structural_property_name": "style consistency from implicit cues",
+        "ancestor_assumption_blocking_it": "A Multi-Task Role-Playing Agent Capable of Imitating Character Styles (2024) (background) assumes characters can be represented by external artifacts (quotations) without addressing automatic construction from minimal data.",
+        "why_evolution_did_not_close_it": "The frontier adds explicit style supervision but still requires curated profiles or quotations, leaving the assumption of external representation unchanged.",
+        "why_not_resolved": "The reliance on external artifacts persists."
+      },
+      {
+        "gap_text": "The frontier's training pipeline replaces few-shot prompting but still requires manually crafted character profiles, failing to establish profile-free role-play robustness; it cannot perform in scenarios where profiles are unavailable.",
+        "structural_property_name": "profile-free role-play robustness",
+        "ancestor_assumption_blocking_it": "IBSEN: Director-Actor Agent Collaboration for Controllable and Character-Driven Role-Playing (2024) assumes character profiles must be manually crafted and provided as input.",
+        "why_evolution_did_not_close_it": "The frontier replaces few-shot prompting with supervised fine-tuning but still requires explicit profiles, inheriting IBSEN's assumption of manual profile construction.",
+        "why_not_resolved": "Manual profile creation remains a bottleneck."
+      }
+    ],
+    "shared_residual_gaps": [
+      {
+        "gap_text": "Across all branches, the frontier inherits the assumption that explicit, high-quality character profiles must be provided externally; no mechanism exists for automatic profile generation or inference from limited interaction data, leaving the structural property of self-supervised identity representation unestablished.",
+        "structural_property_name": "self-supervised identity representation",
+        "branches_affected": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "common_assumption": "All ancestors assume character profiles are available as static, manually crafted input, which the frontier does not challenge."
+      }
+    ],
+    "recent_actions": [
+      {
+        "branch_label": "A",
+        "role": "mainline",
+        "action": "reasoning_pattern",
+        "from_title": "LLMs + Persona-Plug = Personalized LLMs",
+        "what_changed": "A replaces B's single static persona embedding with dynamic, per-step role activation and style supervision via distillation, actively guiding reasoning to stay in character."
+      },
+      {
+        "branch_label": "B",
+        "role": "background",
+        "action": "reasoning_pattern",
+        "from_title": "The Oscars of AI Theater: A Survey on Role-Playing with Language Models (background)",
+        "what_changed": "A shifts from passive survey of role-playing methods to active generation of role-aware reasoning traces via profile injection and style distillation."
+      },
+      {
+        "branch_label": "C",
+        "role": "background",
+        "action": "reasoning_pattern",
+        "from_title": "Identity-Driven Hierarchical Role-Playing Agents (background)",
+        "what_changed": "A replaces B's static identity conditioning with dynamic role-aware reasoning through explicit profile integration and style distillation."
+      },
+      {
+        "branch_label": "D",
+        "role": "background",
+        "action": "reasoning_pattern",
+        "from_title": "A Multi-Task Role-Playing Agent Capable of Imitating Character Linguistic Styles (background)",
+        "what_changed": "A adds structured role identity activation and style distillation, whereas B only uses multi-task learning on quotation data without explicit role reasoning."
+      },
+      {
+        "branch_label": "E",
+        "role": "mainline",
+        "action": "reasoning_pattern",
+        "from_title": "IBSEN: Director-Actor Agent Collaboration for Controllable and Interactive Drama Script Generation",
+        "what_changed": "A replaces B's few-shot prompting for role-play with a two-stage training pipeline (RIA+RSO) that explicitly supervises reasoning style."
+      }
+    ],
+    "action_distribution": {
+      "reasoning_pattern": 5,
+      "structural": 13
+    },
+    "mainline_count": 2,
+    "frontier_solves": "Primary methods are Role Identity Activation (RIA) and Reasoning Style Optimization (RSO). RIA explicitly incorporates character profiles into the reasoning process to keep the model focused on its role. RSO uses distillation from LRMs to adjust the reasoning style to match the character and scene, preventing overly formal or rigid outputs.",
+    "frontier_method": "RAR consists of two stages. RIA: during reasoning, character profile information is prepended or interleaved to keep the model aware of its role. RSO: a teacher LRM generates reasoning traces; the student RPA is trained via distillation to mimic the teacher's reasoning style while aligning with char",
+    "frontier_activity": {
+      "year": 2025,
+      "depth_to_oldest": 2,
+      "competing_frontiers": []
+    },
+    "obvious_composition_flag": true,
+    "composite_signal": {
+      "is_obvious_composition": true,
+      "what_A_combines": "current paper takes the concept of explicit persona profile injection (from pred[0]) and the approach of character-driven role-play through prompt-based context (from pred[1])",
+      "obviousness_reason": "Combining manually crafted character profiles with role-play interactions is widely practiced in prior role-playing agents (e.g., character.ai). The current paper's training innovations do not change the obviousness of this basic compositio",
+      "novel_combination": "",
+      "composite_remaining_gap": "Reliance on manually crafted character profiles; no automatic profile generation or learning from limited data."
+    },
+    "frontier_what_persists": [
+      "A inherits B's assumption that explicit external persona information must be provided upfront and cannot be learned or inferred from limited data.",
+      "A inherits the assumption that character profiles are readily available and static, which many existing methods (as surveyed in B) also rely on.",
+      "A inherits B's assumption that detailed character profiles are available as input, without addressing the challenge of automatically generating or inferring such profiles.",
+      "Both methods assume characters can be sufficiently represented by external artifacts (quotations or profiles) without addressing automatic construction from minimal data.",
+      "A inherits B's assumption that character profiles must be manually crafted and provided as input."
+    ]
+  }
+]

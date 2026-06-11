@@ -1,0 +1,10 @@
+{
+  "title": "SELF-ROLE: Self-Supervised Role Identity Inference for Consistent Role-Playing Agents",
+  "fullcheck": {
+    "verdict": "novel",
+    "evidence": "None of the existing papers address self-supervised role identity inference for consistent role-playing agents. Paper [1] focuses on knowledge graph reasoning with dual agents, and Paper [2] explores self-play for language acquisition, both differing in problem and method. The proposed contrastive learning approach with dropout augmentation for role embedding is not found in the provided literature.",
+    "most_similar_paper": "2. Self-play for Data Efficient Language Acquisition",
+    "differentiation": "N/A"
+  },
+  "verdict": "novel"
+}

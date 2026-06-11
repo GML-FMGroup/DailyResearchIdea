@@ -1,0 +1,174 @@
+{
+  "all": [
+    {
+      "direction_id": "d_1",
+      "type": "convergent_gap",
+      "priority": 0.8,
+      "mode": "cross_tree",
+      "title": "Resource-independent small model training with performance guarantees",
+      "rationale": "Both trees assume availability of large pretraining sets or large teacher models, but fail to validate methods that achieve target performance without any large-scale external resource. The field needs to establish a structural property of guaranteed specialization under strict resource constraints.",
+      "evidence_tree_ids": [
+        "0",
+        "1"
+      ],
+      "evidence_branch_ids": [],
+      "meta_gap": "Both trees fail to establish that small models can achieve target performance without access to large pretraining data or a large teacher model.",
+      "shared_mechanism": "Reliance on a large external resource that provides knowledge or data; no method has been validated to work entirely without that resource.",
+      "trend": "",
+      "trend_endpoint": "",
+      "implied_next_problem": "",
+      "source_tree_id": "",
+      "target_tree_id": "",
+      "source_branch_id": "",
+      "target_branch_id": "",
+      "what_to_transfer": "",
+      "active_battle": "",
+      "common_failure_mode": "",
+      "non_obvious_property": "Property: full autonomy from any external large model or large pretraining corpus. Obvious composition that fails: knowledge distillation from a large teacher (e.g., DistilBERT) + fine-tuning on a small dataset, which fails because it still requires a large teacher model. Prior work like Sheared LLaMA or DistilBERT rely on such teachers. The field has not formalized how to train a small model from scratch with performance guarantees using only a tiny seed dataset."
+    },
+    {
+      "direction_id": "d_3",
+      "type": "convergent_action",
+      "priority": 0.7,
+      "mode": "cross_tree",
+      "title": "Guaranteeing downstream performance of resource-efficient small models",
+      "rationale": "Both trees show recent actions shifting away from scaling towards efficiency (objective shift in T_0, data curation in T_1). The collective trajectory is towards resource-efficient methods, but the endpoint lacks a mechanism to ensure that the resulting small model retains needed capabilities without relying on large resources.",
+      "evidence_tree_ids": [
+        "0",
+        "1"
+      ],
+      "evidence_branch_ids": [],
+      "meta_gap": "",
+      "shared_mechanism": "",
+      "trend": "Shift from scaling-law-based model development to resource-efficient specialization through downscaling or data selection.",
+      "trend_endpoint": "A set of theoretically grounded methods that produce small specialized models without reliance on large external resources.",
+      "implied_next_problem": "How to validate performance guarantees empirically when existing benchmarks assume large model capabilities? Need structural property of 'resource-agnostic performance certification'.",
+      "source_tree_id": "",
+      "target_tree_id": "",
+      "source_branch_id": "",
+      "target_branch_id": "",
+      "what_to_transfer": "",
+      "active_battle": "",
+      "common_failure_mode": "",
+      "non_obvious_property": "Property: performance certification that does not assume access to a large evaluation set or a large teacher for comparison. Obvious composition that fails: use a held-out test set from the target domain, which may not be available in scarce data scenarios. Prior work (e.g., scaling laws) assumes large compute for validation. No prior work establishes a bound on downstream performance given only a tiny seed dataset and no external models."
+    },
+    {
+      "direction_id": "d_2",
+      "type": "convergent_gap",
+      "priority": 0.6,
+      "mode": "cross_tree",
+      "title": "Adaptation of model-architecture-dependent mechanisms to downscaled models",
+      "rationale": "Within Tree T_0, multiple branches assume that active learning, ensemble, and scaling law mechanisms can be directly inherited by downscaled models without adjustment. This fails to account for structural changes in mechanism effectiveness with model size.",
+      "evidence_tree_ids": [
+        "0"
+      ],
+      "evidence_branch_ids": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F",
+        "H"
+      ],
+      "meta_gap": "The property that active learning, ensemble, and scaling laws can be applied directly to downscaled models without redesign has not been established.",
+      "shared_mechanism": "Assuming linear scalability of these mechanisms with model size; ignoring that algorithmic design choices may be size-dependent.",
+      "trend": "",
+      "trend_endpoint": "",
+      "implied_next_problem": "",
+      "source_tree_id": "",
+      "target_tree_id": "",
+      "source_branch_id": "",
+      "target_branch_id": "",
+      "what_to_transfer": "",
+      "active_battle": "",
+      "common_failure_mode": "",
+      "non_obvious_property": "Property: monotonic relationship between model size and effectiveness of a mechanism (e.g., active learning query strategies). Obvious composition that fails: use the same active learning algorithm (ActiveLLM) on a small model, which fails because the algorithm relies on a large LLM as oracle. Prior work (e.g., ActiveLLM) does not address how query strategies degrade with smaller models. No formal invariant linking model capacity to instance selection quality exists."
+    }
+  ],
+  "selected": [
+    {
+      "direction_id": "d_1",
+      "type": "convergent_gap",
+      "priority": 0.8,
+      "mode": "cross_tree",
+      "title": "Resource-independent small model training with performance guarantees",
+      "rationale": "Both trees assume availability of large pretraining sets or large teacher models, but fail to validate methods that achieve target performance without any large-scale external resource. The field needs to establish a structural property of guaranteed specialization under strict resource constraints.",
+      "evidence_tree_ids": [
+        "0",
+        "1"
+      ],
+      "evidence_branch_ids": [],
+      "meta_gap": "Both trees fail to establish that small models can achieve target performance without access to large pretraining data or a large teacher model.",
+      "shared_mechanism": "Reliance on a large external resource that provides knowledge or data; no method has been validated to work entirely without that resource.",
+      "trend": "",
+      "trend_endpoint": "",
+      "implied_next_problem": "",
+      "source_tree_id": "",
+      "target_tree_id": "",
+      "source_branch_id": "",
+      "target_branch_id": "",
+      "what_to_transfer": "",
+      "active_battle": "",
+      "common_failure_mode": "",
+      "non_obvious_property": "Property: full autonomy from any external large model or large pretraining corpus. Obvious composition that fails: knowledge distillation from a large teacher (e.g., DistilBERT) + fine-tuning on a small dataset, which fails because it still requires a large teacher model. Prior work like Sheared LLaMA or DistilBERT rely on such teachers. The field has not formalized how to train a small model from scratch with performance guarantees using only a tiny seed dataset."
+    },
+    {
+      "direction_id": "d_3",
+      "type": "convergent_action",
+      "priority": 0.7,
+      "mode": "cross_tree",
+      "title": "Guaranteeing downstream performance of resource-efficient small models",
+      "rationale": "Both trees show recent actions shifting away from scaling towards efficiency (objective shift in T_0, data curation in T_1). The collective trajectory is towards resource-efficient methods, but the endpoint lacks a mechanism to ensure that the resulting small model retains needed capabilities without relying on large resources.",
+      "evidence_tree_ids": [
+        "0",
+        "1"
+      ],
+      "evidence_branch_ids": [],
+      "meta_gap": "",
+      "shared_mechanism": "",
+      "trend": "Shift from scaling-law-based model development to resource-efficient specialization through downscaling or data selection.",
+      "trend_endpoint": "A set of theoretically grounded methods that produce small specialized models without reliance on large external resources.",
+      "implied_next_problem": "How to validate performance guarantees empirically when existing benchmarks assume large model capabilities? Need structural property of 'resource-agnostic performance certification'.",
+      "source_tree_id": "",
+      "target_tree_id": "",
+      "source_branch_id": "",
+      "target_branch_id": "",
+      "what_to_transfer": "",
+      "active_battle": "",
+      "common_failure_mode": "",
+      "non_obvious_property": "Property: performance certification that does not assume access to a large evaluation set or a large teacher for comparison. Obvious composition that fails: use a held-out test set from the target domain, which may not be available in scarce data scenarios. Prior work (e.g., scaling laws) assumes large compute for validation. No prior work establishes a bound on downstream performance given only a tiny seed dataset and no external models."
+    },
+    {
+      "direction_id": "d_2",
+      "type": "convergent_gap",
+      "priority": 0.6,
+      "mode": "cross_tree",
+      "title": "Adaptation of model-architecture-dependent mechanisms to downscaled models",
+      "rationale": "Within Tree T_0, multiple branches assume that active learning, ensemble, and scaling law mechanisms can be directly inherited by downscaled models without adjustment. This fails to account for structural changes in mechanism effectiveness with model size.",
+      "evidence_tree_ids": [
+        "0"
+      ],
+      "evidence_branch_ids": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F",
+        "H"
+      ],
+      "meta_gap": "The property that active learning, ensemble, and scaling laws can be applied directly to downscaled models without redesign has not been established.",
+      "shared_mechanism": "Assuming linear scalability of these mechanisms with model size; ignoring that algorithmic design choices may be size-dependent.",
+      "trend": "",
+      "trend_endpoint": "",
+      "implied_next_problem": "",
+      "source_tree_id": "",
+      "target_tree_id": "",
+      "source_branch_id": "",
+      "target_branch_id": "",
+      "what_to_transfer": "",
+      "active_battle": "",
+      "common_failure_mode": "",
+      "non_obvious_property": "Property: monotonic relationship between model size and effectiveness of a mechanism (e.g., active learning query strategies). Obvious composition that fails: use the same active learning algorithm (ActiveLLM) on a small model, which fails because the algorithm relies on a large LLM as oracle. Prior work (e.g., ActiveLLM) does not address how query strategies degrade with smaller models. No formal invariant linking model capacity to instance selection quality exists."
+    }
+  ]
+}

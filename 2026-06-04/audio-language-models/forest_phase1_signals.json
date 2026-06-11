@@ -1,0 +1,292 @@
+[
+  {
+    "tree_id": "0",
+    "frontier_title": "Position: Enough of Scaling LLMs! Lets Focus on Downscaling",
+    "frontier_year": 2025,
+    "frontier_pid": "e0ed93eaee6ebd6635b6411d6da6c641975e929e",
+    "residual_gaps": [
+      {
+        "gap_text": "ActiveLLM's instance selection mechanism relies on querying a large LLM; frontier does not establish a structural property of resource-efficient active instance selection for downscaled models.",
+        "structural_property_name": "resource-efficient active instance selection",
+        "ancestor_assumption_blocking_it": "ActiveLLM (background) assumes a large LLM as the query oracle for instance selection.",
+        "why_evolution_did_not_close_it": "Evolution action was objective shift; frontier advocates downscaling but does not modify the active learning algorithm, leaving the property unestablished.",
+        "why_not_resolved": "Shared assumption that active learning pipelines can be directly inherited from large models without redesign."
+      },
+      {
+        "gap_text": "Bridging the Gap's vocabulary alignment method for ensemble requires multiple LLMs; frontier does not establish a structural property of vocabulary-agnostic single-model efficiency.",
+        "structural_property_name": "vocabulary-agnostic model efficiency",
+        "ancestor_assumption_blocking_it": "Bridging the Gap (background) assumes multiple LLMs with distinct vocabularies and that ensemble fusion requires alignment.",
+        "why_evolution_did_not_close_it": "Evolution action was objective shift; frontier avoids ensemble entirely, so no mechanism for vocabulary alignment in single model is provided.",
+        "why_not_resolved": "Assumption that downscaling to a single model is always preferable to ensemble."
+      },
+      {
+        "gap_text": "D-CPT Law's scaling law requires costly initial experiments; frontier downscaling framework lacks a structural property of predictable performance trade-off under domain shift.",
+        "structural_property_name": "predictable domain-specific performance trade-off",
+        "ancestor_assumption_blocking_it": "D-CPT Law (background) assumes scaling law can be fitted with limited experiments and generalizes across domains.",
+        "why_evolution_did_not_close_it": "Evolution action was objective shift; frontier no longer provides quantitative predictions, so the property remains unestablished.",
+        "why_not_resolved": "Assumption that empirical validation of downscaling can be done on a case-by-case basis without predictive theory."
+      },
+      {
+        "gap_text": "Ensemble Learning's relative representation method for heterogeneous models assumes multiple LLMs; frontier does not address efficient model fusion via relative representations for small models.",
+        "structural_property_name": "efficient heterogeneous model fusion",
+        "ancestor_assumption_blocking_it": "Ensemble Learning (background) assumes capability of combining multiple LLMs via relative representations.",
+        "why_evolution_did_not_close_it": "Evolution action was scaling shift; frontier concentrates on single model, leaving fusion mechanism unexplored for downscaled models.",
+        "why_not_resolved": "Assumption that downscaling eliminates need for ensemble, but heterogeneous scenarios may still require fusion."
+      },
+      {
+        "gap_text": "Merge, Ensemble, and Cooperate survey catalogs collaborative strategies but lacks empirical validation; frontier also fails to establish empirically validated collaborative strategy performance under downscaling.",
+        "structural_property_name": "empirically validated collaborative strategy performance",
+        "ancestor_assumption_blocking_it": "Merge, Ensemble, and Cooperate (background) assumes that collaborative strategies can be effectively applied without resource constraints.",
+        "why_evolution_did_not_close_it": "Evolution action was objective shift; frontier remains conceptual as a position paper, providing no experiments.",
+        "why_not_resolved": "Shared assumption that theoretical frameworks are sufficient; empirical validation postponed."
+      },
+      {
+        "gap_text": "Scaling Laws for Predicting Downstream requires training fully-converged models up to 3B parameters; frontier does not provide cost-effective performance prediction without large-scale training as a structural property.",
+        "structural_property_name": "cost-effective performance prediction",
+        "ancestor_assumption_blocking_it": "Scaling Laws for Predicting Downstream (background) assumes that large compute is necessary for performance prediction.",
+        "why_evolution_did_not_close_it": "Evolution action was objective shift; frontier does not replace the prediction mechanism with a cheaper one.",
+        "why_not_resolved": "Assumption that alternative to scaling laws is not needed; just stop scaling but no new prediction method."
+      },
+      {
+        "gap_text": "Small Language Models survey catalogs existing SLMs but no actionable framework; frontier provides framework but no structural property of actionable downscaling design space with verified trade-offs.",
+        "structural_property_name": "actionable downscaling design space with verified trade-offs",
+        "ancestor_assumption_blocking_it": "Small Language Models (background) assumes that surveying existing work is sufficient to guide downscaling.",
+        "why_evolution_did_not_close_it": "Evolution action was objective shift; frontier adds framework but no empirical verification.",
+        "why_not_resolved": "Assumption that actionable guidance can be derived from existing work without novel experiments."
+      },
+      {
+        "gap_text": "Scaling Laws with Vocabulary provides scaling law for optimal vocabulary size in large models; frontier does not establish vocabulary size optimization under model size reduction as a structural property.",
+        "structural_property_name": "vocabulary size optimization under downscaling",
+        "ancestor_assumption_blocking_it": "Scaling Laws with Vocabulary (background) assumes vocabulary scaling is only relevant for large models.",
+        "why_evolution_did_not_close_it": "Evolution action was objective shift; frontier ignores vocabulary as a factor.",
+        "why_not_resolved": "Assumption that downscaling automatically handles vocabulary without explicit optimization."
+      }
+    ],
+    "shared_residual_gaps": [
+      {
+        "gap_text": "Multiple branches lack empirical validation of downscaling strategies; the structural property of empirically validated downscaling strategy performance remains unestablished across all branches that require experimental verification.",
+        "structural_property_name": "empirically validated downscaling strategy performance",
+        "branches_affected": [
+          "A",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H"
+        ],
+        "common_assumption": "Theoretical or survey-based reasoning is sufficient to guide downscaling without empirical confirmation."
+      },
+      {
+        "gap_text": "Several branches assume existing mechanisms (active learning, ensemble, scaling laws) can be directly inherited by downscaled models without adaptation; the structural property of mechanism-specific downscaling adaptation remains unestablished.",
+        "structural_property_name": "mechanism-specific downscaling adaptation",
+        "branches_affected": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "F",
+          "H"
+        ],
+        "common_assumption": "Downscaling is a simple reduction in parameter count without need for algorithm redesign."
+      }
+    ],
+    "recent_actions": [
+      {
+        "branch_label": "A",
+        "role": "background",
+        "action": "objective",
+        "from_title": "ActiveLLM: Large Language Model-based Active Learning for Textual Few-Shot Scenarios (background)",
+        "what_changed": "B uses a large LLM as a black-box instance selector; A proposes adopting smaller, compressed models but does not specify how to adapt them to active learning pipelines."
+      },
+      {
+        "branch_label": "B",
+        "role": "background",
+        "action": "objective",
+        "from_title": "Bridging the Gap between Different Vocabularies for LLM Ensemble (background)",
+        "what_changed": "B relies on vocabulary alignment for multi-model ensemble; A proposes to avoid ensemble entirely by making a single model efficient."
+      },
+      {
+        "branch_label": "C",
+        "role": "background",
+        "action": "objective",
+        "from_title": "D-CPT Law: Domain-specific Continual Pre-Training Scaling Law for Large Language Models (background)",
+        "what_changed": "B provides a quantitative scaling law for upscaling via domain-specific pre-training; A proposes a qualitative framework for downscaling without quantitative predictions."
+      },
+      {
+        "branch_label": "D",
+        "role": "background",
+        "action": "scaling",
+        "from_title": "Ensemble Learning for Heterogeneous Large Language Models with Deep Parallel Collaboration (background)",
+        "what_changed": "B introduces a novel ensemble aggregation method using relative representation theory and search-based inverse transformation; A provides no technical method but a framework of downscaling strategies as an alternative to scaling."
+      },
+      {
+        "branch_label": "E",
+        "role": "background",
+        "action": "objective",
+        "from_title": "Merge, Ensemble, and Cooperate! A Survey on Collaborative Strategies in the Era of Large Language Models (background)",
+        "what_changed": "A replaces the focus on scaling and collaboration with a focus on reducing model size and resource usage, without providing technical implementation details."
+      },
+      {
+        "branch_label": "F",
+        "role": "background",
+        "action": "objective",
+        "from_title": "Scaling Laws for Predicting Downstream Performance in LLMs (background)",
+        "what_changed": "B uses empirical scaling laws (FLOPs→loss→performance) for prediction; A replaces this with a position advocating for resource-efficient development without providing a new predictive mechanism."
+      }
+    ],
+    "action_distribution": {
+      "objective": 7,
+      "scaling": 1
+    },
+    "mainline_count": 0,
+    "frontier_solves": "The paper outlines practical strategies for transitioning away from traditional scaling. It provides a framework for sustainable, efficient, and accessible LLM development.",
+    "frontier_method": "The paper is a position piece without technical details. It advocates for strategies such as model pruning, distillation, efficient architectures, and data curation to achieve downscaling.",
+    "frontier_activity": {
+      "year": 2025,
+      "depth_to_oldest": 1,
+      "competing_frontiers": []
+    },
+    "obvious_composition_flag": false,
+    "composite_signal": null,
+    "frontier_what_persists": [
+      "A inherits B's assumption that LLMs (even smaller ones) are necessary for effective instance selection, without questioning the role of LLMs in active learning.",
+      "A still assumes the existence of a base LLM that can be downscaled, inheriting B's assumption that LLMs are the core building block.",
+      "The assumption that empirical validation is necessary for assessing model performance under new data distributions or architectures.",
+      "A retains the assumption that LLM capability is tied to model size, arguing for reduction but not addressing the scenario where multiple specialized models might be beneficial.",
+      "Both papers are conceptual or survey-style, lacking empirical evidence or detailed implementation guidelines to support their claims.",
+      "A silently inherits B's assumption that model performance can be characterized by computational budgets (now in reverse for downscaling), without challenging the reliance on extensive training for eva",
+      "A inherits B's implicit assumption that open-source models and standard evaluation benchmarks are sufficient for assessing downscaling, without questioning whether real-world deployment constraints re",
+      "A inherits B's assumption that the key metric is final performance (loss or accuracy); A aims to maintain performance while reducing size, similar to B's aim of improving performance via scaling."
+    ]
+  },
+  {
+    "tree_id": "1",
+    "frontier_title": "Need a Small Specialized Language Model? Plan Early!",
+    "frontier_year": 2025,
+    "frontier_pid": "1a7103d169cede62cc7d579c7addf12d18c11668",
+    "residual_gaps": [
+      {
+        "gap_text": "The frontier's data selection method inherits the assumption that a large generic pretraining set exists, but does not establish a structural property of guaranteed specialization under data scarcity; the importance sampling relies on a target distribution defined by limited unlabeled samples.",
+        "structural_property_name": "guaranteed specialization under data scarcity",
+        "ancestor_assumption_blocking_it": "The case for 4-bit precision: k-bit Inference Scaling Laws (background) assumes large model availability for quantization, implicitly requiring a large pretraining set.",
+        "why_evolution_did_not_close_it": "Evolution action was data (shifting from quantization to data selection), but it did not challenge the need for a large generic pretraining set; it only changes how the small model is built, not the resource assumption.",
+        "why_not_resolved": "The shared assumption that a large generic pretraining set is available, inherited from multiple ancestors, prevents addressing scenarios of extreme data scarcity."
+      },
+      {
+        "gap_text": "The frontier's importance sampling method inherits the assumption that a small set of unlabeled target samples can characterize the target distribution, but does not establish a property of representation robustness when target samples are few or unrepresentative.",
+        "structural_property_name": "representation robustness of target distribution",
+        "ancestor_assumption_blocking_it": "Data Selection for Language Models via Importance Resampling assumes that a small set of unlabeled domain-specific samples adequately defines the target distribution.",
+        "why_evolution_did_not_close_it": "Evolution action was data (applying importance resampling to specialized model training), but the method directly inherits B's importance weighting without modifying the target distribution estimation, leaving the assumption unchallenged.",
+        "why_not_resolved": "The frontier retains B's method for target distribution definition, which is sensitive to sample representativeness."
+      },
+      {
+        "gap_text": "The frontier removes rationale dependency but still requires a large generic pretraining set for data selection, failing to establish a property of independence from large external resources for specialization.",
+        "structural_property_name": "independence from large external resources",
+        "ancestor_assumption_blocking_it": "Distilling Step-by-Step! Outperforming Larger Language Model (background) assumes availability of a powerful LLM for rationales, which is a large external resource.",
+        "why_evolution_did_not_close_it": "Evolution action was data (replacing rationale-based learning with data selection), but it merely swaps one large resource (LLM) for another (large pretraining set), not removing the assumption.",
+        "why_not_resolved": "The frontier still depends on a large generic pretraining set, a different but equally restrictive external resource."
+      },
+      {
+        "gap_text": "The frontier either trains from scratch on selected data or jointly trains a small model, but both require a large generic pretraining set, failing to establish a structural property of specialization without large-scale pretraining data.",
+        "structural_property_name": "specialization feasibility without large pretraining",
+        "ancestor_assumption_blocking_it": "Sheared LLaMA: Accelerating Language Model Pre-training via  (background) assumes a pre-trained large model exists for pruning, implying a large pretraining corpus.",
+        "why_evolution_did_not_close_it": "Evolution action was data (applying data selection to small model training), but the method does not eliminate the need for a large generic pretraining set; it only changes how the small model is initialized.",
+        "why_not_resolved": "The frontier inherits the requirement for large-scale pretraining data from pruning-based approaches."
+      },
+      {
+        "gap_text": "The frontier's projection method requires a pre-trained large model to project from, but does not establish a property of specialization when only a quantized or medium-sized model is available, assuming large model accessibility.",
+        "structural_property_name": "specialization from non-large initial models",
+        "ancestor_assumption_blocking_it": "SmoothQuant: Accurate and Efficient Post-Training Quantizati (background) assumes a pre-trained large model for quantization, which is the source model for projection.",
+        "why_evolution_did_not_close_it": "Evolution action was data (replacing quantization with projection), but the projection step still requires a large model, inheriting the need for a pre-trained large network.",
+        "why_not_resolved": "The frontier still needs a large pre-trained model as the source for projection, a limitation from quantization paradigms."
+      },
+      {
+        "gap_text": "The frontier assumes availability of a large generic pretraining set for data selection, not addressing the property of efficient specialization when compute and data are both limited, bypassing inference efficiency considerations.",
+        "structural_property_name": "efficient specialization under compute-data constraints",
+        "ancestor_assumption_blocking_it": "DeepSpeed- Inference: Enabling Efficient Inference of Transf (background) assumes large models are necessary, implying abundant compute and data for inference, not specialization.",
+        "why_evolution_did_not_close_it": "Evolution action was data (adding data curation), but it does not reduce the dependency on large pretraining sets or address inference efficiency of the resulting small models.",
+        "why_not_resolved": "The frontier inherits the assumption of large model necessity from inference-focused work, now transferred to data requirements."
+      }
+    ],
+    "shared_residual_gaps": [
+      {
+        "gap_text": "All branches assume availability of a large generic pretraining set or pre-trained model, but none establish a property of specialization that is robust to extreme data scarcity or domain shift from the pretraining distribution; the importance sampling method inherits the assumption that a small set of target samples can define the target distribution, which is fragile.",
+        "structural_property_name": "robust specialization under data scarcity and domain shift",
+        "branches_affected": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F"
+        ],
+        "common_assumption": "All branches assume the existence of a large generic pretraining set or a large pre-trained model, and B additionally assumes that a small set of unlabeled target samples suffices to characterize the target distribution."
+      }
+    ],
+    "recent_actions": [
+      {
+        "branch_label": "A",
+        "role": "background",
+        "action": "data",
+        "from_title": "The case for 4-bit precision: k-bit Inference Scaling Laws (background)",
+        "what_changed": "A shifts from quantization for memory efficiency to data selection and parameter projection for specialization."
+      },
+      {
+        "branch_label": "B",
+        "role": "mainline",
+        "action": "data",
+        "from_title": "Data Selection for Language Models via Importance Resampling",
+        "what_changed": "A extends B's importance resampling to the scenario of training small specialized models and adds a projection-based method for model compression, while B only focuses on data selection for general pretraining."
+      },
+      {
+        "branch_label": "C",
+        "role": "background",
+        "action": "data",
+        "from_title": "Distilling Step-by-Step! Outperforming Larger Language Models with Less Training Data and Smaller Model Sizes (background)",
+        "what_changed": "A replaces rationale-based multi-task learning with data selection and parameter projection, removing the dependency on LLM-generated rationales."
+      },
+      {
+        "branch_label": "D",
+        "role": "background",
+        "action": "data",
+        "from_title": "Sheared LLaMA: Accelerating Language Model Pre-training via Structured Pruning (background)",
+        "what_changed": "B prunes a pre-trained large model to a smaller size using structured removal of layers and heads, while A either trains a small model from scratch on importance-sampled data or jointly trains a small model via a learned projection during l"
+      },
+      {
+        "branch_label": "E",
+        "role": "background",
+        "action": "data",
+        "from_title": "SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models (background)",
+        "what_changed": "B compresses an existing large model via post-training quantization; A constructs a new small model via data curation and parameter projection from a large model."
+      },
+      {
+        "branch_label": "F",
+        "role": "background",
+        "action": "data",
+        "from_title": "DeepSpeed- Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale (background)",
+        "what_changed": "A adds data curation via importance sampling and parameter projection to transfer knowledge from large to small models, whereas B only focuses on efficient inference of given large models without altering their size or training data."
+      }
+    ],
+    "action_distribution": {
+      "data": 6
+    },
+    "mainline_count": 1,
+    "frontier_solves": "The primary methods are importance sampling to select relevant pretraining data for a small model, and projected networks where a large model's parameters are linearly projected into a small specialized model. These enable obtaining good specialized small models with limited specialized data.",
+    "frontier_method": "In scenario 1, importance sampling is used to resample the generic pretraining set to match the distribution of the specialized data, then a small model is trained on the resampled data. In scenario 2, a large 'projected network' is trained with a linear projection layer that maps its parameters to ",
+    "frontier_activity": {
+      "year": 2025,
+      "depth_to_oldest": 1,
+      "competing_frontiers": []
+    },
+    "obvious_composition_flag": false,
+    "composite_signal": null,
+    "frontier_what_persists": [
+      "A still relies on the assumption that a large generic pretraining set is available, similar to B's reliance on large models for scaling laws.",
+      "The assumption that a small set of unlabeled domain-specific samples can adequately characterize the target distribution for data selection.",
+      "Both methods require a large-scale external resource (LLM or large pretraining set) to enable effective transfer to the small specialized model, and neither addresses scenarios where such resources ar",
+      "A inherits the assumption from B that a large generic pretraining set is available, and both require significant computational resources to handle large models.",
+      "Both methods assume the existence of a large generic model or pretraining set; A does not challenge B's reliance on a large model.",
+      "A inherits B's assumption that large models or large pretraining corpora are accessible, without exploring scenarios where only limited data and compute are available."
+    ]
+  }
+]

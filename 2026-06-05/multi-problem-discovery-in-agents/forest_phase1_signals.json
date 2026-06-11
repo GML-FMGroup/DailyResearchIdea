@@ -1,0 +1,160 @@
+[
+  {
+    "tree_id": "0",
+    "frontier_title": "Discovering mathematical concepts through a multi-agent system",
+    "frontier_year": 2026,
+    "frontier_pid": "f5fb1fc7b2c4a5382f5adc291bc1e89f76ea2f5c",
+    "residual_gaps": [
+      {
+        "gap_text": "The multi-agent system does not establish a formal-system-agnostic conjecture verification mechanism; it inherits Lean Copilot's reliance on a fixed formal proof assistant (Lean), limiting applicability to domains without formalized rules.",
+        "structural_property_name": "formal-system-agnostic conjecture verification",
+        "ancestor_assumption_blocking_it": "Lean Copilot assumes a fixed formal environment (Lean) for proof verification.",
+        "why_evolution_did_not_close_it": "The evolution action was structural (replacing single-agent suggestion with multi-agent conjecture generation), but it retained the same formal verification backend from Lean Copilot without introducing a method to adapt to arbitrary formal systems.",
+        "why_not_resolved": "The inherited reliance on a predefined formal environment (Lean) remains, as the frontier did not address generalization to other formal systems."
+      },
+      {
+        "gap_text": "The multi-agent system does not establish a diverse-lemma-generation property without centralized bias; it inherits Aristotle's assumption of a fixed formal system (linear algebra) and evaluates only on homology recovery, leaving the generalizability of lemma diversity unaddressed.",
+        "structural_property_name": "decentralized lemma diversity across formal domains",
+        "ancestor_assumption_blocking_it": "Aristotle assumes a fixed formal system (Lean/linear algebra) and uses centralized lemma generation from a single LLM.",
+        "why_evolution_did_not_close_it": "The evolution action structural (decentralized multi-agent vs centralized single-agent) solved the trigger gap of centralized bias, but it did not challenge the inherited assumption of a fixed formal system; thus, the property of lemma diversity across domains remains unestablished.",
+        "why_not_resolved": "The frontier did not break the dependence on a predefined formal system (linear algebra), so lemma diversity is still constrained to that domain."
+      },
+      {
+        "gap_text": "The multi-agent system does not establish a self-evolving conjecture space that goes beyond a predefined benchmark; it inherits The Equational Theories Project's limitation of focusing on a fixed set of laws, without a mechanism to automatically expand the domain of exploration.",
+        "structural_property_name": "self-evolving conjecture space beyond initial benchmark",
+        "ancestor_assumption_blocking_it": "The Equational Theories Project assumes a fixed set of equational laws (simplest 4694) and does not learn from proof outcomes to generate new laws.",
+        "why_evolution_did_not_close_it": "The evolution action was reasoning_pattern (replacing static conjecture set with feedback-driven loop), but it did not address the assumption that the initial domain is fixed; the feedback loop only operates within the same formal environment (linear algebra), not expanding to new domains.",
+        "why_not_resolved": "The frontier's feedback-driven loop is confined to the homology recovery benchmark and does not automatically expand to other mathematical domains."
+      },
+      {
+        "gap_text": "The multi-agent system does not establish a formalization-free discovery property; it inherits the conceptual framework's dependence on a quantified derivation step measure, requiring a predefined formal system (linear algebra) for operation.",
+        "structural_property_name": "formalization-free mathematical discovery",
+        "ancestor_assumption_blocking_it": "Machine learning and information theory concepts assumes that mathematical domains can be quantified via derivation steps, requiring a predefined formal system.",
+        "why_evolution_did_not_close_it": "The evolution action structural (conceptual to concrete multi-agent RL) made the framework implementable, but it did not remove the need for a predefined formal system; the derivation step assumption was concretized as linear algebra rules, not generalized.",
+        "why_not_resolved": "The frontier concretized the conceptual framework but still requires a formal system (linear algebra) to quantify derivation steps, leaving formalization-free discovery unaddressed."
+      },
+      {
+        "gap_text": "The multi-agent system does not establish a domain-independent evaluation property; it inherits AlphaEvolve's reliance on a predefined evaluator (formal proof system) for mutations, without a method to learn or infer evaluation criteria for new domains.",
+        "structural_property_name": "domain-independent automated evaluation",
+        "ancestor_assumption_blocking_it": "AlphaEvolve assumes a reliable external evaluator (test cases) to judge code mutations.",
+        "why_evolution_did_not_close_it": "The evolution action structural (evolving code to evolving data distribution via conjecture-verify) changed the object being evolved, but it still relies on a formal proof system as evaluator, which is domain-specific.",
+        "why_not_resolved": "The frontier substituted formal proof verification for test cases but still assumes the existence of a domain-specific evaluator, preventing generalization to domains without formalized rules."
+      },
+      {
+        "gap_text": "The multi-agent system does not establish a cross-domain generalization property; it inherits the assumption that the mathematical domain is defined by a fixed set of axioms (group theory for B, linear algebra for A) and does not provide a mechanism to adapt to new axiom sets.",
+        "structural_property_name": "cross-domain generalization via axiom adaptation",
+        "ancestor_assumption_blocking_it": "What makes math problems hard for RL assumes a fixed group theory presentation space defined by user.",
+        "why_evolution_did_not_close_it": "The evolution action structural (single-agent RL to multi-agent) changed the search mechanism but retained the assumption of a fixed formal domain; the multi-agent system still operates within linear algebra rules without adapting to new axioms.",
+        "why_not_resolved": "The frontier did not introduce a mechanism to automatically adapt to new axiom sets; it remains constrained to linear algebra."
+      },
+      {
+        "gap_text": "The multi-agent system does not establish a centralized-proof-free property; it inherits Seed-Prover's reliance on a formal verification environment and centralized proof verification, limiting to domains with formalized rules.",
+        "structural_property_name": "distributed proof verification across domains",
+        "ancestor_assumption_blocking_it": "Seed-Prover assumes a formal verification environment (Lean) and uses centralized proof generation.",
+        "why_evolution_did_not_close_it": "The evolution action structural (single-agent proof generation to multi-agent conjecture-propose-verify) distributed proposal but kept centralized verification (formal checker), leaving the assumption of a formal environment unchallenged.",
+        "why_not_resolved": "The frontier still uses a centralized formal proof checker for verification, which requires a formalized domain."
+      },
+      {
+        "gap_text": "The multi-agent system does not establish an informal-reasoning-compatibility property; it inherits AlphaProof's dependence on a predefined formal environment (Lean) and does not incorporate informal or mixed mathematical reasoning.",
+        "structural_property_name": "informal-to-formal reasoning compatibility",
+        "ancestor_assumption_blocking_it": "Olympiad-level formal mathematical reasoning assumes a formal environment (Lean) and uses auto-formalization for informal problems.",
+        "why_evolution_did_not_close_it": "The evolution action reasoning_pattern (single-agent RL to multi-agent RL with shared distribution) changed the learning paradigm but did not address the formal environment assumption; the system still requires a formal system for verification.",
+        "why_not_resolved": "The frontier did not incorporate informal reasoning; it still relies on a formal environment (linear algebra) for verification."
+      }
+    ],
+    "shared_residual_gaps": [
+      {
+        "gap_text": "The multi-agent system does not establish a formal-system-adaptive conjecture verification property; it inherits from all ancestors the assumption that a formal proof system (e.g., Lean, linear algebra rules) is available, limiting applicability to domains without such formalization.",
+        "structural_property_name": "formal-system-adaptive conjecture verification",
+        "branches_affected": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H"
+        ],
+        "common_assumption": "All ancestors assume a fixed formal environment (Lean, linear algebra, group theory) for verification or evaluation."
+      }
+    ],
+    "recent_actions": [
+      {
+        "branch_label": "A",
+        "role": "mainline",
+        "action": "structural",
+        "from_title": "Lean Copilot: Large Language Models as Copilots for Theorem Proving in Lean",
+        "what_changed": "B uses a single LLM to assist humans with proof steps; A uses decentralized agents that collectively discover concepts via conjecture-proving feedback loops, removing the need for human-provided goals."
+      },
+      {
+        "branch_label": "B",
+        "role": "mainline",
+        "action": "structural",
+        "from_title": "Aristotle: IMO-level Automated Theorem Proving",
+        "what_changed": "A replaces B's single LLM-based lemma generator with a decentralized multi-agent conjecture generation and proof attempt system."
+      },
+      {
+        "branch_label": "C",
+        "role": "mainline",
+        "action": "reasoning_pattern",
+        "from_title": "The Equational Theories Project: Advancing Collaborative Mathematical Research at Scale",
+        "what_changed": "A replaces B's static conjecture set with a feedback-driven conjecture generation loop, where proof outcomes guide future conjectures."
+      },
+      {
+        "branch_label": "D",
+        "role": "mainline",
+        "action": "structural",
+        "from_title": "Machine learning and information theory concepts towards an AI Mathematician",
+        "what_changed": "From a conceptual information-theoretic objective to a concrete multi-agent reinforcement learning system with decentralized conjecture generation and centralized proof verification."
+      },
+      {
+        "branch_label": "E",
+        "role": "background",
+        "action": "structural",
+        "from_title": "AlphaEvolve: A coding agent for scientific and algorithmic discovery (background)",
+        "what_changed": "B evolves code via mutations evaluated by external tests; A evolves a data distribution via agents proposing conjectures verified by a formal proof system."
+      },
+      {
+        "branch_label": "F",
+        "role": "mainline",
+        "action": "structural",
+        "from_title": "What makes math problems hard for reinforcement learning: a case study",
+        "what_changed": "B uses a single-agent RL to navigate the space of presentations, while A uses multiple agents that generate conjectures and update a shared data distribution based on proof outcomes."
+      }
+    ],
+    "action_distribution": {
+      "structural": 9,
+      "reasoning_pattern": 4,
+      "verification": 1,
+      "scaling": 1,
+      "objective": 1
+    },
+    "mainline_count": 5,
+    "frontier_solves": "The primary method is a multi-agent system where agents propose conjectures, attempt proofs, and update a shared data distribution based on outcomes. Key components include conjecture generation, proof attempts, and feedback-driven adaptation. The system successfully recovers homology and ablation experiments statistically validate the complete dynamic.",
+    "frontier_method": "The system is implemented with agents that independently pose conjectures using an initial data distribution. These conjectures are attempted to be proven using linear algebra rules. Successes and failures update the data distribution, influencing future conjectures. The benchmark task involves reco",
+    "frontier_activity": {
+      "year": 2026,
+      "depth_to_oldest": 2,
+      "competing_frontiers": []
+    },
+    "obvious_composition_flag": false,
+    "composite_signal": {
+      "is_obvious_composition": false,
+      "what_A_combines": "A takes formal proof verification from pred[0] (Lean Copilot) and reinforcement learning framework from pred[4] (single-agent RL for math problems), extended to a decentralized multi-agent setup with feedback-driven conjecture generation.",
+      "obviousness_reason": "Combining multi-agent RL with formal verification in theorem proving was not widely known or mechanically straightforward; the interface problem of coordinating multiple agents to propose conjectures and update a shared distribution based o",
+      "novel_combination": "Emergent discovery of mathematical concepts (homology) through multi-agent interaction and collective learning, which neither pure formal verification nor single-agent RL can achieve individually.",
+      "composite_remaining_gap": "The system still requires a predefined formal environment (linear algebra rules), limiting applicability to informal or mixed mathematical domains."
+    },
+    "frontier_what_persists": [
+      "A still assumes access to a formal proof system and predefined inference rules, similar to B's reliance on a proof assistant's environment.",
+      "A inherits B's assumption that a fixed formal system (e.g., Lean, linear algebra) is available for proof verification, constraining the approach to domains where such a system exists.",
+      "A assumes access to a domain-specific formal proof system (linear algebra rules) similar to B's dependence on Lean for verification.",
+      "A inherits B's assumption that the target mathematical domain can be quantified via derivation steps (here, linear algebra rules), without addressing the challenge of automatically constructing such f",
+      "A retains the assumption that a formal verification system exists for the target domain, analogous to B's assumption of reliable task evaluators.",
+      "Both assume a formal, deterministic environment with exact proof rules and require domain-specific background knowledge (linear algebra for A, group theory for B).",
+      "A inherits B's assumption of a formal verification environment and centralized proof verification, limiting applicability to domains with formalized rules.",
+      "Both methods depend on a predefined formal environment (Lean for B, linear algebra rules for A) and do not incorporate reasoning in informal or mixed mathematical contexts."
+    ]
+  }
+]

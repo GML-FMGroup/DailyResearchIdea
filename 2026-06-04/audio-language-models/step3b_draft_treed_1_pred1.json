@@ -1,0 +1,32 @@
+{
+  "prediction": {
+    "direction": "Train a small audio language model using a vector-quantized bottleneck with a codebook size equal to the phoneme inventory of the target language, using only a few hours of transcribed speech and no external teacher or large pretraining data.",
+    "rationale": "The phoneme count of any language is small (≈40), making the audio-to-text mapping intrinsically low-dimensional. A quantized bottleneck forces the model to retain only linguistically relevant features, so a small dataset suffices when the codebook is properly initialized. Recent advances in contrastive objectives stabilize VQ training with small data, enabling this under-explored regime.",
+    "builds_on": "Enough of Scaling LLMs! Lets Focus on Downscaling",
+    "builds_on_pid": "t0__e0ed93eaee6ebd6635b6411d6da6c641975e929e",
+    "persistent_gap": "No existing method trains a small audio language model to competitive accuracy without large pretraining data or a large teacher model.",
+    "why_still_open": "Prior small-model methods (e.g., HuBERT, wav2vec 2.0) rely on large unlabeled datasets for self-supervised pretraining, or on distilling a large teacher. They have not demonstrated that small models can be trained from scratch with only a small labeled dataset.",
+    "candidate_action": "extend",
+    "bridge_keep": "The bottleneck quantization mechanism that filters redundant acoustic variability.",
+    "bridge_remove": "Reliance on large data or a large teacher to learn the quantizer; replace with a phoneme-constrained codebook and a contrastive loss that works with small data.",
+    "bridge_add": "Train a small VQ-VAE where the codebook size is set to the phoneme count of the target language, initialized uniformly. Use a contrastive loss (InfoNCE) between audio segments and their quantized representations, combined with a small supervised cross-entropy loss on transcriptions. The encoder is a small convolutional network. This removes the need for a large external resource by leveraging the structural prior that linguistic content is low-dimensional and discrete.",
+    "non_obvious_property": "Property: The codebook size equals the phoneme inventory (≈40), which is a small, known constant. This forces the model to learn exactly the set of linguistic units, eliminating any need for large data to learn redundant variations. Why prior work cannot exploit it: Prior VQ-based models (e.g., VQ-VAE, HuBERT) use large codebooks (128+ entries) learned from large data; they treat codebook size as a hyperparameter, not as a fixed linguistic prior. Why composition fails: A naive combination of VQ-VAE with a small codebook on a small dataset suffers from codebook collapse (all inputs map to one token) because the typical VQ-VAE training relies on large batch sizes and data diversity. Our method adds a contrastive loss that forces each codebook vector to be distinct and well-separated, a non-trivial addition that is not present in standard VQ-VAE or any prior VQ+contrastive combination.",
+    "obvious_composition_check": "Shortest description: 'VQ-VAE with phoneme-informed codebook for small-data audio language modeling'. This description is incomplete because it omits the contrastive loss stabilization that is essential to prevent collapse; without it, a standard VQ-VAE with a small codebook on small data fails. The load-bearing piece is the contrastive loss, which is not part of the naive composition. Therefore, the composition is materially wrong.",
+    "forest_mode": "cross_tree",
+    "source_trend_ids": [
+      "0",
+      "1"
+    ],
+    "source_branch_ids": [],
+    "is_cross_tree": true,
+    "is_cross_branch": false,
+    "forest_direction_type": "convergent_gap",
+    "forest_meta_gap": "Both trees fail to establish that small models can achieve target performance without access to large pretraining data or a large teacher model.",
+    "forest_shared_mechanism": "Reliance on a large external resource that provides knowledge or data; no method has been validated to work entirely without that resource.",
+    "forest_implied_next_problem": "",
+    "forest_what_to_transfer": "",
+    "forest_active_battle": "",
+    "forest_common_failure_mode": ""
+  },
+  "draft": null
+}

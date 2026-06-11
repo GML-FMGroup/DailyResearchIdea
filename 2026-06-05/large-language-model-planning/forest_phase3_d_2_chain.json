@@ -1,0 +1,72 @@
+{
+  "direction": {
+    "direction_id": "d_2",
+    "type": "convergent_action",
+    "priority": 0.85,
+    "mode": "single_tree",
+    "title": "Metacognitive Budgeting for Memory-Augmented Monte Carlo Tree Search",
+    "rationale": "All recent evolution actions (branches A-F) replace prior approaches with memory-augmented MCTS, converging on this paradigm. However, computational complexity remains a bottleneck. Future work should introduce a metacognitive controller that allocates search budget per node based on expected uncertainty reduction from memory access, effectively pruning the tree where memory provides reliable evaluations. This addresses the scalability issue that persists even after memory augmentation.",
+    "evidence_tree_ids": [
+      "0"
+    ],
+    "evidence_branch_ids": [
+      "A",
+      "C",
+      "D",
+      "E",
+      "F"
+    ],
+    "meta_gap": "",
+    "shared_mechanism": "",
+    "trend": "Replacement of static/sequential planning with memory-augmented MCTS",
+    "trend_endpoint": "Universal adoption of memory-augmented tree search for LLM-based planning",
+    "implied_next_problem": "The high computational cost of MCTS, even with memory, limits scaling to large branching factors or long horizons.",
+    "source_tree_id": "",
+    "target_tree_id": "",
+    "source_branch_id": "",
+    "target_branch_id": "",
+    "what_to_transfer": "",
+    "active_battle": "",
+    "common_failure_mode": "",
+    "non_obvious_property": "Property: The budget allocation must be proportional to the derivative of evaluation uncertainty with respect to computational cost, forming a gradient-based resource allocation. Obvious composition that fails: Using a learned heuristic (e.g., PUCT) for pruning fails because it does not consider the memory's own uncertainty estimates. Prior work on reducing MCTS cost (e.g., 'RAVE' Gelly & Silver, 2007) relies on domain-specific patterns and does not integrate memory uncertainty."
+  },
+  "chain_output": {
+    "per_trend_predictions": [
+      {
+        "direction": "Develop a metacognitive budgeting mechanism for memory-augmented MCTS that allocates simulation budget based on value-of-information (VoI) computed from the shared memory, thereby drastically reducing the number of simulations needed to reach reliable decisions in large plan spaces.",
+        "rationale": "Memory-augmented MCTS (e.g., MC-DML) already caches past evaluations but still performs uniform or UCB-based rollouts, which waste simulations on low-impact nodes. By estimating the expected improvement of each expansion using memory-derived uncertainty, we can focus computational resources where they matter most, enabling scaling to larger branching factors and longer horizons without sacrificing decision quality.",
+        "builds_on": "Monte Carlo Planning with Large Language Model for Text-Based Game Agents",
+        "builds_on_pid": "t0__a32688780cc763b1d0b2d59f9677521779ee6612",
+        "persistent_gap": "The high computational cost of memory-augmented MCTS, even with cached evaluations, limits its application to problems with large branching factors or long planning horizons.",
+        "why_still_open": "Prior work either assumes a fixed simulation budget (e.g., standard MCTS) or uses heuristics like UCB that do not explicitly model the value of additional simulations in the context of memory-augmented search. No existing method exploits the shared memory to compute a principled, tree-structured VoI that guides budget allocation with theoretical guarantees on decision quality.",
+        "candidate_action": "extend",
+        "bridge_keep": "Memory-augmented tree search framework (LLM evaluation + dynamic memory modules for cross-trial learning).",
+        "bridge_remove": "Uniform or UCB-based simulation budget allocation; the assumption that all nodes require equal or exploration-weighted exploration.",
+        "bridge_add": "A VoI compute module that, for each candidate node, evaluates the expected reduction in decision uncertainty using a Gaussian process prior fitted to memory-retrieved state-value pairs. The budget is allocated greedily to nodes with highest VoI, and search terminates when the VoI of all frontier nodes falls below a threshold that provably guarantees the optimal action with high probability.",
+        "non_obvious_property": "Property: The VoI of a node can be decomposed into a depth-dependent factor and a memory-derived uncertainty factor, enabling a provable stopping rule that guarantees no suboptimal action is chosen with high probability when the budget exceeds a threshold that depends only on the depth and memory coverage. Why prior work cannot exploit it: Standard MCTS (e.g., AlphaZero) uses neural value heads but lacks formal uncertainty estimates for budget allocation; memory-augmented MCTS (e.g., MC-DML) caches evaluations but does not compute VoI. A reviewer might propose 'UCB with memory-based prior'—this still uses a heuristic exploration bonus, not VoI, and cannot provide the same decision-quality guarantee because UCB does not model the value of additional simulations for decision making.",
+        "obvious_composition_check": "Memory-Augmented MCTS (MC-DML) + Value-of-Information Budgeting (from Bayesian optimization). The composition is non-trivial because: (i) prior VoI methods assume a stationary prior over values, while here the prior is dynamically constructed from memory during search; (ii) the tree structure introduces dependencies that require hierarchical uncertainty propagation, which neither component alone addresses. The load-bearing piece is the tree-structured VoI computation that reuses memory to estimate improvement without additional simulation—this is not achievable by simply appending a VoI module to MC-DML.",
+        "forest_mode": "single_tree",
+        "source_trend_ids": [
+          "0"
+        ],
+        "source_branch_ids": [
+          "A",
+          "C",
+          "D",
+          "E",
+          "F"
+        ],
+        "is_cross_tree": false,
+        "is_cross_branch": true,
+        "forest_direction_type": "convergent_action",
+        "forest_meta_gap": "",
+        "forest_shared_mechanism": "",
+        "forest_implied_next_problem": "The high computational cost of MCTS, even with memory, limits scaling to large branching factors or long horizons.",
+        "forest_what_to_transfer": "",
+        "forest_active_battle": "",
+        "forest_common_failure_mode": ""
+      }
+    ]
+  },
+  "synthetic_root": "t0__a32688780cc763b1d0b2d59f9677521779ee6612"
+}

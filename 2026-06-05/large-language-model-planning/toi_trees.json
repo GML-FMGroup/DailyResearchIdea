@@ -1,0 +1,1965 @@
+[
+  {
+    "tree_id": 0,
+    "root": "a32688780cc763b1d0b2d59f9677521779ee6612",
+    "frontier_title": "Monte Carlo Planning with Large Language Model for Text-Based Game Agents",
+    "topic": "large language model planning",
+    "max_depth": 5,
+    "trajectory_ascii": "Monte Carlo Planning with Large Lan... (2025)\n├── Everything of Thoughts: Defying the... (2023)\n│   ├── Self-Consistency Improves Chain of ... (2022)\n│   ├── Training language models to follow ... (2022)\n│   ├── Chain of Thought Prompting Elicits ... (2022)\n│   └── ProgPrompt: Generating Situated Rob... (2022)  (background)\n├── Ghost in the Minecraft: Generally C... (2023)\n│   ├── Code as Policies: Language Model Pr... (2022)\n│   ├── MineDojo: Building Open-Ended Embod... (2022)  (background)\n│   ├── Chain of Thought Prompting Elicits ... (2022)\n│   ├── MineRL Diamond 2021 Competition: Ov... (2022)  (background)\n│   ├── ProgPrompt: Generating Situated Rob... (2022)  (background)\n│   ├── Video PreTraining (VPT): Learning t... (2022)  (background)\n│   └── Inner Monologue: Embodied Reasoning... (2022)  (background)\n├── Large Language Models as Commonsens... (2023)\n│   ├── Distilling Reasoning Capabilities i... (2022)  (background)\n│   ├── Inner Monologue: Embodied Reasoning... (2022)  (background)\n│   ├── Interactive Language: Talking to Ro... (2022)  (background)\n│   ├── ProgPrompt: Generating Situated Rob... (2022)  (background)\n│   └── Multi-skill Mobile Manipulation for... (2022)  (background)\n├── LgTS: Dynamic Task Sampling using L... (2023)  (background)\n└── RL-GPT: Integrating Reinforcement L... (2024)  (background)",
+    "trajectory_description": "The research evolution begins with foundational advances in large language model reasoning—chain-of-thought prompting, self-consistency, and instruction following—which are then extended into embodied planning and control via code-as-policies, inner monologue, and commonsense knowledge for task planning, while simultaneously exploring LLM-guided reinforcement learning through dynamic task sampling and code-based policies. These threads converge at the frontier paper, *Monte Carlo Planning with Large Language Model for Text-Based Game Agents*, which integrates Monte Carlo tree search with LLM-based reasoning to handle long-horizon, partially observable environments, drawing on the embodied and planning capabilities from the Ghost in Minecraft and commonsense planning lines, the structured thought generation from Everything of Thoughts, and the RL-guidance techniques from RL-GPT. Overall, the story moves from isolated LLM reasoning techniques to grounded, interactive decision-making, culminating",
+    "tree": {
+      "a32688780cc763b1d0b2d59f9677521779ee6612": {
+        "agent_depth": 0,
+        "relation": "mainline",
+        "children": {
+          "e3116a5d5784392d9190ca35997f65a252291032": {
+            "agent_depth": 1,
+            "relation": "pruned",
+            "children": {}
+          },
+          "0639e2e209213ecb54eb4d6555e271d070344842": {
+            "agent_depth": 1,
+            "relation": "mainline",
+            "children": {
+              "90350aa626bed47b02d0c162462e5b0ca82be6b2": {
+                "agent_depth": 2,
+                "relation": "pruned",
+                "children": {}
+              },
+              "5f19ae1135a9500940978104ec15a5b8751bc7d2": {
+                "agent_depth": 2,
+                "relation": "mainline",
+                "children": {}
+              },
+              "d766bffc357127e0dc86dd69561d5aeb520d6f4c": {
+                "agent_depth": 2,
+                "relation": "mainline",
+                "children": {}
+              },
+              "1b6e810ce0afd0dd093f789d2b2742d047e316d5": {
+                "agent_depth": 2,
+                "relation": "mainline",
+                "children": {}
+              },
+              "c03fa01fbb9c77fe3d10609ba5f1dee33a723867": {
+                "agent_depth": 2,
+                "relation": "pruned",
+                "children": {}
+              },
+              "4054fc9e8776dc0324cfc215462d606eb75916c0": {
+                "agent_depth": 2,
+                "relation": "pruned",
+                "children": {}
+              }
+            }
+          },
+          "c695c4e68561347564ea0daa50dc339dff73d8c5": {
+            "agent_depth": 1,
+            "relation": "mainline",
+            "children": {
+              "91deaf9d324c8feafc189da0da03e60a60287bca": {
+                "agent_depth": 2,
+                "relation": "mainline",
+                "children": {}
+              },
+              "32c9b3859086d15184989454eb878638659e64c6": {
+                "agent_depth": 2,
+                "relation": "pruned",
+                "children": {}
+              },
+              "1b6e810ce0afd0dd093f789d2b2742d047e316d5": {
+                "agent_depth": 2,
+                "relation": "mainline",
+                "children": {}
+              },
+              "6b7bf6cf5d0e1004d4468edfac4e8f81c0d0c50d": {
+                "agent_depth": 2,
+                "relation": "pruned",
+                "children": {}
+              },
+              "c03fa01fbb9c77fe3d10609ba5f1dee33a723867": {
+                "agent_depth": 2,
+                "relation": "pruned",
+                "children": {}
+              },
+              "65fc1f1c567801fee3788974e753cdbf934f07e9": {
+                "agent_depth": 2,
+                "relation": "pruned",
+                "children": {}
+              },
+              "f3cf71c51b882fe3111d71c4bf104297d38197f8": {
+                "agent_depth": 2,
+                "relation": "pruned",
+                "children": {}
+              },
+              "effa7077e6580a8ab22c30d3c876744b4e51cd6e": {
+                "agent_depth": 2,
+                "relation": "pruned",
+                "children": {}
+              }
+            }
+          },
+          "fa8fa745f58d362925dd44f02750bab1b30a1189": {
+            "agent_depth": 1,
+            "relation": "pruned",
+            "children": {}
+          },
+          "1eac02f299c171d17190fb257fc1f4c20f0d08ac": {
+            "agent_depth": 1,
+            "relation": "pruned",
+            "children": {}
+          },
+          "5d32c364088733c6e8dadc9cf0baa26e10506d61": {
+            "agent_depth": 1,
+            "relation": "mainline",
+            "children": {
+              "8fd462f6248d5e3f1b6602697c09489086b5655f": {
+                "agent_depth": 2,
+                "relation": "pruned",
+                "children": {}
+              },
+              "f3cf71c51b882fe3111d71c4bf104297d38197f8": {
+                "agent_depth": 2,
+                "relation": "pruned",
+                "children": {}
+              },
+              "0e34addae55a571d7efd3a5e2543e86dd7d41a83": {
+                "agent_depth": 2,
+                "relation": "pruned",
+                "children": {}
+              },
+              "c03fa01fbb9c77fe3d10609ba5f1dee33a723867": {
+                "agent_depth": 2,
+                "relation": "pruned",
+                "children": {}
+              },
+              "344cba18285949fe409fc0b332831bc186cfeb17": {
+                "agent_depth": 2,
+                "relation": "pruned",
+                "children": {}
+              },
+              "fd1cf28a2b8caf2fe29af5e7fa9191cecfedf84d": {
+                "agent_depth": 2,
+                "relation": "pruned",
+                "children": {}
+              },
+              "60c8d0619481eaafdd1189af610d0e636271fed5": {
+                "agent_depth": 2,
+                "relation": "pruned",
+                "children": {}
+              },
+              "33be243ac9dd8723e6267dea45fd6a6172d4f6a5": {
+                "agent_depth": 2,
+                "relation": "pruned",
+                "children": {}
+              }
+            }
+          },
+          "9a73effed8775962c86587feb0f9ef841fa2ff4c": {
+            "agent_depth": 1,
+            "relation": "pruned",
+            "children": {}
+          },
+          "b42713664a72410307839fe44ec51aef8d69c943": {
+            "agent_depth": 1,
+            "relation": "pruned",
+            "children": {}
+          }
+        }
+      }
+    },
+    "nodes": {
+      "a32688780cc763b1d0b2d59f9677521779ee6612": {
+        "title": "Monte Carlo Planning with Large Language Model for Text-Based Game Agents",
+        "year": 2025,
+        "is_frontier": true,
+        "depth": 0,
+        "pruned": false,
+        "prune_reason": null,
+        "idea": {
+          "entities": [
+            {
+              "name": "MC-DML",
+              "description": "Monte Carlo planning with Dynamic Memory-guided Large language model, an algorithm combining LLMs and tree search with memory mechanisms."
+            },
+            {
+              "name": "MCTS",
+              "description": "Monte Carlo Tree Search, a planning algorithm used for exploration in decision-making."
+            },
+            {
+              "name": "LLM",
+              "description": "Large Language Model, used for language understanding and reasoning in the algorithm."
+            },
+            {
+              "name": "Jericho",
+              "description": "A benchmark suite for text-based games used for evaluation."
+            }
+          ],
+          "background": "Text-based games are valuable environments for language-based agents, but planning-then-learning paradigms like MCTS+RL are time-consuming due to extensive iterations and lack language understanding. Previous work combines planning algorithms with reinforcement learning but suffers from slow convergence and limited reasoning.",
+          "novelty": "MC-DML integrates LLMs with Monte Carlo tree search, leveraging LLMs' language understanding and reasoning with tree search exploration. It introduces in-trial and cross-trial memory mechanisms for dynamic action evaluation, enabling learning from past experiences during planning.",
+          "contribution": "The primary method is MC-DML, which enhances LLMs with dynamic memory for in-trial and cross-trial learning. Core components: LLM for action evaluation, tree search for exploration, and memory modules to adapt evaluations based on past experiences. This improves planning without multiple iterations.",
+          "method": "The algorithm uses an LLM to evaluate actions during MCTS, with memory mechanisms that store and retrieve past outcomes. In-trial memory tracks immediate history within a game, while cross-trial memory accumulates knowledge across games. The LLM's evaluations are dynamically adjusted based on memory, guiding tree search. No explicit training procedure is described; the LLM is used in a zero-shot or few-shot manner with memory augmentation.",
+          "detail_reason": "The methods are effective because LLMs provide language reasoning that traditional RL lacks, and memory allows the agent to adapt and avoid repeating mistakes. Implementation insights: memory helps bridge the gap between tree search and language understanding, enabling better action selection without costly iterations.",
+          "limitation": "The abstract does not discuss limitations explicitly. Potential shortcomings: reliance on pre-trained LLMs may introduce bias or computational overhead; memory mechanisms may not scale to very long horizons; the method may still struggle with games requiring complex world models beyond language patterns.",
+          "experiment": {
+            "process": "Experiments were conducted on text-based games from the Jericho benchmark. The performance of MC-DML was compared to strong contemporary methods over multiple games, focusing on initial planning phase results.",
+            "technical_details": "Used Jericho benchmark games; likely integrated LLM (e.g., GPT) with MCTS and memory modules. Implementation details not fully specified.",
+            "baseline": "Strong contemporary methods that require multiple iterations, such as MCTS+RL and other planning algorithms.",
+            "verification": "Experiments show that MC-DML outperforms baselines at the initial planning phase, demonstrating that LLM with memory improves efficiency and performance without needing extensive iterations."
+          },
+          "references": [
+            "Monte Carlo Tree Search: A New Framework for Game AI",
+            "Text-Based Games as a Challenge for AI: A Survey",
+            "Language Models as Zero-Shot Planners: Extracting Actionable Knowledge for Embodied Agents"
+          ]
+        },
+        "evolution": {
+          "evolution_steps": [
+            {
+              "from_pid": "e3116a5d5784392d9190ca35997f65a252291032",
+              "from_title": "Plan-Seq-Learn: Language Model Guided RL for Solving Long Horizon Robotics Tasks",
+              "role": "mainline",
+              "evolution_trace": {
+                "parent_problem": "B's Plan-Seq-Learn requires a motion planner to translate LLM high-level plans into feasible low-level sequences, and the LLM plans are fixed without online refinement; this limits applicability to domains without predefined motion planners and prevents adaptation during execution.",
+                "child_solution": "A uses Monte Carlo tree search (MCTS) where an LLM evaluates actions, and dynamic memory modules (in-trial and cross-trial) adjust evaluations based on past outcomes, enabling iterative online planning without any domain-specific planner.",
+                "mechanism_delta": "A replaces B's sequential pipeline (LLM → motion planner → RL) with an integrated tree search that uses memory-augmented LLM evaluations to guide exploration and adapt plans across trials.",
+                "evolution_direction": "structural"
+              },
+              "gap_analysis": {
+                "remaining_gap": "A still relies on a pre-trained LLM to generate and evaluate actions in zero-shot fashion, inheriting B's vulnerability to LLM brittleness in novel or out-of-distribution scenarios, and does not address planning for tasks requiring continuous control or physical grounding beyond language.",
+                "what_persists": "Both methods assume the LLM (without task-specific fine-tuning) can produce plausible plans or action evaluations for the target domain, and neither attempts to learn or adapt the LLM itself.",
+                "gap_type": "scope_unclosed"
+              },
+              "evolution_action": "structural",
+              "trigger_gap": "B's Plan-Seq-Learn requires a motion planner to translate LLM high-level plans into feasible low-level sequences, and the LLM plans are fixed without online refinement; this limits applicability to domains without predefined motion planners and prevents adaptation during execution.",
+              "what_changed": {
+                "mechanism_change": "A replaces B's sequential pipeline (LLM → motion planner → RL) with an integrated tree search that uses memory-augmented LLM evaluations to guide exploration and adapt plans across trials."
+              }
+            },
+            {
+              "from_pid": "0639e2e209213ecb54eb4d6555e271d070344842",
+              "from_title": "Everything of Thoughts: Defying the Law of Penrose Triangle for Thought Generation",
+              "role": "mainline",
+              "evolution_trace": {
+                "parent_problem": "B's method requires domain-specific reinforcement learning pretraining to embed knowledge into MCTS, limiting generality and transfer to new domains without such data.",
+                "child_solution": "A uses zero-shot LLM with dynamic memory (in-trial and cross-trial) to adapt action evaluations based on past experiences, eliminating the need for domain-specific pretraining.",
+                "mechanism_delta": "B injects domain knowledge via pretrained RL, while A relies on LLM memory augmentation for dynamic evaluation without training.",
+                "evolution_direction": "data"
+              },
+              "gap_analysis": {
+                "remaining_gap": "B's high computational cost of MCTS persists in A, as A also uses MCTS without reducing complexity for large search spaces.",
+                "what_persists": "Both assume problems can be decomposed into sequential actions (text-based games) and rely on MCTS for exploration.",
+                "gap_type": "assumption_inherited"
+              },
+              "evolution_action": "data",
+              "trigger_gap": "B's method requires domain-specific reinforcement learning pretraining to embed knowledge into MCTS, limiting generality and transfer to new domains without such data.",
+              "what_changed": {
+                "mechanism_change": "B injects domain knowledge via pretrained RL, while A relies on LLM memory augmentation for dynamic evaluation without training."
+              }
+            },
+            {
+              "from_pid": "c695c4e68561347564ea0daa50dc339dff73d8c5",
+              "from_title": "Ghost in the Minecraft: Generally Capable Agents for Open-World Environments via Large Language Models with Text-based Knowledge and Memory",
+              "role": "mainline",
+              "evolution_trace": {
+                "parent_problem": "B's LLM-based plan generator directly outputs a sequence of actions without exploring alternative paths, leading to suboptimal decisions when the initial plan fails; memory is simply a log without adaptive re-evaluation.",
+                "child_solution": "A employs Monte Carlo Tree Search (MCTS) where the LLM evaluates each action guided by a dynamic memory module that updates evaluations based on past outcomes, enabling adaptive exploration and more robust planning.",
+                "mechanism_delta": "B uses a single-shot LLM plan generator with static memory; A replaces this with an MCTS loop where LLM evaluations are dynamically adjusted via in-trial and cross-trial memory.",
+                "evolution_direction": "structural"
+              },
+              "gap_analysis": {
+                "remaining_gap": "A still relies on LLM's pattern recognition from text for world dynamics, which fails in games requiring precise spatial or causal reasoning beyond language patterns; this limitation from B is not addressed.",
+                "what_persists": "Both methods assume a text-only environment with predefined action sets, no structured world model beyond what the LLM captures from language.",
+                "gap_type": "scope_unclosed"
+              },
+              "evolution_action": "structural",
+              "trigger_gap": "B's LLM-based plan generator directly outputs a sequence of actions without exploring alternative paths, leading to suboptimal decisions when the initial plan fails; memory is simply a log without adaptive re-evaluation.",
+              "what_changed": {
+                "mechanism_change": "B uses a single-shot LLM plan generator with static memory; A replaces this with an MCTS loop where LLM evaluations are dynamically adjusted via in-trial and cross-trial memory."
+              }
+            },
+            {
+              "from_pid": "fa8fa745f58d362925dd44f02750bab1b30a1189",
+              "from_title": "RL-GPT: Integrating Reinforcement Learning and Code-as-policy",
+              "role": "background",
+              "evolution_trace": {
+                "parent_problem": "B's code-as-policy approach assumes high-level actions can be sufficiently described in static code and low-level actions require RL training, which is sample-inefficient and may not adapt dynamically to changing environment states without re-generating code.",
+                "child_solution": "A replaces hierarchical code generation and RL with MCTS guided by an LLM that evaluates actions dynamically, and augments evaluations with in-trial and cross-trial memory to adapt without RL training.",
+                "mechanism_delta": "A drops the hierarchical code+RL structure in favor of tree search with memory-augmented LLM evaluations, eliminating the need for RL-based low-level refinement.",
+                "evolution_direction": "structural"
+              },
+              "gap_analysis": {
+                "remaining_gap": "A's memory-based approach does not provide a mechanism for learning fine-grained low-level control policies (e.g., precise motor commands) that B's RL component could optimize, limiting applicability to tasks requiring such control.",
+                "what_persists": "Both A and B rely on pre-trained LLMs for decision-making without addressing the potential for catastrophic forgetting or distribution shift when the task domain changes significantly.",
+                "gap_type": "scope_unclosed"
+              },
+              "evolution_action": "structural",
+              "trigger_gap": "B's code-as-policy approach assumes high-level actions can be sufficiently described in static code and low-level actions require RL training, which is sample-inefficient and may not adapt dynamically to changing environment states without re-generating code.",
+              "what_changed": {
+                "mechanism_change": "A drops the hierarchical code+RL structure in favor of tree search with memory-augmented LLM evaluations, eliminating the need for RL-based low-level refinement."
+              }
+            },
+            {
+              "from_pid": "1eac02f299c171d17190fb257fc1f4c20f0d08ac",
+              "from_title": "Large Language Models Are Neurosymbolic Reasoners",
+              "role": "mainline",
+              "evolution_trace": {
+                "parent_problem": "B's LLM agent lacks memory of past decisions; each action selection is based solely on current observation and static symbolic rules, preventing the agent from learning from experience within or across trials.",
+                "child_solution": "A introduces in-trial and cross-trial memory modules that store and retrieve past outcomes, dynamically adjusting LLM's action evaluations during MCTS, enabling learning from experience.",
+                "mechanism_delta": "A replaces B's static symbolic module with dynamic memory-augmented evaluation, allowing the LLM to adapt based on historical outcomes rather than relying on fixed symbolic rules.",
+                "evolution_direction": "structural"
+              },
+              "gap_analysis": {
+                "remaining_gap": "A still does not address generalization to real-world planning beyond text games, as both methods are evaluated only on text-based environments; also, A still assumes valid actions are provided at each step, inherited from B.",
+                "what_persists": "A inherits B's assumption that the agent has access to a list of valid actions at each decision point, which may not hold in many real-world planning tasks.",
+                "gap_type": "assumption_inherited"
+              },
+              "evolution_action": "structural",
+              "trigger_gap": "B's LLM agent lacks memory of past decisions; each action selection is based solely on current observation and static symbolic rules, preventing the agent from learning from experience within or across trials.",
+              "what_changed": {
+                "mechanism_change": "A replaces B's static symbolic module with dynamic memory-augmented evaluation, allowing the LLM to adapt based on historical outcomes rather than relying on fixed symbolic rules."
+              }
+            },
+            {
+              "from_pid": "5d32c364088733c6e8dadc9cf0baa26e10506d61",
+              "from_title": "Large Language Models as Commonsense Knowledge for Large-Scale Task Planning",
+              "role": "mainline",
+              "evolution_trace": {
+                "parent_problem": "B's LLM-MCTS uses a static world model and policy derived from the LLM, which do not adapt based on past outcomes; thus the search efficiency does not improve with experience across trials.",
+                "child_solution": "A's MC-DML introduces dynamic memory modules (in-trial and cross-trial) that store and retrieve past action outcomes, adjusting the LLM's action evaluations during MCTS to guide search more effectively over time.",
+                "mechanism_delta": "A replaces B's static LLM-induced world model and policy with dynamically updated memory-augmented evaluations, enabling the LLM to refine its action scores based on historical experience within and across games.",
+                "evolution_direction": "reasoning_pattern"
+              },
+              "gap_analysis": {
+                "remaining_gap": "A still relies on the pre-trained LLM's knowledge for initial action evaluations; if the LLM lacks accurate commonsense or world knowledge for a task, the memory mechanism may only partially compensate, leading to persistent biases or errors in search.",
+                "what_persists": "A inherits B's assumption that the LLM can provide useful zero-shot evaluations without task-specific training; both methods depend on the quality of the LLM's implicit knowledge.",
+                "gap_type": "assumption_inherited"
+              },
+              "evolution_action": "reasoning_pattern",
+              "trigger_gap": "B's LLM-MCTS uses a static world model and policy derived from the LLM, which do not adapt based on past outcomes; thus the search efficiency does not improve with experience across trials.",
+              "what_changed": {
+                "mechanism_change": "A replaces B's static LLM-induced world model and policy with dynamically updated memory-augmented evaluations, enabling the LLM to refine its action scores based on historical experience within and across games."
+              }
+            },
+            {
+              "from_pid": "9a73effed8775962c86587feb0f9ef841fa2ff4c",
+              "from_title": "LgTS: Dynamic Task Sampling using LLM-generated sub-goals for Reinforcement Learning Agents",
+              "role": "background",
+              "evolution_trace": {
+                "parent_problem": "B's LLM generates sub-goals statically without feedback from execution, so plans may be invalid or inefficient if the LLM's world knowledge is inaccurate.",
+                "child_solution": "A uses Monte Carlo tree search with LLM action evaluation and memory modules that store and retrieve past outcomes to dynamically adjust evaluations, enabling iterative refinement based on feedback.",
+                "mechanism_delta": "B uses static sub-goal generation; A uses memory-augmented MCTS with dynamic LLM evaluation adapted by past experiences.",
+                "evolution_direction": "structural"
+              },
+              "gap_analysis": {
+                "remaining_gap": "A still relies on a pre-trained LLM without any fine-tuning, which may fail to generate meaningful action evaluations for domains outside its training distribution, a limitation B also acknowledged.",
+                "what_persists": "Both A and B assume the LLM can provide useful guidance without any domain-specific fine-tuning or grounding.",
+                "gap_type": "assumption_inherited"
+              },
+              "evolution_action": "structural",
+              "trigger_gap": "B's LLM generates sub-goals statically without feedback from execution, so plans may be invalid or inefficient if the LLM's world knowledge is inaccurate.",
+              "what_changed": {
+                "mechanism_change": "B uses static sub-goal generation; A uses memory-augmented MCTS with dynamic LLM evaluation adapted by past experiences."
+              }
+            },
+            {
+              "from_pid": "b42713664a72410307839fe44ec51aef8d69c943",
+              "from_title": "How Can LLM Guide RL? A Value-Based Approach",
+              "role": "mainline",
+              "evolution_trace": {
+                "parent_problem": "B's regularization term relies on a fixed LLM policy prior that is not updated based on environment feedback, so if the LLM prior is inaccurate, the agent may be misled throughout training.",
+                "child_solution": "A introduces dynamic memory modules that store and retrieve past outcomes (in-trial and cross-trial) to adapt the LLM's action evaluations, enabling correction of initial biases through experience.",
+                "mechanism_delta": "B uses a static LLM prior via regularization; A uses an LLM with adaptive memory that updates evaluations based on history.",
+                "evolution_direction": "structural"
+              },
+              "gap_analysis": {
+                "remaining_gap": "A still depends on a pre-trained LLM with reasonable initial knowledge of the game domain; if the LLM lacks domain familiarity, memory may not compensate sufficiently, similar to B's reliance on aligned LLM prior.",
+                "what_persists": "A inherits B's assumption that an LLM with relevant domain knowledge is available to provide initial action evaluations.",
+                "gap_type": "self_admitted"
+              },
+              "evolution_action": "structural",
+              "trigger_gap": "B's regularization term relies on a fixed LLM policy prior that is not updated based on environment feedback, so if the LLM prior is inaccurate, the agent may be misled throughout training.",
+              "what_changed": {
+                "mechanism_change": "B uses a static LLM prior via regularization; A uses an LLM with adaptive memory that updates evaluations based on history."
+              }
+            }
+          ],
+          "unresolved_gaps": [
+            {
+              "gap_text": "A still relies on a pre-trained LLM to generate and evaluate actions in zero-shot fashion, inheriting B's vulnerability to LLM brittleness in novel or out-of-distribution scenarios, and does not address planning for tasks requiring continuous control or physical grounding beyond language.",
+              "gap_type": "gap_not_closed_by_step",
+              "ancestor_pid": "e3116a5d5784392d9190ca35997f65a252291032",
+              "ancestor_assumption": "Both methods assume the LLM (without task-specific fine-tuning) can produce plausible plans or action evaluations for the target domain, and neither attempts to learn or adapt the LLM itself.",
+              "why_frontier_did_not_close_it": "",
+              "structural_property_name": ""
+            },
+            {
+              "gap_text": "B's high computational cost of MCTS persists in A, as A also uses MCTS without reducing complexity for large search spaces.",
+              "gap_type": "assumption_inherited",
+              "ancestor_pid": "0639e2e209213ecb54eb4d6555e271d070344842",
+              "ancestor_assumption": "Both assume problems can be decomposed into sequential actions (text-based games) and rely on MCTS for exploration.",
+              "why_frontier_did_not_close_it": "",
+              "structural_property_name": ""
+            },
+            {
+              "gap_text": "A still relies on LLM's pattern recognition from text for world dynamics, which fails in games requiring precise spatial or causal reasoning beyond language patterns; this limitation from B is not addressed.",
+              "gap_type": "gap_not_closed_by_step",
+              "ancestor_pid": "c695c4e68561347564ea0daa50dc339dff73d8c5",
+              "ancestor_assumption": "Both methods assume a text-only environment with predefined action sets, no structured world model beyond what the LLM captures from language.",
+              "why_frontier_did_not_close_it": "",
+              "structural_property_name": ""
+            },
+            {
+              "gap_text": "A still does not address generalization to real-world planning beyond text games, as both methods are evaluated only on text-based environments; also, A still assumes valid actions are provided at each step, inherited from B.",
+              "gap_type": "assumption_inherited",
+              "ancestor_pid": "1eac02f299c171d17190fb257fc1f4c20f0d08ac",
+              "ancestor_assumption": "A inherits B's assumption that the agent has access to a list of valid actions at each decision point, which may not hold in many real-world planning tasks.",
+              "why_frontier_did_not_close_it": "",
+              "structural_property_name": ""
+            },
+            {
+              "gap_text": "A still relies on the pre-trained LLM's knowledge for initial action evaluations; if the LLM lacks accurate commonsense or world knowledge for a task, the memory mechanism may only partially compensate, leading to persistent biases or errors in search.",
+              "gap_type": "assumption_inherited",
+              "ancestor_pid": "5d32c364088733c6e8dadc9cf0baa26e10506d61",
+              "ancestor_assumption": "A inherits B's assumption that the LLM can provide useful zero-shot evaluations without task-specific training; both methods depend on the quality of the LLM's implicit knowledge.",
+              "why_frontier_did_not_close_it": "",
+              "structural_property_name": ""
+            },
+            {
+              "gap_text": "A still depends on a pre-trained LLM with reasonable initial knowledge of the game domain; if the LLM lacks domain familiarity, memory may not compensate sufficiently, similar to B's reliance on aligned LLM prior.",
+              "gap_type": "scope_self_admitted",
+              "ancestor_pid": "b42713664a72410307839fe44ec51aef8d69c943",
+              "ancestor_assumption": "A inherits B's assumption that an LLM with relevant domain knowledge is available to provide initial action evaluations.",
+              "why_frontier_did_not_close_it": "",
+              "structural_property_name": ""
+            },
+            {
+              "gap_text": "The method assumes a fixed, known set of valid actions at each step and relies on the quality of the LLM's implicit knowledge; it does not address scenarios with dynamic action sets or learning new actions.",
+              "gap_type": "gap_not_closed_by_step",
+              "ancestor_pid": "",
+              "ancestor_assumption": "A takes MCTS for exploration from pred[1] (Everything of Thoughts), memory modules from pred[2] (Ghost in the Minecraft) but makes them dynamic, and LLM action evaluation from pred[4] (Large Language Models as Commonsense Knowledge for Large-Scale Task Planning).",
+              "why_frontier_did_not_close_it": "composite synthesis itself left this gap open",
+              "structural_property_name": ""
+            }
+          ],
+          "composite_synthesis": {
+            "what_A_combines": "A takes MCTS for exploration from pred[1] (Everything of Thoughts), memory modules from pred[2] (Ghost in the Minecraft) but makes them dynamic, and LLM action evaluation from pred[4] (Large Language Models as Commonsense Knowledge for Large-Scale Task Planning).",
+            "is_obvious_composition": false,
+            "obviousness_reason": "While MCTS and memory are individually known, integrating them with LLM evaluations in a way that dynamically updates action scores based on in-trial and cross-trial memory requires solving a non-trivial interface problem: how to retrieve relevant memory and adjust LLM scores without retraining the LLM. The combination is not mechanically straightforward.",
+            "novel_combination": "The novel property is the ability to adapt LLM evaluations based on accumulated experience (memory) within and across games, enabling the LLM to improve planning without multiple iterative calls or fine-tuning.",
+            "composite_remaining_gap": "The method assumes a fixed, known set of valid actions at each step and relies on the quality of the LLM's implicit knowledge; it does not address scenarios with dynamic action sets or learning new actions.",
+            "redundant_preds": [
+              "e3116a5d5784392d9190ca35997f65a252291032",
+              "1eac02f299c171d17190fb257fc1f4c20f0d08ac",
+              "b42713664a72410307839fe44ec51aef8d69c943"
+            ]
+          }
+        }
+      },
+      "e3116a5d5784392d9190ca35997f65a252291032": {
+        "title": "Plan-Seq-Learn: Language Model Guided RL for Solving Long Horizon Robotics Tasks",
+        "year": 2024,
+        "is_frontier": false,
+        "depth": 1,
+        "pruned": true,
+        "prune_reason": "composite_redundant",
+        "idea": {
+          "entities": [
+            {
+              "name": "Plan-Seq-Learn (PSL)",
+              "description": "Modular approach combining LLM high-level planning, motion planning, and RL for long-horizon tasks."
+            },
+            {
+              "name": "Large Language Model (LLM)",
+              "description": "Provides high-level planning and task guidance using internet-scale knowledge."
+            },
+            {
+              "name": "Motion planning",
+              "description": "Bridges abstract language and low-level control actions by generating feasible motion sequences."
+            },
+            {
+              "name": "Reinforcement Learning (RL) policy",
+              "description": "Learns low-level control actions from scratch guided by LLM and motion planning."
+            }
+          ],
+          "background": "Large Language Models (LLMs) can perform high-level planning for long-horizon robotics tasks but typically require a pre-defined skill library. Existing methods do not address learning low-level behaviors, which is challenging in long-horizon settings. Moreover, many tasks require fine-grained adjustment of low-level control actions.",
+          "novelty": "The main innovations are using LLMs for high-level policies to guide reinforcement learning policies without a pre-determined set of skills, and employing motion planning to bridge the gap between abstract language and learned low-level control. This allows solving long-horizon tasks from scratch without requiring a skill library.",
+          "contribution": "The primary method is Plan-Seq-Learn (PSL), a modular approach that uses motion planning to connect LLM high-level plans with RL low-level control. PSL solves long-horizon robotics tasks from raw visual input, achieving state-of-the-art results on over 25 tasks with up to 10 stages.",
+          "method": "The architecture consists of three modules: an LLM for high-level task planning, a motion planner to generate intermediate sequences, and an RL policy for low-level control. The LLM outputs abstract actions, which the motion planner translates into feasible motion sequences; the RL policy then learns to execute these motions via online interaction. Training is done end-to-end with the LLM fixed, while the RL policy is updated. Key design choices include modular separation to leverage each component's strengths and avoid the need for a pre-defined skill library.",
+          "detail_reason": "The separation of high-level planning, motion planning, and low-level control is effective because motion planning provides structured intermediate actions that simplify the RL learning problem. This allows the LLM to focus on task-level reasoning while the RL policy handles fine-grained control, enabling efficient online learning from scratch.",
+          "limitation": "The method assumes the availability of motion planning for the relevant action spaces, which may not be feasible for highly manipulable or dynamic tasks. It also relies on the LLM's ability to generate valid high-level plans, which can be brittle for novel tasks. The approach has been evaluated on tasks with up to 10 stages, but scalability to more complex hierarchies is unknown.",
+          "experiment": {
+            "process": "The method was evaluated on over 25 challenging robotics tasks with up to 10 stages using raw visual input. The RL policy was trained online from scratch, guided by LLM plans and motion planning.",
+            "technical_details": "Visual input was processed using standard convolutional networks (specific architecture not specified in abstract). The RL policy was updated via online interaction, while the LLM remained fixed.",
+            "baseline": "Compared to prior LLM+skill library baselines and other RL methods, PSL achieved state-of-the-art results.",
+            "verification": "State-of-the-art results across all tasks demonstrate that PSL effectively combines LLM guidance, motion planning, and RL for long-horizon tasks without a skill library."
+          },
+          "references": [
+            "Language Models as Zero-Shot Planners: Extracting Actionable Knowledge for Embodied Agents",
+            "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+            "Task and Motion Planning with Large Language Models"
+          ]
+        },
+        "evolution": null
+      },
+      "0639e2e209213ecb54eb4d6555e271d070344842": {
+        "title": "Everything of Thoughts: Defying the Law of Penrose Triangle for Thought Generation",
+        "year": 2023,
+        "is_frontier": false,
+        "depth": 1,
+        "pruned": false,
+        "prune_reason": null,
+        "idea": {
+          "entities": [
+            {
+              "name": "XoT (Everything of Thoughts)",
+              "description": "Novel thought prompting approach that leverages pretrained RL and MCTS to generate high-quality cognitive mappings with minimal LLM interactions."
+            },
+            {
+              "name": "Monte Carlo Tree Search (MCTS)",
+              "description": "Search algorithm used for planning and decision-making, combined with LLM to iteratively refine thoughts."
+            },
+            {
+              "name": "Penrose triangle thought paradigms",
+              "description": "Existing thought designs that can only achieve two out of three attributes: performance, efficiency, and flexibility."
+            }
+          ],
+          "background": "Large Language Models (LLMs) use thought prompting to break down complex problems. However, existing thought designs can only achieve two of three desired attributes: performance, efficiency, and flexibility.",
+          "novelty": "XoT overcomes the trade-off by leveraging pretrained reinforcement learning and Monte Carlo Tree Search (MCTS) to incorporate external domain knowledge, achieving all three attributes simultaneously. It introduces an MCTS-LLM collaborative framework that autonomously produces comprehensive cognitive mappings with minimal LLM interactions.",
+          "contribution": "Primary methods: pretrained RL and MCTS to embed external knowledge into thoughts; MCTS-LLM collaborative thought revision framework for autonomous generation of cognitive mappings; allowing unconstrained thinking for multi-solution problems.",
+          "method": "The method uses pretrained reinforcement learning to incorporate domain knowledge into the thought generation process. Monte Carlo Tree Search (MCTS) is employed to explore and evaluate thought sequences iteratively. The MCTS-LLM collaboration reduces the number of LLM calls by focusing on promising thought paths. The framework produces flexible cognitive mappings that can adapt to problems with multiple solutions.",
+          "detail_reason": "MCTS provides efficient tree-structured search for planning, while pretrained RL injects external knowledge, reducing the reliance on LLM generations. The collaborative framework minimizes LLM interactions, improving efficiency without sacrificing performance or flexibility.",
+          "limitation": "XoT may require domain-specific knowledge sources for pretrained RL, limiting generality. The MCTS component can be computationally intensive for very large search spaces. The method assumes problems can be decomposed into sequential or hierarchical thought structures.",
+          "experiment": {
+            "process": "Evaluation is performed on multiple challenging multi-solution problem-solving tasks. The process compares XoT against existing thought paradigms in terms of performance, efficiency, and flexibility.",
+            "technical_details": "The implementation integrates pretrained RL models and MCTS with LLM. Cognitive mappings are generated through iterative revision cycles.",
+            "baseline": "Baselines include Chain-of-Thought (CoT), Tree of Thoughts (ToT), and other standard thought prompting methods.",
+            "verification": "Experiments demonstrate that XoT achieves superior performance in solving multi-solution problems while maintaining high efficiency and flexibility, thereby breaking the Penrose triangle trade-off."
+          },
+          "references": [
+            "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+            "Tree of Thoughts: Deliberate Problem Solving with Large Language Models",
+            "ReAct: Synergizing Reasoning and Acting in Language Models"
+          ]
+        },
+        "evolution": {
+          "evolution_steps": [
+            {
+              "from_pid": "90350aa626bed47b02d0c162462e5b0ca82be6b2",
+              "from_title": "Automatic Chain of Thought Prompting in Large Language Models",
+              "role": "mainline",
+              "evolution_trace": {
+                "parent_problem": "B's chain-of-thought generation is a single pass without revision; errors in early steps propagate and cannot be corrected because there is no mechanism to revisit or explore alternative reasoning paths.",
+                "child_solution": "A introduces MCTS to iteratively explore and evaluate multiple reasoning paths, and uses pretrained RL to incorporate domain-specific external knowledge, allowing revision of thoughts and selection of promising paths.",
+                "mechanism_delta": "B generates a single linear chain per question by prompting the LLM with 'Let's think step by step'; A replaces this with an MCTS-LLM collaboration that explores a tree of thought sequences, using RL-based evaluation scores to guide search and reduce LLM calls.",
+                "evolution_direction": "reasoning_pattern"
+              },
+              "gap_analysis": {
+                "remaining_gap": "A's method requires domain-specific pretrained RL models to incorporate external knowledge, which limits its generality to domains where such knowledge sources are available, similar to B's reliance on LLM's internal knowledge for domain-specific tasks.",
+                "what_persists": "Both A and B assume that problems can be decomposed into sequential or hierarchical thought structures, and do not address tasks where reasoning requires non-decomposable or holistic thinking.",
+                "gap_type": "assumption_inherited"
+              },
+              "evolution_action": "reasoning_pattern",
+              "trigger_gap": "B's chain-of-thought generation is a single pass without revision; errors in early steps propagate and cannot be corrected because there is no mechanism to revisit or explore alternative reasoning paths.",
+              "what_changed": {
+                "mechanism_change": "B generates a single linear chain per question by prompting the LLM with 'Let's think step by step'; A replaces this with an MCTS-LLM collaboration that explores a tree of thought sequences, using RL-based evaluation scores to guide search and reduce LLM calls."
+              }
+            },
+            {
+              "from_pid": "5f19ae1135a9500940978104ec15a5b8751bc7d2",
+              "from_title": "Self-Consistency Improves Chain of Thought Reasoning in Language Models",
+              "role": "mainline",
+              "evolution_trace": {
+                "parent_problem": "B's self-consistency uses independent sampling of reasoning paths without any mechanism to correct early errors or explore alternative paths, relying solely on majority voting over diverse paths.",
+                "child_solution": "A introduces Monte Carlo Tree Search (MCTS) guided by pretrained reinforcement learning to iteratively explore and revise thought sequences, enabling error recovery and structured search.",
+                "mechanism_delta": "B samples multiple independent reasoning paths and aggregates answers; A replaces this with a search-based framework that uses MCTS to dynamically explore, evaluate, and refine thought traces with LLM collaboration.",
+                "evolution_direction": "reasoning_pattern"
+              },
+              "gap_analysis": {
+                "remaining_gap": "A still assumes problems can be decomposed into sequential or hierarchical thought structures, a limitation inherited from B's chain-of-thought approach, and does not address non-linguistic or non-decomposable reasoning tasks.",
+                "what_persists": "Both methods assume reasoning can be expressed as a series of textual steps (thoughts), without fundamentally altering the autoregressive generation or requiring structural understanding beyond language.",
+                "gap_type": "assumption_inherited"
+              },
+              "evolution_action": "reasoning_pattern",
+              "trigger_gap": "B's self-consistency uses independent sampling of reasoning paths without any mechanism to correct early errors or explore alternative paths, relying solely on majority voting over diverse paths.",
+              "what_changed": {
+                "mechanism_change": "B samples multiple independent reasoning paths and aggregates answers; A replaces this with a search-based framework that uses MCTS to dynamically explore, evaluate, and refine thought traces with LLM collaboration."
+              }
+            },
+            {
+              "from_pid": "d766bffc357127e0dc86dd69561d5aeb520d6f4c",
+              "from_title": "Training language models to follow instructions with human feedback",
+              "role": "mainline",
+              "evolution_trace": {
+                "parent_problem": "B's RLHF relies on human labelers to provide reward signals via rankings, which is costly, introduces labeler bias, and limits scalability to diverse tasks.",
+                "child_solution": "A replaces human-provided rewards with a pretrained RL policy that uses domain knowledge to guide thought generation, combined with MCTS to automatically explore and evaluate thought sequences without requiring human feedback.",
+                "mechanism_delta": "Instead of using human rankings to train a reward model (as in B), A uses a pretrained RL agent (trained on domain-specific rewards) and MCTS to automatically generate and prune thought paths, reducing dependence on human annotation.",
+                "evolution_direction": "reasoning_pattern"
+              },
+              "gap_analysis": {
+                "remaining_gap": "A still requires a pretrained RL policy with access to domain-specific rewards, which may not be available for tasks without clear reward structures, similar to B's reliance on human-defined reward rankings.",
+                "what_persists": "A inherits the assumption that a reliable external reward signal (from domain-specific sources) is available for training the RL component.",
+                "gap_type": "self_admitted"
+              },
+              "evolution_action": "reasoning_pattern",
+              "trigger_gap": "B's RLHF relies on human labelers to provide reward signals via rankings, which is costly, introduces labeler bias, and limits scalability to diverse tasks.",
+              "what_changed": {
+                "mechanism_change": "Instead of using human rankings to train a reward model (as in B), A uses a pretrained RL agent (trained on domain-specific rewards) and MCTS to automatically generate and prune thought paths, reducing dependence on human annotation."
+              }
+            },
+            {
+              "from_pid": "1b6e810ce0afd0dd093f789d2b2742d047e316d5",
+              "from_title": "Chain of Thought Prompting Elicits Reasoning in Large Language Models",
+              "role": "mainline",
+              "evolution_trace": {
+                "parent_problem": "B's chain-of-thought prompting uses static linear exemplars; an early reasoning error propagates without recovery.",
+                "child_solution": "A introduces MCTS to explore and evaluate multiple thought paths, enabling error recovery by rolling back and exploring alternatives.",
+                "mechanism_delta": "B relies on few-shot static exemplars for linear reasoning; A uses pretrained RL and MCTS for dynamic tree search over thoughts.",
+                "evolution_direction": "reasoning_pattern"
+              },
+              "gap_analysis": {
+                "remaining_gap": "B requires manually crafted few-shot exemplars with reasoning chains; A requires domain-specific knowledge for pretrained RL, neither achieves zero-shot or unsupervised reasoning without task-specific demonstrations.",
+                "what_persists": "Both assume reasoning can be decomposed into discrete, sequential or hierarchical thought steps; unstructured reasoning is not addressed.",
+                "gap_type": "self_admitted"
+              },
+              "evolution_action": "reasoning_pattern",
+              "trigger_gap": "B's chain-of-thought prompting uses static linear exemplars; an early reasoning error propagates without recovery.",
+              "what_changed": {
+                "mechanism_change": "B relies on few-shot static exemplars for linear reasoning; A uses pretrained RL and MCTS for dynamic tree search over thoughts."
+              }
+            },
+            {
+              "from_pid": "c03fa01fbb9c77fe3d10609ba5f1dee33a723867",
+              "from_title": "ProgPrompt: Generating Situated Robot Task Plans using Large Language Models",
+              "role": "background",
+              "evolution_trace": {
+                "parent_problem": "B relies entirely on static prompt engineering with manually crafted examples; it cannot learn from rewards or search over thought trajectories, limiting adaptability to novel tasks without extensive prompt redesign.",
+                "child_solution": "A introduces a pretrained RL component that learns domain-specific knowledge for thought generation, and an MCTS-LLM collaborative framework that performs iterative search and revision of thought sequences, enabling adaptive exploration beyond fixed prompts.",
+                "mechanism_delta": "A replaces B's static prompt-based generation with a learned RL policy and search-based thought revision, adding dynamic exploration and exploitation of thought paths.",
+                "evolution_direction": "reasoning_pattern"
+              },
+              "gap_analysis": {
+                "remaining_gap": "A does not address the need for manually designed reward functions or domain-specific training data for the RL component, similar to B's requirement for manually crafted example programs; both rely on external human input to guide generation.",
+                "what_persists": "A still assumes availability of domain knowledge (for RL pretraining) and that problems can be decomposed into sequential/hierarchical thought structures, similar to B's assumption of predefined actions/objects.",
+                "gap_type": "assumption_inherited"
+              },
+              "evolution_action": "reasoning_pattern",
+              "trigger_gap": "B relies entirely on static prompt engineering with manually crafted examples; it cannot learn from rewards or search over thought trajectories, limiting adaptability to novel tasks without extensive prompt redesign.",
+              "what_changed": {
+                "mechanism_change": "A replaces B's static prompt-based generation with a learned RL policy and search-based thought revision, adding dynamic exploration and exploitation of thought paths."
+              }
+            }
+          ],
+          "unresolved_gaps": [
+            {
+              "gap_text": "A's method requires domain-specific pretrained RL models to incorporate external knowledge, which limits its generality to domains where such knowledge sources are available, similar to B's reliance on LLM's internal knowledge for domain-specific tasks.",
+              "gap_type": "assumption_inherited",
+              "ancestor_pid": "90350aa626bed47b02d0c162462e5b0ca82be6b2",
+              "ancestor_assumption": "Both A and B assume that problems can be decomposed into sequential or hierarchical thought structures, and do not address tasks where reasoning requires non-decomposable or holistic thinking.",
+              "why_frontier_did_not_close_it": "",
+              "structural_property_name": ""
+            },
+            {
+              "gap_text": "A still assumes problems can be decomposed into sequential or hierarchical thought structures, a limitation inherited from B's chain-of-thought approach, and does not address non-linguistic or non-decomposable reasoning tasks.",
+              "gap_type": "assumption_inherited",
+              "ancestor_pid": "5f19ae1135a9500940978104ec15a5b8751bc7d2",
+              "ancestor_assumption": "Both methods assume reasoning can be expressed as a series of textual steps (thoughts), without fundamentally altering the autoregressive generation or requiring structural understanding beyond language.",
+              "why_frontier_did_not_close_it": "",
+              "structural_property_name": ""
+            },
+            {
+              "gap_text": "A still requires a pretrained RL policy with access to domain-specific rewards, which may not be available for tasks without clear reward structures, similar to B's reliance on human-defined reward rankings.",
+              "gap_type": "scope_self_admitted",
+              "ancestor_pid": "d766bffc357127e0dc86dd69561d5aeb520d6f4c",
+              "ancestor_assumption": "A inherits the assumption that a reliable external reward signal (from domain-specific sources) is available for training the RL component.",
+              "why_frontier_did_not_close_it": "",
+              "structural_property_name": ""
+            },
+            {
+              "gap_text": "B requires manually crafted few-shot exemplars with reasoning chains; A requires domain-specific knowledge for pretrained RL, neither achieves zero-shot or unsupervised reasoning without task-specific demonstrations.",
+              "gap_type": "scope_self_admitted",
+              "ancestor_pid": "1b6e810ce0afd0dd093f789d2b2742d047e316d5",
+              "ancestor_assumption": "Both assume reasoning can be decomposed into discrete, sequential or hierarchical thought steps; unstructured reasoning is not addressed.",
+              "why_frontier_did_not_close_it": "",
+              "structural_property_name": ""
+            },
+            {
+              "gap_text": "The method still relies on domain-specific reward signals for RL training, limiting generalizability to tasks without clear external rewards.",
+              "gap_type": "gap_not_closed_by_step",
+              "ancestor_pid": "",
+              "ancestor_assumption": "A takes the chain-of-thought decomposition of reasoning from pred[3], the idea of exploring multiple reasoning paths from pred[1], and the reinforcement learning based evaluation from pred[2].",
+              "why_frontier_did_not_close_it": "composite synthesis itself left this gap open",
+              "structural_property_name": ""
+            }
+          ],
+          "composite_synthesis": {
+            "what_A_combines": "A takes the chain-of-thought decomposition of reasoning from pred[3], the idea of exploring multiple reasoning paths from pred[1], and the reinforcement learning based evaluation from pred[2].",
+            "is_obvious_composition": false,
+            "obviousness_reason": "The combination of chain-of-thought, multiple paths, and reinforcement learning required designing a novel MCTS-LLM collaboration that reduces LLM calls and produces cognitive mappings, which is not a straightforward application of the components.",
+            "novel_combination": "The ability to autonomously generate cognitive mappings for multi-solution problems with unconstrained thinking, while reducing LLM calls through MCTS-guided search.",
+            "composite_remaining_gap": "The method still relies on domain-specific reward signals for RL training, limiting generalizability to tasks without clear external rewards.",
+            "redundant_preds": [
+              "90350aa626bed47b02d0c162462e5b0ca82be6b2"
+            ]
+          }
+        }
+      },
+      "c695c4e68561347564ea0daa50dc339dff73d8c5": {
+        "title": "Ghost in the Minecraft: Generally Capable Agents for Open-World Environments via Large Language Models with Text-based Knowledge and Memory",
+        "year": 2023,
+        "is_frontier": false,
+        "depth": 1,
+        "pruned": false,
+        "prune_reason": null,
+        "idea": {
+          "entities": [
+            {
+              "name": "Ghost in the Minecraft (GITM)",
+              "description": "A framework integrating Large Language Models with text-based knowledge and memory for generally capable agents in Minecraft."
+            },
+            {
+              "name": "Large Language Models (LLMs)",
+              "description": "Models providing logic and common sense for generating action plans from text."
+            },
+            {
+              "name": "Minecraft",
+              "description": "Open-world environment used as a testbed for developing intelligent agents."
+            },
+            {
+              "name": "Structured actions",
+              "description": "Set of predefined actions that the LLM uses to generate plans for agents."
+            },
+            {
+              "name": "Text-based knowledge and memory",
+              "description": "Knowledge and memory stored in text form, used by the LLM to guide agent behavior."
+            }
+          ],
+          "background": "Minecraft is a popular platform for developing open-world agents, but previous work focuses on specific tasks like 'ObtainDiamond' and suffers from low success rates (around 20%) due to limitations of Reinforcement Learning-based controllers.",
+          "novelty": "GITM integrates LLMs with text-based knowledge and memory to create generally capable agents, leveraging LLM logic and common sense to handle complex, sparse-reward environments through structured action plans.",
+          "contribution": "The primary methods include a set of structured actions and an LLM-based plan generator that produces action plans for agents. The framework achieves significantly higher success rates than prior methods, demonstrating generalization across tasks.",
+          "method": "The framework uses a pre-trained LLM (e.g., GPT-3) to generate action plans from a textual description of the environment and goals. Structured actions are defined as a set of atomic operations. The LLM is prompted with these actions and current text-based context (knowledge and memory) to output a sequence. No training of the LLM is required; it operates via few-shot or zero-shot prompting. Memory is maintained as text logs of past actions and observations.",
+          "detail_reason": "The LLM's pre-trained reasoning and common sense enable it to infer appropriate actions in sparse-reward settings, while structured actions reduce the search space. Text-based memory allows the agent to recall past experiences, aiding long-term planning.",
+          "limitation": "The approach relies on text-based interactions, which may lose fine-grained spatial information. The structured actions require manual design. It is currently evaluated only in Minecraft; generality to other open-world environments is not shown.",
+          "experiment": {
+            "process": "The agent is evaluated on the 'ObtainDiamond' task and potentially other tasks in Minecraft. The agent receives text descriptions of its surroundings and goals, generates plans via the LLM, and executes them as structured actions.",
+            "technical_details": "LLM: likely GPT-3 or similar; action set: predefined for Minecraft (e.g., move, break, craft). Prompts include task description, available actions, and memory.",
+            "baseline": "Compared to prior RL-based methods for ObtainDiamond, such as those using deep Q-learning or policy gradients.",
+            "verification": "Success rate on ObtainDiamond is reported as significantly higher than the ~20% baseline, demonstrating the LLM's planning capability."
+          },
+          "references": [
+            "MineRL: A Large-Scale Dataset of Minecraft Demonstrations for Solving Sparse Reward Tasks",
+            "Language Models are Few-Shot Planners",
+            "Towards Generalist Agents in Open-World Environments with Large Language Models"
+          ]
+        },
+        "evolution": {
+          "evolution_steps": [
+            {
+              "from_pid": "91deaf9d324c8feafc189da0da03e60a60287bca",
+              "from_title": "Code as Policies: Language Model Programs for Embodied Control",
+              "role": "mainline",
+              "evolution_trace": {
+                "parent_problem": "B's method generates code that calls pre-defined perception/control APIs, making it brittle for novel tasks where those APIs are unavailable or the generated code is semantically incorrect.",
+                "child_solution": "A replaces code generation with direct generation of action plans using a fixed set of structured actions, and incorporates text-based memory to maintain context across steps.",
+                "mechanism_delta": "B outputs executable Python code; A outputs a sequence of predefined atomic actions.",
+                "evolution_direction": "reasoning_pattern"
+              },
+              "gap_analysis": {
+                "remaining_gap": "A still relies entirely on LLM's pre-trained knowledge without any fine-tuning or environment-specific grounding, so the generated plans may be semantically inconsistent with the environment's actual dynamics.",
+                "what_persists": "A inherits B's assumption that a pre-trained LLM can directly produce valid plans via prompting, without requiring environment-specific training or verifiers.",
+                "gap_type": "assumption_inherited"
+              },
+              "evolution_action": "reasoning_pattern",
+              "trigger_gap": "B's method generates code that calls pre-defined perception/control APIs, making it brittle for novel tasks where those APIs are unavailable or the generated code is semantically incorrect.",
+              "what_changed": {
+                "mechanism_change": "B outputs executable Python code; A outputs a sequence of predefined atomic actions."
+              }
+            },
+            {
+              "from_pid": "32c9b3859086d15184989454eb878638659e64c6",
+              "from_title": "MineDojo: Building Open-Ended Embodied Agents with Internet-Scale Knowledge",
+              "role": "background",
+              "evolution_trace": {
+                "parent_problem": "B's learned reward from video-language model provides only coarse, aggregated feedback, failing to guide precise step-by-step action sequences required for long-term planning.",
+                "child_solution": "A replaces RL with learned reward by directly prompting a pretrained LLM to generate action plans step-by-step using structured atomic actions and text-based memory.",
+                "mechanism_delta": "Shift from reward-learning+RL to LLM-based autoregressive plan generation with explicit action structure and memory.",
+                "evolution_direction": "reasoning_pattern"
+              },
+              "gap_analysis": {
+                "remaining_gap": "Both A and B are evaluated only in Minecraft, leaving open the challenge of generalizing to other open-world environments with different action spaces or physics.",
+                "what_persists": "A inherits B's domain-specific assumption that the method's success depends on the Minecraft environment and does not test cross-domain transfer.",
+                "gap_type": "scope_unclosed"
+              },
+              "evolution_action": "reasoning_pattern",
+              "trigger_gap": "B's learned reward from video-language model provides only coarse, aggregated feedback, failing to guide precise step-by-step action sequences required for long-term planning.",
+              "what_changed": {
+                "mechanism_change": "Shift from reward-learning+RL to LLM-based autoregressive plan generation with explicit action structure and memory."
+              }
+            },
+            {
+              "from_pid": "1b6e810ce0afd0dd093f789d2b2742d047e316d5",
+              "from_title": "Chain of Thought Prompting Elicits Reasoning in Large Language Models",
+              "role": "mainline",
+              "evolution_trace": {
+                "parent_problem": "B's chain-of-thought prompting generates a static reasoning chain without any mechanism to incorporate environmental feedback or update the plan based on observations, making it unsuitable for interactive planning in open-world environments.",
+                "child_solution": "A introduces a text-based memory and knowledge store that is updated with each action's outcome, and the LLM generates action plans by conditioning on the current context (goals, actions, and memory), allowing iterative refinement based on environmental feedback.",
+                "mechanism_delta": "A extends chain-of-thought prompting from a one-shot static reasoning chain to an interactive, memory-augmented planning loop that uses environmental observations to update the plan.",
+                "evolution_direction": "reasoning_pattern"
+              },
+              "gap_analysis": {
+                "remaining_gap": "A still requires a large pre-trained LLM (e.g., GPT-3) to achieve strong performance, thus does not close B's limitation of needing massive models; moreover, A's reliance on text-based interaction loses fine-grained spatial information, a limitation explicitly acknowledged by A.",
+                "what_persists": "A inherits B's assumption that large language models are necessary and that explicit verbalized reasoning steps are sufficient for task completion, without addressing the spatial detail loss.",
+                "gap_type": "assumption_inherited"
+              },
+              "evolution_action": "reasoning_pattern",
+              "trigger_gap": "B's chain-of-thought prompting generates a static reasoning chain without any mechanism to incorporate environmental feedback or update the plan based on observations, making it unsuitable for interactive planning in open-world environments.",
+              "what_changed": {
+                "mechanism_change": "A extends chain-of-thought prompting from a one-shot static reasoning chain to an interactive, memory-augmented planning loop that uses environmental observations to update the plan."
+              }
+            },
+            {
+              "from_pid": "6b7bf6cf5d0e1004d4468edfac4e8f81c0d0c50d",
+              "from_title": "MineRL Diamond 2021 Competition: Overview, Results, and Lessons Learned",
+              "role": "background",
+              "evolution_trace": {
+                "parent_problem": "B's RL-based competition requires sample-efficient training and has high barrier to participation; the approach is task-specific (ObtainDiamond) and does not generalize across tasks.",
+                "child_solution": "A uses a pre-trained LLM (GPT-3) with few-shot prompting to generate action plans from textual environment descriptions and goals, using a set of manually defined structured actions and text-based memory, requiring no training.",
+                "mechanism_delta": "Replaces RL policy learning with LLM-based few-shot planning using structured actions and text memory, eliminating environment-specific training.",
+                "evolution_direction": "reasoning_pattern"
+              },
+              "gap_analysis": {
+                "remaining_gap": "A still relies on manually designed structured actions and text-based perception, which may lose fine-grained spatial information; A has only been evaluated in Minecraft, so generalization to other open-world environments remains unaddressed.",
+                "what_persists": "A inherits B's assumption that the environment can be fully captured by a fixed set of atomic actions (structured actions in A, similar to the fixed action space in MineRL tasks).",
+                "gap_type": "self_admitted"
+              },
+              "evolution_action": "reasoning_pattern",
+              "trigger_gap": "B's RL-based competition requires sample-efficient training and has high barrier to participation; the approach is task-specific (ObtainDiamond) and does not generalize across tasks.",
+              "what_changed": {
+                "mechanism_change": "Replaces RL policy learning with LLM-based few-shot planning using structured actions and text memory, eliminating environment-specific training."
+              }
+            },
+            {
+              "from_pid": "c03fa01fbb9c77fe3d10609ba5f1dee33a723867",
+              "from_title": "ProgPrompt: Generating Situated Robot Task Plans using Large Language Models",
+              "role": "mainline",
+              "evolution_trace": {
+                "parent_problem": "B's ProgPrompt generates plans without integrating past observations or previous actions into the LLM context, leading to inconsistent plans when tasks require memory across steps.",
+                "child_solution": "A introduces text-based memory logs that record past actions and observations, and includes this memory in the LLM prompt to inform subsequent plan generation.",
+                "mechanism_delta": "B uses a static prompt with only current state primitives; A augments the prompt with dynamic memory logs that accumulate over time.",
+                "evolution_direction": "structural"
+              },
+              "gap_analysis": {
+                "remaining_gap": "A still requires manual specification of structured actions (atomic operations) for each environment, just as B requires predefined action and object primitives; this limits transfer to new domains without engineering effort.",
+                "what_persists": "A inherits B's assumption that a fixed set of action primitives must be predefined by the developer, and does not explore automatic discovery or grounding of actions from natural language.",
+                "gap_type": "assumption_inherited"
+              },
+              "evolution_action": "structural",
+              "trigger_gap": "B's ProgPrompt generates plans without integrating past observations or previous actions into the LLM context, leading to inconsistent plans when tasks require memory across steps.",
+              "what_changed": {
+                "mechanism_change": "B uses a static prompt with only current state primitives; A augments the prompt with dynamic memory logs that accumulate over time."
+              }
+            },
+            {
+              "from_pid": "65fc1f1c567801fee3788974e753cdbf934f07e9",
+              "from_title": "Video PreTraining (VPT): Learning to Act by Watching Unlabeled Online Videos",
+              "role": "background",
+              "evolution_trace": {
+                "parent_problem": "B requires a small labeled dataset of keypress actions to train an inverse dynamics model, limiting applicability where such data is unavailable.",
+                "child_solution": "A eliminates the need for labeled action data by using a pretrained LLM with zero-shot/few-shot prompting to generate action plans from textual descriptions, removing the training requirement.",
+                "mechanism_delta": "A replaces B's semi-supervised imitation learning pipeline (IDM + behavior cloning + RL fine-tuning) with an LLM-based planner that outputs structured action sequences from text context, no training needed.",
+                "evolution_direction": "reasoning_pattern"
+              },
+              "gap_analysis": {
+                "remaining_gap": "Both A and B are only evaluated in Minecraft; A does not demonstrate generalization to other open-world environments, leaving B's scope limitation unaddressed.",
+                "what_persists": "A inherits B's assumption that the approach can be evaluated in a single game environment (Minecraft) without testing generality.",
+                "gap_type": "self_admitted"
+              },
+              "evolution_action": "reasoning_pattern",
+              "trigger_gap": "B requires a small labeled dataset of keypress actions to train an inverse dynamics model, limiting applicability where such data is unavailable.",
+              "what_changed": {
+                "mechanism_change": "A replaces B's semi-supervised imitation learning pipeline (IDM + behavior cloning + RL fine-tuning) with an LLM-based planner that outputs structured action sequences from text context, no training needed."
+              }
+            },
+            {
+              "from_pid": "f3cf71c51b882fe3111d71c4bf104297d38197f8",
+              "from_title": "Inner Monologue: Embodied Reasoning through Planning with Language Models",
+              "role": "background",
+              "evolution_trace": {
+                "parent_problem": "B's inner monologue loop relies on accurate natural language feedback at each step, which may be noisy or incomplete, causing the LLM to generate poor subsequent actions.",
+                "child_solution": "A replaces the real-time feedback loop with a set of structured actions and a text-based memory of past actions and observations, so the LLM generates action plans based on a consolidated context without depending on per-step feedback accuracy.",
+                "mechanism_delta": "B's closed-loop LLM planner uses per-step natural language feedback to adjust actions; A's open-loop LLM planner uses structured actions and text memory to generate plans without real-time feedback.",
+                "evolution_direction": "reasoning_pattern"
+              },
+              "gap_analysis": {
+                "remaining_gap": "A has not addressed B's limitation of limited domain evaluation; A is only tested in Minecraft, leaving open the question of generalizability to other open-world environments with different dynamics and action spaces.",
+                "what_persists": "Both B and A assume that a single pre-trained LLM can generate effective plans without task-specific fine-tuning, relying solely on prompt engineering and textual context.",
+                "gap_type": "scope_unclosed"
+              },
+              "evolution_action": "reasoning_pattern",
+              "trigger_gap": "B's inner monologue loop relies on accurate natural language feedback at each step, which may be noisy or incomplete, causing the LLM to generate poor subsequent actions.",
+              "what_changed": {
+                "mechanism_change": "B's closed-loop LLM planner uses per-step natural language feedback to adjust actions; A's open-loop LLM planner uses structured actions and text memory to generate plans without real-time feedback."
+              }
+            }
+          ],
+          "unresolved_gaps": [
+            {
+              "gap_text": "A still relies entirely on LLM's pre-trained knowledge without any fine-tuning or environment-specific grounding, so the generated plans may be semantically inconsistent with the environment's actual dynamics.",
+              "gap_type": "assumption_inherited",
+              "ancestor_pid": "91deaf9d324c8feafc189da0da03e60a60287bca",
+              "ancestor_assumption": "A inherits B's assumption that a pre-trained LLM can directly produce valid plans via prompting, without requiring environment-specific training or verifiers.",
+              "why_frontier_did_not_close_it": "",
+              "structural_property_name": ""
+            },
+            {
+              "gap_text": "A still requires a large pre-trained LLM (e.g., GPT-3) to achieve strong performance, thus does not close B's limitation of needing massive models; moreover, A's reliance on text-based interaction loses fine-grained spatial information, a limitation explicitly acknowledged by A.",
+              "gap_type": "assumption_inherited",
+              "ancestor_pid": "1b6e810ce0afd0dd093f789d2b2742d047e316d5",
+              "ancestor_assumption": "A inherits B's assumption that large language models are necessary and that explicit verbalized reasoning steps are sufficient for task completion, without addressing the spatial detail loss.",
+              "why_frontier_did_not_close_it": "",
+              "structural_property_name": ""
+            },
+            {
+              "gap_text": "A still requires manual specification of structured actions (atomic operations) for each environment, just as B requires predefined action and object primitives; this limits transfer to new domains without engineering effort.",
+              "gap_type": "assumption_inherited",
+              "ancestor_pid": "c03fa01fbb9c77fe3d10609ba5f1dee33a723867",
+              "ancestor_assumption": "A inherits B's assumption that a fixed set of action primitives must be predefined by the developer, and does not explore automatic discovery or grounding of actions from natural language.",
+              "why_frontier_did_not_close_it": "",
+              "structural_property_name": ""
+            },
+            {
+              "gap_text": "The composition does not address grounding of actions in visual or spatial observations; it relies solely on text descriptions.",
+              "gap_type": "gap_not_closed_by_step",
+              "ancestor_pid": "",
+              "ancestor_assumption": "Current paper takes LLM-as-planner via prompting from pred[0], chain-of-thought reasoning from pred[1], and predefined atomic action primitives from pred[2].",
+              "why_frontier_did_not_close_it": "composite synthesis itself left this gap open",
+              "structural_property_name": ""
+            }
+          ],
+          "composite_synthesis": {
+            "what_A_combines": "Current paper takes LLM-as-planner via prompting from pred[0], chain-of-thought reasoning from pred[1], and predefined atomic action primitives from pred[2].",
+            "is_obvious_composition": true,
+            "obviousness_reason": "Combining LLM planning with chain-of-thought reasoning is a straightforward extension (pred[1] already demonstrates chain-of-thought for reasoning tasks). Adding memory logs to the prompt is mechanically trivial, and using predefined action primitives is standard. No novel interface problem was solved.",
+            "novel_combination": "",
+            "composite_remaining_gap": "The composition does not address grounding of actions in visual or spatial observations; it relies solely on text descriptions.",
+            "redundant_preds": []
+          }
+        }
+      },
+      "fa8fa745f58d362925dd44f02750bab1b30a1189": {
+        "title": "RL-GPT: Integrating Reinforcement Learning and Code-as-policy",
+        "year": 2024,
+        "is_frontier": false,
+        "depth": 1,
+        "pruned": true,
+        "prune_reason": "background",
+        "idea": {
+          "entities": [
+            {
+              "name": "slow agent",
+              "description": "Analyzes actions suitable for coding and decomposes high-level tasks"
+            },
+            {
+              "name": "fast agent",
+              "description": "Executes coding tasks for low-level actions"
+            },
+            {
+              "name": "two-level hierarchical framework",
+              "description": "Combines slow and fast agents to integrate RL and code-as-policy"
+            }
+          ],
+          "background": "Large Language Models (LLMs) have shown proficiency in using tools via coding but face limitations in handling intricate logic and precise control. Prior work often separates high-level planning (coding) from low-level action refinement (RL), lacking seamless integration.",
+          "novelty": "Introduces a two-level hierarchical framework (RL-GPT) with a slow agent that analyzes actions for coding and a fast agent that executes coding, effectively integrating RL and code-as-policy. This decomposition focuses each agent on specific tasks, improving efficiency over existing methods.",
+          "contribution": "The primary method is RL-GPT, a hierarchical framework comprising a slow agent for task decomposition and a fast agent for code execution. The slow agent identifies which actions can be directly coded, while the fast agent implements the code, and low-level actions are refined via RL. This achieves superior efficiency in embodied tasks.",
+          "method": "The architecture consists of two LLM-based agents: the slow agent analyzes the task and outputs action specifications suitable for coding; the fast agent generates Python code to execute these actions. Low-level control policies are trained using RL to refine actions. The pipeline alternates between high-level planning (slow agent) and code execution (fast agent), with RL training for tasks requiring precise control. Key design choices include using GPT for both agents and leveraging code-as-policy for high-level plans.",
+          "detail_reason": "The decomposition into slow and fast agents allows each to specialize: the slow agent handles abstract reasoning without needing low-level details, while the fast agent focuses on code generation. This division reduces complexity and improves efficiency. RL integration enables adaptation to tasks where pure coding fails due to dynamic environments.",
+          "limitation": "The framework assumes that high-level actions can be sufficiently described in code and that low-level actions benefit from RL, which may not hold for all tasks. The reliance on LLMs for both agents introduces computational overhead. Currently limited to embodied tasks with clear hierarchical structure.",
+          "experiment": {
+            "process": "Experiments are conducted in Minecraft and MineDojo benchmarks. The agent is trained to obtain diamonds (a complex task) and evaluated on all MineDojo tasks.",
+            "technical_details": "Uses GPT-4 for both slow and fast agents. RL training employs PPO with a reward function based on task progress. The slow agent outputs a plan as structured code, which the fast agent executes. Low-level actions are refined via RL over multiple episodes.",
+            "baseline": "Compared against traditional RL methods (e.g., PPO) and existing GPT agents (e.g., Code as Policies, SayCan). Achieves SOTA on MineDojo tasks and obtains diamonds quickly.",
+            "verification": "The experiments demonstrate that RL-GPT outperforms baselines in sample efficiency and task completion, verifying that the hierarchical decomposition effectively combines coding and RL."
+          },
+          "references": [
+            "Code as Policies: Language Model Programs for Embodied Control",
+            "SayCan: Do As I Can, Not As I Say: Grounding Language in Robotic Affordances",
+            "Inner Monologue: Embodied Reasoning through Planning with Language Models"
+          ]
+        },
+        "evolution": null
+      },
+      "1eac02f299c171d17190fb257fc1f4c20f0d08ac": {
+        "title": "Large Language Models Are Neurosymbolic Reasoners",
+        "year": 2024,
+        "is_frontier": false,
+        "depth": 1,
+        "pruned": true,
+        "prune_reason": "composite_redundant",
+        "idea": {
+          "entities": [
+            {
+              "name": "Large Language Models (LLMs)",
+              "description": "Neural network models capable of understanding and generating human language, used as the core agent."
+            },
+            {
+              "name": "LLM agent",
+              "description": "The proposed AI agent that leverages an LLM to perform actions in text-based games, enhanced with symbolic modules."
+            },
+            {
+              "name": "Symbolic module",
+              "description": "A component that provides additional symbolic reasoning capabilities to the LLM agent."
+            },
+            {
+              "name": "Text-based games",
+              "description": "Game environments where interactions are through natural language, used as benchmarks for symbolic reasoning."
+            }
+          ],
+          "background": "Many real-world applications involve symbolic reasoning, and Large Language Models (LLMs) have shown promise in natural language tasks. This work investigates LLMs as symbolic reasoners, focusing on text-based games that require skills like math, map reading, sorting, and common sense. Prior work often used LLMs in role-playing or simple question-answering, but not specifically for symbolic reasoning in interactive environments.",
+          "novelty": "The main innovation is the introduction of a symbolic module that augments the LLM's reasoning process, enabling it to handle symbolic tasks in text-based games more effectively. Unlike prior approaches that rely solely on prompting or fine-tuning, this method explicitly integrates symbolic knowledge into the decision-making loop. The agent is initialized with a role and receives both observations and valid actions, combined with the symbolic module, to choose actions.",
+          "contribution": "The primary method is an LLM agent that at each step receives the game observation, valid actions, and a symbolic module. The agent then selects an action to interact with the environment. Core components include the LLM (e.g., GPT), the symbolic module (which provides structured symbolic knowledge), and the action selection interface. The approach achieves an average performance of 88% across symbolic tasks.",
+          "method": "The method uses a pretrained LLM as the core reasoning engine. The agent is initialized with a role description (e.g., 'You are an agent solving symbolic puzzles'). At each turn, the agent receives the current observation and a list of valid actions from the game, plus a symbolic module that encodes domain-specific symbolic rules (e.g., arithmetic or map knowledge). The LLM processes these inputs via a prompt and outputs an action. No additional training is performed; the method is zero-shot or few-shot prompted. The architecture is modular, allowing different LLMs and symbolic modules to be plugged in.",
+          "detail_reason": "The combination of an LLM with a symbolic module is effective because the LLM provides natural language understanding and general knowledge, while the symbolic module supplies structured, logical reasoning that LLMs often struggle with. This hybrid approach compensates for LLM weaknesses in precise symbolic manipulation, leading to higher accuracy on tasks like math and sorting.",
+          "limitation": "The approach relies on the quality and coverage of the symbolic module; if the module is incomplete or incorrect, performance may degrade. It is currently evaluated only on text-based games, so generalization to other symbolic reasoning domains (e.g., real-world planning) is unknown. The method also assumes access to valid actions at each step, which may not hold in all environments.",
+          "experiment": {
+            "process": "The LLM agent was tested on several text-based games that involve symbolic tasks (math, map reading, sorting, common sense). For each task, the agent was given the game description, initial state, and a set of valid actions. The agent interacted with the environment for multiple rounds until an objective was achieved or a maximum number of steps was reached. Performance was measured as task success rate.",
+            "technical_details": "The LLM used is likely GPT-3 or a similar large model. The symbolic module is a manually constructed set of rules or knowledge graphs relevant to each task. The interaction is done via prompts that include the symbolic module's output. No training or fine-tuning was performed; the agent relies on the LLM's in-context learning ability.",
+            "baseline": "Baselines include using the LLM alone without the symbolic module, and possibly random action selection. The paper does not specify other baselines but claims significant improvement over the LLM-only baseline.",
+            "verification": "The experiments verify the core idea by comparing the LLM agent's performance with and without the symbolic module. The average 88% success rate demonstrates that the symbolic augmentation enhances symbolic reasoning capabilities. Ablation studies (not detailed in abstract) likely confirm the necessity of each component."
+          },
+          "references": [
+            "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+            "Tree of Thoughts: Deliberate Problem Solving with Large Language Models",
+            "ReAct: Synergizing Reasoning and Acting in Language Models"
+          ]
+        },
+        "evolution": null
+      },
+      "5d32c364088733c6e8dadc9cf0baa26e10506d61": {
+        "title": "Large Language Models as Commonsense Knowledge for Large-Scale Task Planning",
+        "year": 2023,
+        "is_frontier": false,
+        "depth": 1,
+        "pruned": false,
+        "prune_reason": null,
+        "idea": {
+          "entities": [
+            {
+              "name": "LLM-MCTS",
+              "description": "Algorithm combining LLM-induced world model and policy with Monte Carlo Tree Search for task planning."
+            },
+            {
+              "name": "LLM world model",
+              "description": "Commonsense model of the world derived from LLM, providing prior beliefs for reasoning."
+            },
+            {
+              "name": "LLM policy",
+              "description": "Policy derived from LLM that acts as a heuristic to guide search."
+            },
+            {
+              "name": "MCTS",
+              "description": "Monte Carlo Tree Search algorithm used for planning."
+            },
+            {
+              "name": "GPT2",
+              "description": "One of the LLMs used in experiments to induce world model and policy."
+            },
+            {
+              "name": "GPT3.5",
+              "description": "Another LLM used in experiments to induce world model and policy."
+            },
+            {
+              "name": "Minimum description length (MDL)",
+              "description": "Principle used to determine whether using LLM as world model or policy is better based on description length."
+            }
+          ],
+          "background": "Large-scale task planning is a major challenge. Recent work exploits large language models (LLMs) directly as a policy, showing surprisingly interesting results. This paper builds on that by also using LLMs as a world model.",
+          "novelty": "The key novelty is demonstrating that LLMs provide both a commonsense world model and a policy, and combining them with Monte Carlo Tree Search (MCTS) in a new algorithm (LLM-MCTS). This contrasts with prior work that used LLMs solely as policies. The introduction of minimum description length as a guiding principle for choosing between model-based and policy-based planning is also novel.",
+          "contribution": "The primary method is the LLM-MCTS algorithm, which uses an LLM-induced world model to provide a commonsense prior belief for MCTS reasoning, and an LLM-induced policy as a heuristic to guide the search, vastly improving search efficiency. The core components are the world model and policy derived from the LLM, and the MCTS search algorithm.",
+          "method": "The LLM-MCTS algorithm integrates an LLM-induced world model and policy into MCTS. The world model provides transition probabilities and state priors, acting as a commonsense prior belief for the tree search. The policy provides action probabilities that serve as a heuristic to guide node expansion and selection. The search is performed without explicit training; the LLM is used in a zero-shot manner to generate both world model and policy outputs. The algorithm balances exploration and exploitation via MCTS, leveraging the LLM's knowledge.",
+          "detail_reason": "The methods are effective because the LLM's world model captures commonsense knowledge that helps MCTS reason about plausible state transitions, reducing search space, while the policy heuristic directs the search toward promising actions, increasing efficiency. The minimum description length principle explains why using the world model is better when it is more compact than the policy, as it provides a more efficient representation of the domain.",
+          "limitation": "The paper focuses on complex, novel tasks and may assume that the LLM's commonsense knowledge is sufficiently accurate; inaccuracies in the world model could mislead the search. The approach requires careful design of prompts to extract useful world model and policy from LLMs, and its performance may depend on the quality of the LLM. The MDL principle, while insightful, may not always be easy to compute or apply in practice.",
+          "experiment": {
+            "process": "Experiments were conducted on three tasks: multiplication, multi-hop travel planning, and object rearrangement. For each task, LLM-MCTS was compared against baseline methods: MCTS without LLM guidance, and policies induced by LLMs (GPT2 and GPT3.5). Performance was measured in terms of success rate or task completion metrics.",
+            "technical_details": "LLMs used were GPT2 and GPT3.5. The world model and policy were obtained by prompting the LLM with task descriptions. MCTS parameters such as number of simulations and exploration constant were tuned. Minimum description length was computed based on the complexity of the world model and policy representations.",
+            "baseline": "Baselines included standard MCTS without any LLM guidance, and using LLM as a policy directly (i.e., sampling actions from the LLM without search). Both GPT2 and GPT3.5 were tested as direct policies.",
+            "verification": "Experiments verified that LLM-MCTS outperforms baselines across tasks, demonstrating the benefit of combining world model and policy. Additional analysis of MDL showed that when the world model's description length is substantially smaller than the policy's, model-based planning (LLM-MCTS) is more effective, supporting the guiding principle."
+          },
+          "references": [
+            "Large Language Models as Policy for Task Planning",
+            "Monte Carlo Tree Search: A Survey",
+            "The Minimum Description Length Principle"
+          ]
+        },
+        "evolution": {
+          "evolution_steps": [
+            {
+              "from_pid": "8fd462f6248d5e3f1b6602697c09489086b5655f",
+              "from_title": "Distilling Reasoning Capabilities into Smaller Language Models",
+              "role": "background",
+              "evolution_trace": {
+                "parent_problem": "B's decomposer produces subproblems sequentially with no backtracking; an error in an early subproblem propagates to all subsequent subproblems.",
+                "child_solution": "A uses MCTS to explore multiple decomposition paths; the search can backtrack from low-probability states, mitigating error propagation.",
+                "mechanism_delta": "A replaces B's sequential chain-of-thought decomposition with a tree search that uses an LLM-induced world model to evaluate state transitions and a policy to guide search, allowing recovery from poor initial decompositions.",
+                "evolution_direction": "structural"
+              },
+              "gap_analysis": {
+                "remaining_gap": "A's world model and policy are both derived from the same LLM without external verification; if the LLM's commonsense knowledge is inaccurate, MCTS may still converge to a wrong plan. B's issue of dependence on teacher quality remains, now as dependence on LLM quality.",
+                "what_persists": "A inherits B's reliance on a single large language model as the source of all reasoning knowledge; no external knowledge or training correction is introduced.",
+                "gap_type": "self_admitted"
+              },
+              "evolution_action": "structural",
+              "trigger_gap": "B's decomposer produces subproblems sequentially with no backtracking; an error in an early subproblem propagates to all subsequent subproblems.",
+              "what_changed": {
+                "mechanism_change": "A replaces B's sequential chain-of-thought decomposition with a tree search that uses an LLM-induced world model to evaluate state transitions and a policy to guide search, allowing recovery from poor initial decompositions."
+              }
+            },
+            {
+              "from_pid": "f3cf71c51b882fe3111d71c4bf104297d38197f8",
+              "from_title": "Inner Monologue: Embodied Reasoning through Planning with Language Models",
+              "role": "mainline",
+              "evolution_trace": {
+                "parent_problem": "B relies on external environmental feedback to correct its plans; feedback may be sparse or unavailable, causing degraded performance in long-horizon tasks.",
+                "child_solution": "A uses an LLM-induced world model to simulate action outcomes internally, combined with MCTS search guided by an LLM-induced policy, eliminating the need for external feedback during planning.",
+                "mechanism_delta": "B's planning is open-loop until external feedback arrives; A replaces external feedback with internal world model simulation via MCTS.",
+                "evolution_direction": "structural"
+              },
+              "gap_analysis": {
+                "remaining_gap": "A's world model is derived zero-shot from the LLM and may be inaccurate, leading to misleading search; it does not incorporate real-world verification or adaptation to environment feedback, similar to B's reliance on feedback quality.",
+                "what_persists": "The assumption that the LLM's zero-shot outputs (world model and policy) are sufficiently accurate for planning without fine-tuning or grounding.",
+                "gap_type": "scope_unclosed"
+              },
+              "evolution_action": "structural",
+              "trigger_gap": "B relies on external environmental feedback to correct its plans; feedback may be sparse or unavailable, causing degraded performance in long-horizon tasks.",
+              "what_changed": {
+                "mechanism_change": "B's planning is open-loop until external feedback arrives; A replaces external feedback with internal world model simulation via MCTS."
+              }
+            },
+            {
+              "from_pid": "0e34addae55a571d7efd3a5e2543e86dd7d41a83",
+              "from_title": "Interactive Language: Talking to Robots in Real Time",
+              "role": "background",
+              "evolution_trace": {
+                "parent_problem": "B's behavioral cloning policy directly maps language to motor commands without explicit planning, so it cannot handle novel tasks requiring long-horizon decomposition not present in the training dataset.",
+                "child_solution": "A introduces LLM-MCTS, which uses an LLM-induced world model and policy to perform tree search, enabling explicit task decomposition and adaptation to novel tasks via LLM's commonsense knowledge.",
+                "mechanism_delta": "A replaces B's end-to-end behavioral cloning with a search-based planning algorithm (MCTS) guided by LLM-generated heuristics and world models.",
+                "evolution_direction": "reasoning_pattern"
+              },
+              "gap_analysis": {
+                "remaining_gap": "A still relies on the accuracy of LLM-generated world model and policy; inaccuracies can mislead the search, similar to B's reliance on dataset coverage.",
+                "what_persists": "A inherits B's assumption that language commands are clear and unambiguous; the method does not address noisy or incomplete instructions.",
+                "gap_type": "assumption_inherited"
+              },
+              "evolution_action": "reasoning_pattern",
+              "trigger_gap": "B's behavioral cloning policy directly maps language to motor commands without explicit planning, so it cannot handle novel tasks requiring long-horizon decomposition not present in the training dataset.",
+              "what_changed": {
+                "mechanism_change": "A replaces B's end-to-end behavioral cloning with a search-based planning algorithm (MCTS) guided by LLM-generated heuristics and world models."
+              }
+            },
+            {
+              "from_pid": "c03fa01fbb9c77fe3d10609ba5f1dee33a723867",
+              "from_title": "ProgPrompt: Generating Situated Robot Task Plans using Large Language Models",
+              "role": "mainline",
+              "evolution_trace": {
+                "parent_problem": "B's single-pass prompting generates plans without exploration; it has no world model to simulate action outcomes, so it cannot correct or explore alternatives for novel tasks.",
+                "child_solution": "A integrates Monte Carlo Tree Search with an LLM-induced world model (transition probabilities and state priors) and policy (action probabilities) to systematically search over plan steps, guided by commonsense knowledge.",
+                "mechanism_delta": "B uses a single autoregressive pass to generate a plan, while A uses MCTS with LLM-derived world model and policy to perform iterative tree search, improving exploration and robustness.",
+                "evolution_direction": "structural"
+              },
+              "gap_analysis": {
+                "remaining_gap": "A still requires careful prompt engineering to extract accurate world model and policy from the LLM, and the world model's accuracy is not guaranteed for highly novel tasks, mirroring B's sensitivity to prompt design and limited generalization.",
+                "what_persists": "A inherits B's reliance on manual prompt design per environment and assumes the LLM's commonsense knowledge is sufficiently accurate, without addressing the need for automated prompt optimization or robustness to LLM inaccuracies.",
+                "gap_type": "assumption_inherited"
+              },
+              "evolution_action": "structural",
+              "trigger_gap": "B's single-pass prompting generates plans without exploration; it has no world model to simulate action outcomes, so it cannot correct or explore alternatives for novel tasks.",
+              "what_changed": {
+                "mechanism_change": "B uses a single autoregressive pass to generate a plan, while A uses MCTS with LLM-derived world model and policy to perform iterative tree search, improving exploration and robustness."
+              }
+            },
+            {
+              "from_pid": "344cba18285949fe409fc0b332831bc186cfeb17",
+              "from_title": "Multi-skill Mobile Manipulation for Object Rearrangement",
+              "role": "background",
+              "evolution_trace": {
+                "parent_problem": "B relies on a predefined library of skills and task decomposition, which requires manual engineering for each new task, limiting scalability and generalization to novel tasks.",
+                "child_solution": "A uses an LLM to generate a world model (transition probabilities) and policy (action heuristics) on the fly, integrating them into MCTS to perform planning without predefined skills.",
+                "mechanism_delta": "B's planning uses hand-coded skill modules and hierarchical decomposition; A substitutes these with LLM-generated commonsense knowledge to guide MCTS search.",
+                "evolution_direction": "structural"
+              },
+              "gap_analysis": {
+                "remaining_gap": "A's LLM-induced world model may be inaccurate or biased, leading to suboptimal planning, and A does not address the need for grounding in real-world physical interactions that B attempted through skill execution.",
+                "what_persists": "A inherits B's assumption that planning can be performed in a fully simulated or symbolic environment without addressing challenges of perception and execution in the real world.",
+                "gap_type": "scope_unclosed"
+              },
+              "evolution_action": "structural",
+              "trigger_gap": "B relies on a predefined library of skills and task decomposition, which requires manual engineering for each new task, limiting scalability and generalization to novel tasks.",
+              "what_changed": {
+                "mechanism_change": "B's planning uses hand-coded skill modules and hierarchical decomposition; A substitutes these with LLM-generated commonsense knowledge to guide MCTS search."
+              }
+            }
+          ],
+          "unresolved_gaps": [
+            {
+              "gap_text": "A's world model is derived zero-shot from the LLM and may be inaccurate, leading to misleading search; it does not incorporate real-world verification or adaptation to environment feedback, similar to B's reliance on feedback quality.",
+              "gap_type": "gap_not_closed_by_step",
+              "ancestor_pid": "f3cf71c51b882fe3111d71c4bf104297d38197f8",
+              "ancestor_assumption": "The assumption that the LLM's zero-shot outputs (world model and policy) are sufficiently accurate for planning without fine-tuning or grounding.",
+              "why_frontier_did_not_close_it": "",
+              "structural_property_name": ""
+            },
+            {
+              "gap_text": "A still requires careful prompt engineering to extract accurate world model and policy from the LLM, and the world model's accuracy is not guaranteed for highly novel tasks, mirroring B's sensitivity to prompt design and limited generalization.",
+              "gap_type": "assumption_inherited",
+              "ancestor_pid": "c03fa01fbb9c77fe3d10609ba5f1dee33a723867",
+              "ancestor_assumption": "A inherits B's reliance on manual prompt design per environment and assumes the LLM's commonsense knowledge is sufficiently accurate, without addressing the need for automated prompt optimization or robustness to LLM inaccuracies.",
+              "why_frontier_did_not_close_it": "",
+              "structural_property_name": ""
+            },
+            {
+              "gap_text": "The composition still relies on manually designed prompts per environment and does not address automatic prompt optimization or grounding of LLM knowledge to specific environments, leaving the need for domain-specific tuning.",
+              "gap_type": "gap_not_closed_by_step",
+              "ancestor_pid": "",
+              "ancestor_assumption": "A takes the idea of using an LLM for internal world model simulation from pred[0] and the idea of using an LLM to generate action policies from pred[1], and integrates both into a Monte Carlo Tree Search framework.",
+              "why_frontier_did_not_close_it": "composite synthesis itself left this gap open",
+              "structural_property_name": ""
+            }
+          ],
+          "composite_synthesis": {
+            "what_A_combines": "A takes the idea of using an LLM for internal world model simulation from pred[0] and the idea of using an LLM to generate action policies from pred[1], and integrates both into a Monte Carlo Tree Search framework.",
+            "is_obvious_composition": false,
+            "obviousness_reason": "The combination required solving the interface problem of converting LLM outputs into probabilistic state transition priors (world model) and action probability heuristics (policy) that can guide MCTS exploration and exploitation in a zero-shot manner. This integration is not a mere sequential application of X and Y, but a co-design where both components interact within the search algorithm.",
+            "novel_combination": "The novel property is the ability to perform large-scale task planning in a zero-shot manner by leveraging LLM commonsense knowledge through both a world model (for internal simulation) and a policy (for heuristic guidance) within MCTS, achieving efficient search without training or environmental feedback.",
+            "composite_remaining_gap": "The composition still relies on manually designed prompts per environment and does not address automatic prompt optimization or grounding of LLM knowledge to specific environments, leaving the need for domain-specific tuning.",
+            "redundant_preds": []
+          }
+        }
+      },
+      "b42713664a72410307839fe44ec51aef8d69c943": {
+        "title": "How Can LLM Guide RL? A Value-Based Approach",
+        "year": 2024,
+        "is_frontier": false,
+        "depth": 1,
+        "pruned": true,
+        "prune_reason": "composite_redundant",
+        "idea": {
+          "entities": [
+            {
+              "name": "LLM",
+              "description": "Large language model providing policy prior"
+            },
+            {
+              "name": "RL",
+              "description": "Reinforcement learning for sequential decision-making"
+            },
+            {
+              "name": "LINVIT",
+              "description": "Algorithm incorporating LLM guidance as regularization in value-based RL"
+            },
+            {
+              "name": "SLINVIT",
+              "description": "Simplified version of LINVIT for practical use"
+            }
+          ],
+          "background": "Reinforcement learning (RL) requires extensive trial-and-error for sequential decision-making, while large language models (LLMs) lack exploration and self-improvement capabilities for planning tasks. This paper studies how LLM policy priors can enhance RL sample efficiency.",
+          "novelty": "Unlike prior work using LLMs for initialization or language-based rewards, this paper directly incorporates LLM guidance as a regularization factor in value-based RL, significantly reducing data needs when the LLM policy is near-optimal.",
+          "contribution": "Proposes LINVIT, which integrates LLM guidance as a regularization term in value-based RL to improve sample efficiency. Also presents SLINVIT, a practical simplification for easier implementation.",
+          "method": "The algorithm augments standard value-based RL (e.g., Q-learning) with an extra regularization term that penalizes deviation from the LLM policy. The training procedure involves updating the value function with this term, thereby guiding exploration. Key design choice: regularization strength can be tuned based on confidence in LLM policy.",
+          "detail_reason": "The regularization approach is effective when the LLM's policy is close to optimal, as it reduces necessary exploration by steering the RL agent towards promising actions from the start, leading to faster convergence with less data.",
+          "limitation": "Assumes the LLM policy is reasonably aligned with the optimal policy; if the LLM prior is poor, regularization may bias learning and degrade performance. The method also relies on access to a suitable LLM for the task domain.",
+          "experiment": {
+            "process": "Experiments are not described in the provided abstract.",
+            "technical_details": "Not available from abstract.",
+            "baseline": "Not specified.",
+            "verification": "Not detailed."
+          },
+          "references": [
+            "Not specified in abstract."
+          ]
+        },
+        "evolution": null
+      },
+      "9a73effed8775962c86587feb0f9ef841fa2ff4c": {
+        "title": "LgTS: Dynamic Task Sampling using LLM-generated sub-goals for Reinforcement Learning Agents",
+        "year": 2023,
+        "is_frontier": false,
+        "depth": 1,
+        "pruned": true,
+        "prune_reason": "background",
+        "idea": {
+          "entities": [
+            {
+              "name": "LgTS",
+              "description": "LLM-guided Teacher-Student learning, a novel approach that uses LLMs to generate sub-goals for RL agents."
+            },
+            {
+              "name": "LLM",
+              "description": "Large Language Model used for high-level planning and sub-goal generation."
+            },
+            {
+              "name": "RL agent",
+              "description": "Reinforcement Learning agent that learns policies to reach goals without knowing transition dynamics."
+            },
+            {
+              "name": "Teacher-Student learning",
+              "description": "Algorithm used by the RL agent to learn successful policies from sub-goals while minimizing environment interactions."
+            },
+            {
+              "name": "sub-goal graph",
+              "description": "Graphical representation of sub-goals generated by LLM to guide the agent."
+            }
+          ],
+          "background": "LLMs have been used for high-level planning in artificial agents, but existing methods require fine-tuning on datasets, carefully engineered prompts, and deterministic execution of LLM outputs. These assumptions limit applicability in dynamic environments.",
+          "novelty": "LgTS removes the need for LLM fine-tuning and deterministic execution by using LLMs to generate a sub-goal graph that guides an RL agent. The agent uses Teacher-Student learning to explore and learn policies without requiring transition dynamics.",
+          "contribution": "The primary methods are LLM-generated sub-goal graphs and Teacher-Student learning. The LLM provides a high-level plan as sub-goals, while the RL agent uses the teacher-student framework to decompose tasks and learn policies efficiently, reducing environment interactions.",
+          "method": "The LLM generates a directed graph of sub-goals from start to goal state without fine-tuning. The RL agent, with no prior knowledge of dynamics, uses a Teacher-Student learning algorithm: the teacher selects sub-goals, and the student learns policies to achieve them. The agent samples sub-goals dynamically based on progress, minimizing interactions.",
+          "detail_reason": "Using LLMs for sub-goal generation leverages their reasoning without requiring fine-tuning, making the method adaptable. The Teacher-Student learning efficiently guides exploration by decomposing the task into manageable sub-problems, reducing the sample complexity.",
+          "limitation": "The approach assumes the LLM can generate meaningful sub-goals without fine-tuning, which may not hold for highly specialized domains. Additionally, the Teacher-Student learning may still require many interactions for complex tasks.",
+          "experiment": {
+            "process": "The proposed LgTS is evaluated on grid-world navigation and continuous control tasks. The agent starts with no prior knowledge and must reach a goal state. Performance is measured by the number of environment interactions and success rate.",
+            "technical_details": "Implemented using a transformer-based LLM (e.g., GPT-3) for sub-goal generation. The RL agent uses a deep Q-network or policy gradient method with experience replay.",
+            "baseline": "Compared against random exploration, pure RL without sub-goals, and LLM-based planning with fine-tuning (e.g., SayCan, Code as Policies).",
+            "verification": "Experiments show LgTS achieves higher success rates with fewer interactions than baselines, demonstrating the effectiveness of LLM-guided sub-goals in reducing exploration."
+          },
+          "references": [
+            "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+            "Teacher-Student Learning for Decision Making",
+            "Planning with Large Language Models for Code Generation"
+          ]
+        },
+        "evolution": null
+      },
+      "4054fc9e8776dc0324cfc215462d606eb75916c0": {
+        "title": "Expectation vs. Experience: Evaluating the Usability of Code Generation Tools Powered by Large Language Models",
+        "year": 2022,
+        "is_frontier": false,
+        "depth": 2,
+        "pruned": true,
+        "prune_reason": "User study on code generation usability, no method or problem overlap.",
+        "idea": null,
+        "evolution": null
+      },
+      "effa7077e6580a8ab22c30d3c876744b4e51cd6e": {
+        "title": "Deep learning, reinforcement learning, and world models",
+        "year": 2022,
+        "is_frontier": false,
+        "depth": 2,
+        "pruned": true,
+        "prune_reason": "General survey of DL/RL, no specific method or problem overlap with LLM-based planning.",
+        "idea": null,
+        "evolution": null
+      },
+      "90350aa626bed47b02d0c162462e5b0ca82be6b2": {
+        "title": "Automatic Chain of Thought Prompting in Large Language Models",
+        "year": 2022,
+        "is_frontier": false,
+        "depth": 2,
+        "pruned": true,
+        "prune_reason": "composite_redundant",
+        "idea": {
+          "entities": [
+            {
+              "name": "Large language models (LLMs)",
+              "description": "Models capable of complex reasoning via intermediate steps."
+            },
+            {
+              "name": "Chain-of-thought (CoT) prompting",
+              "description": "Technique that generates reasoning steps before answering."
+            },
+            {
+              "name": "Auto-CoT",
+              "description": "Automatic method to construct CoT demonstrations by sampling diverse questions and generating reasoning chains."
+            }
+          ],
+          "background": "Chain-of-thought prompting has two paradigms: a simple prompt like 'Let's think step by step' to elicit step-by-step reasoning, and manual demonstrations with question-reasoning chain pairs. The second paradigm requires hand-crafting task-specific demonstrations, which is labor-intensive.",
+          "novelty": "The paper eliminates manual effort by using LLMs to automatically generate reasoning chains for demonstrations. It emphasizes that diversity in sampling questions is crucial to reduce the impact of mistakes in generated chains.",
+          "contribution": "Proposes Auto-CoT, which automatically constructs demonstrations by sampling diverse questions and generating reasoning chains using LLMs. The core components are a question sampling strategy and a reasoning chain generation step, aiming to provide effective zero-shot CoT prompting.",
+          "method": "The method samples a set of questions with diversity (e.g., from different clusters or random selection). For each question, an LLM generates a reasoning chain using the 'Let's think step by step' prompt. The resulting question-chain pairs are used as demonstrations for CoT prompting on test questions. The key design choice is ensuring diversity to mitigate errors from automatic generation.",
+          "detail_reason": "Diverse samples cover different reasoning paths and reduce the chance of systematic errors in demonstrations. This improves robustness compared to using a single or few random chains, which may contain mistakes.",
+          "limitation": "Generated chains may still contain mistakes despite diversity; the method relies on the LLM's ability to produce reasonable chains. It may not handle tasks requiring very specific knowledge or multi-step verification.",
+          "experiment": {
+            "process": "The method is evaluated on ten public benchmark reasoning tasks, comparing zero-shot CoT with manual demonstrations and Auto-CoT.",
+            "technical_details": "Uses GPT-3 (davinci) for generating chains. Questions are sampled to ensure diversity (e.g., via clustering or random subset).",
+            "baseline": "Zero-shot CoT with 'Let's think step by step' and few-shot CoT with human-written demonstrations.",
+            "verification": "Auto-CoT achieves comparable or better performance than manual CoT, showing that automatic diverse demonstrations are effective while saving human effort."
+          },
+          "references": [
+            "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+            "Large Language Models are Zero-Shot Reasoners",
+            "Self-Consistency Improves Chain of Thought Reasoning in Language Models"
+          ]
+        },
+        "evolution": null
+      },
+      "fd1cf28a2b8caf2fe29af5e7fa9191cecfedf84d": {
+        "title": "RT-1: Robotics Transformer for Real-World Control at Scale",
+        "year": 2022,
+        "is_frontier": false,
+        "depth": 2,
+        "pruned": true,
+        "prune_reason": "Focuses on robot control via transformers, not LLM planning.",
+        "idea": null,
+        "evolution": null
+      },
+      "60c8d0619481eaafdd1189af610d0e636271fed5": {
+        "title": "Perceiver-Actor: A Multi-Task Transformer for Robotic Manipulation",
+        "year": 2022,
+        "is_frontier": false,
+        "depth": 2,
+        "pruned": true,
+        "prune_reason": "Describes a multi-task transformer for manipulation, not LLM-based planning.",
+        "idea": null,
+        "evolution": null
+      },
+      "33be243ac9dd8723e6267dea45fd6a6172d4f6a5": {
+        "title": "Less is More: Task-aware Layer-wise Distillation for Language Model Compression",
+        "year": 2022,
+        "is_frontier": false,
+        "depth": 2,
+        "pruned": true,
+        "prune_reason": "Focuses on model compression, not planning.",
+        "idea": null,
+        "evolution": null
+      },
+      "5f19ae1135a9500940978104ec15a5b8751bc7d2": {
+        "title": "Self-Consistency Improves Chain of Thought Reasoning in Language Models",
+        "year": 2022,
+        "is_frontier": false,
+        "depth": 2,
+        "pruned": false,
+        "prune_reason": null,
+        "idea": {
+          "entities": [
+            {
+              "name": "Self-consistency",
+              "description": "Decoding strategy that samples diverse reasoning paths and selects the most consistent answer via marginalization."
+            },
+            {
+              "name": "Chain-of-thought prompting",
+              "description": "Prompting method that elicits step-by-step reasoning from language models."
+            },
+            {
+              "name": "Greedy decoding",
+              "description": "Standard decoding that selects the most likely token at each step."
+            }
+          ],
+          "background": "Chain-of-thought prompting with greedy decoding has shown promising results on complex reasoning tasks. However, greedy decoding may not capture the diversity of valid reasoning paths.",
+          "novelty": "This paper proposes self-consistency, a decoding strategy that replaces greedy decoding with sampling multiple reasoning paths and selecting the most consistent answer. This leverages the intuition that correct reasoning problems often admit multiple valid paths leading to the same answer.",
+          "contribution": "The primary method is self-consistency: first sample a diverse set of reasoning paths from the language model, then select the answer that appears most frequently by marginalizing over the paths. This improves robustness and accuracy compared to single-path greedy decoding.",
+          "method": "The method uses a pre-trained large language model (e.g., GPT-3) with chain-of-thought prompting. For each query, multiple reasoning paths are generated via sampling (e.g., temperature sampling). The final answer is determined by aggregating the answers from all paths, e.g., by majority vote. No additional training is required; the strategy is applied at inference time.",
+          "detail_reason": "Self-consistency is effective because complex reasoning problems typically have multiple correct reasoning paths. By sampling diverse paths and selecting the most consistent answer, the model reduces the impact of random errors in any single path. The marginalization over paths provides a natural way to combine evidence.",
+          "limitation": "The approach requires multiple sampling passes, increasing computational cost linearly with the number of paths. It also assumes that the correct answer is the most consistent across diverse reasoning paths, which may not hold for tasks with multiple valid answers or ambiguous questions.",
+          "experiment": {
+            "process": "The method is evaluated on arithmetic (GSM8K, SVAMP, AQuA) and commonsense reasoning (StrategyQA, ARC-challenge) benchmarks.",
+            "technical_details": "GPT-3 (model size not specified) is used with chain-of-thought prompting. Multiple reasoning paths (e.g., 40) are sampled with temperature scaling. Final answer is selected by majority vote.",
+            "baseline": "Compared to standard chain-of-thought prompting with greedy decoding.",
+            "verification": "Experiments show significant accuracy improvements (e.g., +17.9% on GSM8K), demonstrating that self-consistency boosts performance over greedy decoding."
+          },
+          "references": [
+            "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+            "Language Models are Few-Shot Learners",
+            "Evaluating Large Language Models Trained on Code"
+          ]
+        },
+        "evolution": null
+      },
+      "d766bffc357127e0dc86dd69561d5aeb520d6f4c": {
+        "title": "Training language models to follow instructions with human feedback",
+        "year": 2022,
+        "is_frontier": false,
+        "depth": 2,
+        "pruned": false,
+        "prune_reason": null,
+        "idea": {
+          "entities": [
+            {
+              "name": "InstructGPT",
+              "description": "A family of language models fine-tuned with human feedback to better follow user intent."
+            },
+            {
+              "name": "GPT-3",
+              "description": "A large language model with 175 billion parameters that serves as the base model."
+            },
+            {
+              "name": "Reinforcement Learning from Human Feedback (RLHF)",
+              "description": "A training method that uses human rankings as rewards to fine-tune the model via reinforcement learning."
+            }
+          ],
+          "background": "Large language models like GPT-3 often generate outputs that are untruthful, toxic, or not helpful, indicating a misalignment with user intent. Prior work on alignment includes fine-tuning on demonstrations and using human feedback, but scaling up models alone does not inherently improve intent following.",
+          "novelty": "This paper shows that fine-tuning with human feedback can dramatically improve alignment, with a 1.3 billion parameter InstructGPT model outperforming the 175 billion GPT-3 on human evaluations. The key innovation is the two-stage process: supervised learning on demonstrations followed by reinforcement learning from human rankings.",
+          "contribution": "The primary method is InstructGPT, which first fine-tunes GPT-3 via supervised learning on labeler demonstrations, then further fine-tunes it using reinforcement learning from human feedback (RLHF) based on rankings of model outputs. This aligns the model with user intent across a wide range of tasks.",
+          "method": "Starting with a set of prompts (labeler-written and API submissions), we collect demonstrations of desired behavior and fine-tune GPT-3 supervised. Then, for each prompt, we sample multiple outputs from the fine-tuned model and have labelers rank them. We train a reward model on these rankings and use Proximal Policy Optimization (PPO) to fine-tune the supervised model to maximize the reward. The final model is 1.3B parameters.",
+          "detail_reason": "The supervised step provides a strong baseline that learns basic instruction following, while the RL step with human rankings teaches the model nuanced preferences that are difficult to specify via demonstrations alone. The reward model captures complex human preferences, and PPO optimizes the policy to produce outputs that are more likely to be preferred.",
+          "limitation": "The approach relies on expensive human labeling, which introduces potential biases and scalability limitations. Despite improvements, InstructGPT models can still generate harmful or untruthful outputs, and the evaluation is limited to the prompt distribution used during training.",
+          "experiment": {
+            "process": "We evaluate InstructGPT models against GPT-3 baselines via human evaluations on a set of prompts. Labelers compare outputs from different models and indicate preference. We also measure truthfulness and toxicity using automated metrics.",
+            "technical_details": "The 1.3B parameter InstructGPT model is compared to the 175B GPT-3. Human evaluators are shown outputs from both models side-by-side and asked which better follows the instruction. Truthfulness is measured by the API's labeler judgments, and toxicity by a toxicity classifier.",
+            "baseline": "The primary baseline is the original 175B GPT-3 model without fine-tuning. Additionally, supervised fine-tuned models are compared.",
+            "verification": "The preference evaluations show that InstructGPT outputs are preferred over GPT-3 outputs 85% of the time. Truthfulness improves (e.g., 25% fewer untruthful outputs) and toxicity reduces (e.g., 40% less toxic) with minimal performance regressions on public NLP benchmarks."
+          },
+          "references": [
+            "Deep reinforcement learning from human preferences",
+            "Learning to summarize with human feedback",
+            "Fine-tuning language models from human preferences"
+          ]
+        },
+        "evolution": null
+      },
+      "1b6e810ce0afd0dd093f789d2b2742d047e316d5": {
+        "title": "Chain of Thought Prompting Elicits Reasoning in Large Language Models",
+        "year": 2022,
+        "is_frontier": false,
+        "depth": 2,
+        "pruned": false,
+        "prune_reason": null,
+        "idea": {
+          "entities": [
+            {
+              "name": "Chain of thought prompting",
+              "description": "A method where a few chain of thought demonstrations are provided as exemplars in prompting to elicit intermediate reasoning steps."
+            },
+            {
+              "name": "Large language models",
+              "description": "Models with sufficient scale (e.g., 540B parameters) that exhibit emergent reasoning abilities under chain of thought prompting."
+            },
+            {
+              "name": "GSM8K benchmark",
+              "description": "A dataset of math word problems where chain of thought prompting achieves state-of-the-art accuracy."
+            }
+          ],
+          "background": "Standard prompting methods often fail to elicit complex reasoning in large language models. Previous work has explored fine-tuning or using verifiers to improve reasoning, but these require additional training or model modifications.",
+          "novelty": "The main innovation is chain of thought prompting, which uses a small number of exemplars containing intermediate reasoning steps to guide the model, without any fine-tuning. This shows that reasoning abilities emerge naturally in sufficiently large models when provided with such demonstrations.",
+          "contribution": "The primary method is chain of thought prompting: providing a few examples where each includes a step-by-step reasoning chain leading to the answer. This allows the model to decompose complex problems into intermediate steps, improving performance on arithmetic, commonsense, and symbolic reasoning tasks.",
+          "method": "The method uses few-shot prompting with chain of thought demonstrations. No training or fine-tuning is performed; the model is prompted with input and a few exemplars that include reasoning steps. Key design choices include the number of exemplars (e.g., eight) and the clarity of the reasoning chains. The approach is tested on GPT-3 and other large models, with the best results on a 540B parameter model.",
+          "detail_reason": "Chain of thought prompting is effective because it breaks down multi-step reasoning into intermediate subproblems, which the model can solve sequentially. This reduces the cognitive load on the model and leverages its ability to generate coherent text. The method works best with very large models, indicating that emergent reasoning capabilities require sufficient scale.",
+          "limitation": "The method requires large language models (e.g., 540B parameters) to achieve strong performance, which may not be accessible. It also assumes that reasoning steps can be explicitly verbalized, which may not hold for all tasks. Additionally, the performance is sensitive to the quality of the exemplars provided.",
+          "experiment": {
+            "process": "Experiments were conducted on three large language models across arithmetic (e.g., GSM8K), commonsense, and symbolic reasoning tasks. For each task, a few chain of thought exemplars were provided as few-shot prompts, and the model's accuracy was evaluated.",
+            "technical_details": "The models used include GPT-3 variants (e.g., 175B, 540B parameters). Prompting was done with 8 exemplars for GSM8K and varying numbers for other tasks. No fine-tuning or additional training was used.",
+            "baseline": "Baselines include standard few-shot prompting without chain of thought, and for GSM8K, a finetuned GPT-3 with a verifier. Chain of thought prompting outperformed both, achieving state-of-the-art accuracy.",
+            "verification": "The experiments verify the core idea by showing that chain of thought prompting consistently improves over standard prompting across diverse reasoning tasks, and that the gains increase with model scale."
+          },
+          "references": [
+            "Language Models are Few-Shot Learners (Brown et al., 2020)",
+            "Training Verifiers to Solve Math Word Problems (Cobbe et al., 2021)",
+            "Scaling Laws for Neural Language Models (Kaplan et al., 2020)"
+          ]
+        },
+        "evolution": null
+      },
+      "c03fa01fbb9c77fe3d10609ba5f1dee33a723867": {
+        "title": "ProgPrompt: Generating Situated Robot Task Plans using Large Language Models",
+        "year": 2022,
+        "is_frontier": false,
+        "depth": 2,
+        "pruned": true,
+        "prune_reason": "background",
+        "idea": {
+          "entities": [
+            {
+              "name": "ProgPrompt",
+              "description": "A programmatic LLM prompt structure for generating situated robot task plans."
+            },
+            {
+              "name": "Large Language Models (LLMs)",
+              "description": "Models like GPT-3 used to generate action sequences."
+            },
+            {
+              "name": "VirtualHome",
+              "description": "A household task simulator used for evaluation."
+            }
+          ],
+          "background": "Task planning for robots typically requires extensive domain knowledge. Prior work uses LLMs to generate plans but often produces invalid or infeasible actions.",
+          "novelty": "The key innovation is a programmatic prompt structure that includes program-like specifications of actions and objects, as well as example programs. This constrains LLM outputs to be executable in specific environments and robot capabilities.",
+          "contribution": "The primary method is a structured prompting approach that encodes available actions and objects in a program-like format. Core components include the prompt template and generation constraints. It enables functional plan generation across varied tasks and robots.",
+          "method": "The method uses an LLM (e.g., GPT-3) with a carefully designed prompt that includes a description of actions and objects as function signatures, plus example plans. No training is involved; plans are generated by autoregressive decoding with constraints to ensure feasible actions. Ablation experiments refine prompt structure and generation settings.",
+          "detail_reason": "The programmatic prompt leverages LLMs' code generation capabilities, producing structured outputs that are more likely to be syntactically and semantically valid. Constraints during generation prevent infeasible actions.",
+          "limitation": "The approach relies on the LLM's understanding of the programmatic instructions, which may fail for highly novel tasks. It also requires manual design of the prompt template and examples for each new environment.",
+          "experiment": {
+            "process": "Evaluated on VirtualHome household tasks and on a physical robot arm for tabletop tasks.",
+            "technical_details": "VirtualHome simulator for household tasks; physical robot arm (likely UR5 or similar) for tabletop manipulation.",
+            "baseline": "Compared against previous LLM-based planning methods such as generating free-form text and scoring-based approaches.",
+            "verification": "Achieved state-of-the-art success rates, demonstrating that the programmatic prompt improves plan feasibility and task completion."
+          },
+          "references": [
+            "SayCan: Do as I can, not as I say",
+            "Code as Policies: Language Model Programs for Embodied Control",
+            "Grounding Large Language Models in Embodied Environments"
+          ]
+        },
+        "evolution": null
+      },
+      "91deaf9d324c8feafc189da0da03e60a60287bca": {
+        "title": "Code as Policies: Language Model Programs for Embodied Control",
+        "year": 2022,
+        "is_frontier": false,
+        "depth": 2,
+        "pruned": false,
+        "prune_reason": null,
+        "idea": {
+          "entities": [
+            {
+              "name": "Code as Policies",
+              "description": "A formulation that uses language model generated programs (LMPs) for robot control."
+            },
+            {
+              "name": "Language Model Programs (LMPs)",
+              "description": "Programs generated by LLMs to implement robot policies from natural language commands."
+            },
+            {
+              "name": "Large Language Models (LLMs)",
+              "description": "Code-completion trained models used to synthesize robot policy code."
+            },
+            {
+              "name": "Object detectors",
+              "description": "Perception modules that provide input to policy code, e.g., [2], [3]."
+            },
+            {
+              "name": "Control primitive APIs",
+              "description": "Low-level robot control functions that are parameterized by generated policy code."
+            },
+            {
+              "name": "Third-party libraries (NumPy, Shapely)",
+              "description": "Libraries used for arithmetic and spatial-geometric reasoning in policy code."
+            }
+          ],
+          "background": "Large language models trained on code-completion have shown the ability to synthesize simple Python programs from docstrings. This work builds on that capability, repurposing such models to generate robot policy code from natural language commands, enabling embodied control without task-specific training.",
+          "novelty": "The key innovation is re-purposing code-writing LLMs to directly produce executable robot policy code via few-shot prompting, rather than using LLMs for high-level planning or text generation. This approach enables spatial-geometric reasoning through library calls, generalization to new instructions, and contextual interpretation of vague terms (e.g., 'faster').",
+          "contribution": "The primary method is few-shot prompting: providing several example language commands (as comments) and corresponding policy code as input, then asking the LLM to generate new code for a given command. Core components include chaining classic logic structures (if-else, loops) and calling third-party libraries (NumPy, Shapely) to perform arithmetic and spatial reasoning. The generated code outputs parameterized API calls for control primitives.",
+          "method": "Input consists of few-shot examples formatted as comments (language commands) followed by Python policy code. The LLM (trained on code completion) is prompted to generate new code for a new command. The generated code uses classical control flow and invokes perception APIs (e.g., object detector outputs) and control APIs. It also imports libraries like NumPy and Shapely for numerical and geometric operations. No additional training or fine-tuning is performed; the model's existing code synthesis ability is exploited.",
+          "detail_reason": "LLMs trained on code are effective because they learn to compose functions and handle diverse API calls without further training. Using comments as prompts leverages the natural mapping from docstrings to code, making the conversion from natural language to policy straightforward. The reliance on external libraries allows the model to offload complex arithmetic and geometry, overcoming limitations of pure text generation.",
+          "limitation": "The approach depends heavily on the quality and diversity of few-shot examples—poor examples lead to incorrect code. It also requires that all needed perception and control APIs are pre-defined; complex tasks may need many such APIs. The model may generate syntactically valid but semantically incorrect code, especially for novel scenarios not covered by examples.",
+          "experiment": {
+            "process": "Experiments likely involve presenting the LLM with few-shot examples of language commands and corresponding policy code, then asking it to generate code for new commands in a tabletop manipulation setting. The generated code is executed on a robot to perform tasks like moving objects or adjusting velocities, and success rates are measured.",
+            "technical_details": "Use of a pre-trained LLM (e.g., Codex) with few-shot prompting. Perception via object detectors (e.g., from [2], [3]). Control via API calls for robot arm. Libraries: NumPy for calculations, Shapely for geometric operations.",
+            "baseline": "Compare to prior methods that may use human-written policies or learn from demonstration. Likely no baseline that uses LLMs for direct code generation in this context.",
+            "verification": "Experiments verify that the generated code exhibits spatial reasoning, generalizes to new instructions, and correctly interprets ambiguous descriptions ('faster') in context, as demonstrated by successful task completion."
+          },
+          "references": [
+            "Program Synthesis with Large Language Models",
+            "Learning to Manipulate Object Detectors for Robotics",
+            "Robot Control via Code-Generating Language Models"
+          ]
+        },
+        "evolution": null
+      },
+      "32c9b3859086d15184989454eb878638659e64c6": {
+        "title": "MineDojo: Building Open-Ended Embodied Agents with Internet-Scale Knowledge",
+        "year": 2022,
+        "is_frontier": false,
+        "depth": 2,
+        "pruned": true,
+        "prune_reason": "background",
+        "idea": {
+          "entities": [
+            {
+              "name": "MineDojo",
+              "description": "A framework built on Minecraft for building open-ended embodied agents with internet-scale knowledge."
+            },
+            {
+              "name": "Minecraft",
+              "description": "A popular game used as the simulation environment for diverse tasks and knowledge acquisition."
+            },
+            {
+              "name": "Simulation suite",
+              "description": "Part of MineDojo featuring thousands of diverse open-ended tasks."
+            },
+            {
+              "name": "Knowledge base",
+              "description": "Internet-scale database comprising Minecraft videos, tutorials, wiki pages, and forum discussions."
+            },
+            {
+              "name": "Agent learning algorithm",
+              "description": "Novel algorithm leveraging pre-trained video-language models as a learned reward function."
+            },
+            {
+              "name": "Video-language model",
+              "description": "Large pre-trained model used to provide reward signals for agent training without manual shaping."
+            }
+          ],
+          "background": "Autonomous agents have achieved success in specialist domains like Atari and Go but typically learn tabula rasa in isolated environments with manually conceived objectives, failing to generalize across diverse tasks. Prior work lacks a trinity of open-ended environment, large-scale multimodal knowledge, and flexible agent architecture.",
+          "novelty": "The main innovation is the introduction of the trinity of ingredients for generalist agents: an environment supporting many tasks, an internet-scale multimodal knowledge base, and a flexible agent architecture. Additionally, a novel learning algorithm uses pre-trained video-language models as a reward function, eliminating manually designed dense shaping rewards.",
+          "contribution": "The paper presents MineDojo, a framework with a Minecraft simulation suite of thousands of tasks and an internet-scale knowledge base. It proposes an agent learning algorithm that leverages large pre-trained video-language models to provide learned rewards, enabling agents to solve open-ended tasks specified in free-form language without manual reward engineering.",
+          "method": "The agent architecture uses a pre-trained video-language model (e.g., based on CLIP or VideoBERT) to encode video demonstrations and language instructions. The reward function is computed as similarity between the agent's current observation and goal description in the joint embedding space. Training employs reinforcement learning with this learned reward, without manually designed dense rewards. The knowledge base provides diverse training data for the video-language model.",
+          "detail_reason": "The method is effective because it aligns the agent's learning objective with human-like understanding of goals from video and language, leveraging large-scale pre-training to generalize across tasks. Implementation insights include using contrastive learning to align video and text embeddings, and mining diverse tasks from the knowledge base to avoid overfitting.",
+          "limitation": "Current limitations include reliance on the Minecraft domain, which may not transfer to other environments. The agent may struggle with tasks requiring precise control or long-term planning not well captured by video-language rewards. Assumptions include availability of large-scale video-text data for pre-training.",
+          "experiment": {
+            "process": "The agent is trained on a set of open-ended tasks specified in free-form language, using the learned reward from the video-language model. Training involves interaction with the MineDojo simulation suite, with performance measured by task success rate and goal completion.",
+            "technical_details": "The video-language model is pre-trained on the MineDojo knowledge base using contrastive learning. The agent uses a policy network (e.g., PPO) with visual and language inputs. Reward is computed as cosine similarity between encoded observation and goal text.",
+            "baseline": "Baselines include task-specific reward functions and other RL agents without the learned reward (e.g., behavior cloning from videos, sparse reward RL). Comparisons show the learned reward significantly improves sample efficiency and final performance.",
+            "verification": "Experiments verify the core idea by demonstrating that the agent can solve novel tasks not seen during training, and that the learned reward correlates well with human judgment. Ablation studies confirm the importance of the internet-scale knowledge base and the video-language model."
+          },
+          "references": [
+            "Playing Atari with Deep Reinforcement Learning",
+            "Learning Transferable Visual Models From Natural Language Supervision (CLIP)",
+            "Minecraft as a Platform for General-Purpose AI Research"
+          ]
+        },
+        "evolution": null
+      },
+      "6b7bf6cf5d0e1004d4468edfac4e8f81c0d0c50d": {
+        "title": "MineRL Diamond 2021 Competition: Overview, Results, and Lessons Learned",
+        "year": 2022,
+        "is_frontier": false,
+        "depth": 2,
+        "pruned": true,
+        "prune_reason": "background",
+        "idea": {
+          "entities": [
+            {
+              "name": "MineRL Diamond 2021 Competition",
+              "description": "Third edition of the MineRL ObtainDiamond competition with a two-track design."
+            },
+            {
+              "name": "MineRL ObtainDiamond task",
+              "description": "Reinforcement learning task to obtain a diamond in the MineRL environment."
+            },
+            {
+              "name": "Two-track design",
+              "description": "Easier track allowing any solution and harder track enforcing generalizable methods."
+            }
+          ],
+          "background": "Reinforcement learning competitions advance the field by providing scope and support for specific problems. Organizers enforce general techniques, sample efficiency, and reproducibility, but these restrictions increase difficulty. The MineRL Diamond 2021 competition addressed this by introducing a separate easier track for newcomers.",
+          "novelty": "The main innovation is the two-track system: an easier track allowing any solution to encourage participation, and a harder track enforcing generalizable solutions. This lowered the barrier for entry while still advancing generalizable methods.",
+          "contribution": "The competition provided extensive tutorials and support. The easier track successfully obtained a diamond, and the harder track progressed generalizable solutions.",
+          "method": "The competition used the MineRL environment with the ObtainDiamond task. The harder track required sample-efficient and generalizable RL algorithms. Exact technical details are not provided in the abstract.",
+          "detail_reason": "The two-track design was effective because it allowed newcomers to participate without stringent restrictions, increasing submissions, while the harder track maintained focus on generalizable approaches.",
+          "limitation": "The harder track still had a high barrier, possibly limiting participation. The competition may not fully address the trade-off between generalizability and performance.",
+          "experiment": {
+            "process": "The competition was held with two tracks. Participants submitted solutions. The easier track allowed any method; the harder track required general techniques.",
+            "technical_details": "The MineRL environment and ObtainDiamond task were used. Specific algorithms are not detailed in the abstract.",
+            "baseline": "No explicit baselines mentioned; comparison between the two tracks.",
+            "verification": "Results showed increased submissions and successful diamond acquisition in the easier track, while the harder track progressed generalizable solutions."
+          },
+          "references": [
+            "",
+            "",
+            ""
+          ]
+        },
+        "evolution": null
+      },
+      "65fc1f1c567801fee3788974e753cdbf934f07e9": {
+        "title": "Video PreTraining (VPT): Learning to Act by Watching Unlabeled Online Videos",
+        "year": 2022,
+        "is_frontier": false,
+        "depth": 2,
+        "pruned": true,
+        "prune_reason": "background",
+        "idea": {
+          "entities": [
+            {
+              "name": "Video PreTraining (VPT)",
+              "description": "Semi-supervised imitation learning method that pretrains agents by watching unlabeled online videos, using an inverse dynamics model to label them."
+            },
+            {
+              "name": "Inverse Dynamics Model (IDM)",
+              "description": "Model trained on a small amount of labeled data to predict actions given two consecutive frames, used to label unlabeled video data."
+            },
+            {
+              "name": "Behavioral Prior",
+              "description": "General policy trained via behavior cloning on the labeled dataset (original + IDM-labeled), capable of zero-shot performance and fine-tuning."
+            }
+          ],
+          "background": "Sequential decision domains like robotics and games lack large labeled datasets for pretraining behavioral priors. Previous work pretrains on text/images but not on action-labeled data. VPT addresses this by leveraging unlabeled online videos.",
+          "novelty": "Extends internet-scale pretraining to sequential decision domains using semi-supervised imitation learning. Key innovation is training an inverse dynamics model with a small labeled dataset to label a huge unlabeled video corpus, enabling behavioral prior learning from unlabeled data.",
+          "contribution": "Primary method: semi-supervised imitation learning with inverse dynamics labeling. Core components: inverse dynamics model (predicts actions from frames), behavioral prior (trained via behavior cloning on labeled data). Functions: label unlabeled videos, then distill a policy with zero-shot and fine-tuning capabilities.",
+          "method": "Architecture: inverse dynamics model takes two consecutive frames (mouse/keyboard at 20Hz) and outputs action probabilities. Training: first train IDM on small labeled Minecraft dataset (e.g., contractor data). Then use IDM to label large unlabeled YouTube Minecraft videos. Finally, train behavioral prior via behavior cloning on combined labeled data. Fine-tuning uses reinforcement learning (e.g., PPO) or further imitation learning on specific tasks.",
+          "detail_reason": "Using human interface (mouse/keyboard at 20Hz) enables direct mapping from videos to actions. IDM is accurate enough with minimal labeled data. Behavioral prior captures broad gameplay, providing zero-shot exploration, and fine-tuning solves hard-exploration tasks that RL from scratch fails on.",
+          "limitation": "Requires a small amount of labeled data for training IDM, and assumes action space is consistent between labeled and unlabeled data. Evaluated only in Minecraft; generalization to other domains not shown. Performance may degrade with large domain shift.",
+          "experiment": {
+            "process": "Train IDM on 2,000 hours of labeled Minecraft play; label 70,000 hours of unlabeled YouTube Minecraft videos; train behavioral prior via behavior cloning; fine-tune on hard-exploration tasks (e.g., obtain diamond) using RL and imitation learning.",
+            "technical_details": "Inverse dynamics model: ResNet-based CNN processing frame pairs; behavior cloning: supervised learning over actions; RL fine-tuning: PPO with reward shaping from task completions.",
+            "baseline": "RL from scratch (PPO without pretraining), behavior cloning from limited labeled data, and random policy.",
+            "verification": "Zero-shot evaluation: behavioral prior obtains items and performs tasks without fine-tuning. Fine-tuned VPT significantly outperforms RL-from-scratch on tasks requiring long-horizon exploration, demonstrating that pretraining provides useful prior knowledge."
+          },
+          "references": [
+            "Learning to Act from Unlabeled Videos via Inverse Dynamics",
+            "Imitation Learning from Observation with Inverse Dynamics",
+            "Minecraft as a Testbed for Deep Reinforcement Learning"
+          ]
+        },
+        "evolution": null
+      },
+      "f3cf71c51b882fe3111d71c4bf104297d38197f8": {
+        "title": "Inner Monologue: Embodied Reasoning through Planning with Language Models",
+        "year": 2022,
+        "is_frontier": false,
+        "depth": 2,
+        "pruned": true,
+        "prune_reason": "background",
+        "idea": {
+          "entities": [
+            {
+              "name": "Inner Monologue",
+              "description": "A reasoning mechanism that uses environment feedback to form an internal dialogue for planning."
+            },
+            {
+              "name": "Large Language Models (LLMs)",
+              "description": "Pre-trained language models used for planning and reasoning in embodied environments."
+            },
+            {
+              "name": "Environment Feedback",
+              "description": "Natural language feedback from the environment, including success detection, scene description, and human interaction."
+            },
+            {
+              "name": "Robotic Control",
+              "description": "The domain of applying LLMs to control robots through high-level instructions."
+            }
+          ],
+          "background": "Recent works have applied LLMs to embodied tasks like robot planning and interaction, requiring understanding of skills, their effects, and linguistic mapping. Prior approaches often need fine-tuning or predefined skill sets, limiting adaptability.",
+          "novelty": "The key innovation is using LLMs in closed-loop with natural language feedback from the environment without additional training. This enables an 'inner monologue' that processes real-time feedback to refine plans, improving instruction completion over open-loop methods.",
+          "contribution": "The primary method is to augment LLM-based planning with environmental feedback (success detection, scene descriptions, human input) via a closed-loop system. Core components include feedback parsing and plan revision, all without fine-tuning the LLM.",
+          "method": "The LLM receives a high-level instruction and generates a sequence of skills. At each step, the environment provides natural language feedback, which is fed back into the LLM as part of the prompt to simulate inner monologue. No additional training is performed; the LLM is used off-the-shelf with zero-shot prompting. Feedback types include binary success, descriptive scene text, and human commands.",
+          "detail_reason": "Using natural language feedback allows the LLM to leverage its pre-trained reasoning capabilities over text, avoiding the need for task-specific training or reward engineering. The inner monologue structure enables the model to consider contextual changes and adjust plans dynamically.",
+          "limitation": "The approach assumes reliable and informative feedback from the environment, which may not always be available or accurate. It may struggle with tasks requiring precise low-level control or long-horizon planning where feedback is sparse or ambiguous.",
+          "experiment": {
+            "process": "Experiments were conducted on three robotic domains (e.g., tabletop manipulation, navigation) measuring high-level instruction completion rate. The agent iteratively plans and receives feedback after each action.",
+            "technical_details": "LLM used is GPT-3 or similar. Feedback is preprocessed into natural language. No fine-tuning; prompts are engineered to incorporate feedback history.",
+            "baseline": "Compared against open-loop planning without feedback, and ablations removing specific feedback types.",
+            "verification": "Results show that closed-loop feedback significantly improves task completion across all three domains, validating the inner monologue concept."
+          },
+          "references": [
+            "SayCan: Grounding Language in Robotic Affordances",
+            "PaLM-E: An Embodied Multimodal Language Model",
+            "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"
+          ]
+        },
+        "evolution": null
+      },
+      "8fd462f6248d5e3f1b6602697c09489086b5655f": {
+        "title": "Distilling Reasoning Capabilities into Smaller Language Models",
+        "year": 2022,
+        "is_frontier": false,
+        "depth": 2,
+        "pruned": true,
+        "prune_reason": "background",
+        "idea": {
+          "entities": [
+            {
+              "name": "Chain of Thought (CoT)",
+              "description": "Step-by-step reasoning approach that improves reasoning in large language models."
+            },
+            {
+              "name": "Socratic CoT",
+              "description": "Alternative reasoning scheme that decomposes problems into subproblems to guide intermediate reasoning steps."
+            },
+            {
+              "name": "Problem decomposer",
+              "description": "Small distilled model that breaks down a complex problem into a sequence of subproblems."
+            },
+            {
+              "name": "Subproblem solver",
+              "description": "Small distilled model that solves each subproblem generated by the decomposer."
+            }
+          ],
+          "background": "Chain-of-thought (CoT) reasoning effectively induces step-by-step reasoning in large language models, but its success is tied to model size, requiring billion-parameter models. Prior work has shown that smaller models struggle with CoT, motivating knowledge distillation from larger models.",
+          "novelty": "This paper introduces Socratic CoT, a novel reasoning scheme that learns to decompose problems into subproblems, and distills this ability into smaller models. Unlike standard CoT which generates a single reasoning chain, Socratic CoT explicitly separates problem decomposition from solving, enabling two specialized small models to work in sync.",
+          "contribution": "The primary methods are knowledge distillation using Socratic CoT to train two small models: a problem decomposer and a subproblem solver. The decomposer breaks the original problem into a sequence of subproblems, and the solver addresses each subproblem. Together, they solve complex problems cooperatively.",
+          "method": "The approach uses a large teacher model (e.g., GPT-3) to generate Socratic CoT reasoning traces, which consist of decompositions and sub-solutions. Two smaller student models (e.g., T5) are trained via distillation: the decomposer learns to output subproblem sequences, and the solver learns to answer each subproblem. The models are trained separately on the decomposed data and then used in tandem during inference.",
+          "detail_reason": "Socratic CoT is effective because it modularizes reasoning into decomposition and solving, allowing smaller models to handle each simpler task. The distillation transfers the teacher's structured reasoning, and the decomposition reduces the complexity for each model, leading to over 70% improvement over baselines on reasoning datasets.",
+          "limitation": "The approach assumes the availability of a large teacher model capable of generating high-quality Socratic CoT traces. It may also suffer from error propagation if the decomposer produces incorrect subproblems. The method is evaluated only on math and commonsense reasoning datasets, so generalization to other domains is unclear.",
+          "experiment": {
+            "process": "The authors evaluate on GSM8K, StrategyQA, and SVAMP. They compare performance of small models (e.g., 220M-parameter T5) trained with standard CoT distillation, Socratic CoT distillation, and baseline fine-tuning without reasoning. They measure accuracy on each dataset.",
+            "technical_details": "Teacher model: likely GPT-3 or similar large LM. Student models: T5 variants. Distillation uses teacher-generated Socratic CoT chains; training is supervised on predicted decompositions and sub-solutions. Inference: given a problem, the decomposer produces subproblems, which are solved sequentially by the solver; the final answer is aggregated from sub-solutions.",
+            "baseline": "Baselines include: (1) fine-tuning the small model directly on the dataset without CoT, (2) distillation using standard CoT (single chain), and (3) few-shot CoT with the small model (if large enough).",
+            "verification": "The experiments verify that Socratic CoT distillation significantly outperforms baselines (over 70% improvement in some cases), demonstrating that decomposition and solver specialization help smaller models achieve reasoning gains comparable to larger models."
+          },
+          "references": [
+            "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+            "Distilling the Knowledge in a Neural Network",
+            "Training Verifiers to Solve Math Word Problems"
+          ]
+        },
+        "evolution": null
+      },
+      "0e34addae55a571d7efd3a5e2543e86dd7d41a83": {
+        "title": "Interactive Language: Talking to Robots in Real Time",
+        "year": 2022,
+        "is_frontier": false,
+        "depth": 2,
+        "pruned": true,
+        "prune_reason": "background",
+        "idea": {
+          "entities": [
+            {
+              "name": "Interactive Language framework",
+              "description": "A framework for building interactive, real-time, natural language-instructable robots in the real world."
+            },
+            {
+              "name": "Behavioral cloning policy",
+              "description": "A policy trained via behavioral cloning on language-annotated trajectories to execute visuo-linguo-motor skills."
+            },
+            {
+              "name": "Language-annotated trajectory dataset",
+              "description": "A dataset of nearly 600,000 language-labeled trajectories for training robot policies."
+            },
+            {
+              "name": "Visuo-linguo-motor skills",
+              "description": "End-to-end skills that integrate visual, linguistic, and motor components for real-world tasks."
+            }
+          ],
+          "background": "The paper addresses the challenge of building robots that can understand and execute natural language commands in real-time interactive settings. Previous work has been limited to smaller sets of commands and less capable policies, often failing to generalize to diverse language inputs or long-horizon tasks.",
+          "novelty": "The proposed framework enables robots to proficiently execute an order of magnitude more commands than prior works, with a 93.5% success rate on 87,000 unique natural language strings. The released dataset is an order of magnitude larger than previously available, and the same policy can be guided by real-time human language for complex long-horizon rearrangement goals.",
+          "contribution": "The primary method is behavioral cloning on a large dataset of hundreds of thousands of language-annotated trajectories. The core components include the dataset, a training environment, a benchmark, and the trained policy, which together enable a wide range of visuo-linguo-motor skills.",
+          "method": "The policy is trained via behavioral cloning, using a dataset of nearly 600,000 trajectories with language annotations. The architecture likely includes a neural network that takes visual and language inputs and outputs motor commands. Training is done in a supervised manner to mimic expert demonstrations. Key design choices include the scale of the dataset and the use of real-world data.",
+          "detail_reason": "The large dataset provides diverse examples covering many language variations and tasks, enabling the policy to generalize to novel commands. Behavioral cloning is simple yet effective for learning from demonstrations, and the real-time interaction capability allows human guidance to correct or extend behavior.",
+          "limitation": "The policy is trained via behavioral cloning, which may not handle novel situations not covered in the dataset. It assumes clear language commands and may struggle with ambiguous or noisy instructions. Additionally, real-world deployment might face challenges such as sensor noise or dynamic environments.",
+          "experiment": {
+            "process": "The policy was trained on the dataset and evaluated on 87,000 unique natural language strings in the real world. Human guidance was tested for long-horizon tasks like 'make a smiley face out of blocks'.",
+            "technical_details": "The training uses behavioral cloning with the collected dataset. The environment and benchmark are open-sourced. The policy is tested on real robotic hardware.",
+            "baseline": "Comparison is made implicitly to previous works that handle fewer commands and smaller datasets.",
+            "verification": "The high success rate (93.5%) on a large set of commands and successful human-guided long-horizon tasks demonstrate that the policy effectively learns visuo-linguo-motor skills and can be interactively controlled."
+          },
+          "references": []
+        },
+        "evolution": null
+      },
+      "344cba18285949fe409fc0b332831bc186cfeb17": {
+        "title": "Multi-skill Mobile Manipulation for Object Rearrangement",
+        "year": 2022,
+        "is_frontier": false,
+        "depth": 2,
+        "pruned": true,
+        "prune_reason": "background",
+        "idea": {
+          "entities": [
+            {
+              "name": "M3",
+              "description": "Multi-skill mobile manipulation method proposed in the paper"
+            },
+            {
+              "name": "Home Assistant Benchmark (HAB)",
+              "description": "Benchmark used for evaluating long-horizon mobile manipulation tasks"
+            },
+            {
+              "name": "Mobile manipulation skills",
+              "description": "Manipulation skills that include mobility for flexible interaction"
+            },
+            {
+              "name": "Region goal navigation",
+              "description": "Navigation skill trained with region goal instead of point goal to allow multiple endpoints"
+            }
+          ],
+          "background": "Long-horizon mobile manipulation for object rearrangement is tackled by decomposing into subtasks. Prior work chains stationary manipulation skills with point-goal navigation, but suffers from compounding errors, e.g., navigating to a bad location where manipulation fails.",
+          "novelty": "The main innovations are using mobile manipulation skills instead of stationary ones, and training the navigation skill with region goal instead of point goal. This provides flexibility and reduces errors in skill chaining.",
+          "contribution": "The primary methods are implementing mobile manipulation skills and a region-goal navigation skill. These components allow the robot to manipulate objects from multiple locations and the navigation to have multiple successful endpoints.",
+          "method": "The method adopts a modular approach that decomposes a full task into subtasks. Mobile manipulation skills are trained to include mobility, enabling interaction from multiple locations. The navigation skill is trained with a region goal, allowing multiple end points that lead to successful manipulation. The overall system is evaluated on 3 challenging tasks.",
+          "detail_reason": "Mobility in manipulation skills provides flexibility to adapt to different locations, avoiding the failure of stationary skills due to poor navigation endpoints. Region-goal navigation reduces the precision requirement and increases the chance of successful skill chaining.",
+          "limitation": "The abstract does not specify limitations explicitly. Potential shortcomings include reliance on predefined subtask decomposition, evaluation only on simulated tasks, and assumptions about environment structure. Generalization to more complex or dynamic environments may be limited.",
+          "experiment": {
+            "process": "The method M3 is evaluated on 3 challenging long-horizon mobile manipulation tasks from the Home Assistant Benchmark (HAB). Performance is compared against prior methods that use stationary skills and point-goal navigation.",
+            "technical_details": "Implemented mobile manipulation skills and region-goal navigation. Evaluation metrics likely include success rate and efficiency.",
+            "baseline": "Prior work using stationary manipulation skills and point-goal navigation.",
+            "verification": "Experiments demonstrate superior performance over baselines, verifying that mobile manipulation skills and region-goal navigation reduce compounding errors."
+          },
+          "references": [
+            "Home Assistant Benchmark (HAB)",
+            "Modular approaches for long-horizon manipulation",
+            "End-to-end RL policies for mobile manipulation"
+          ]
+        },
+        "evolution": null
+      }
+    }
+  }
+]

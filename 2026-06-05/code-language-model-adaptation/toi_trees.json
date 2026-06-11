@@ -1,0 +1,937 @@
+[
+  {
+    "tree_id": 0,
+    "root": "86562f4372233a13c74682c3752326decf8d6cb7",
+    "frontier_title": "Representation Collapse in Sequential Post-Training of Large Language Models",
+    "topic": "code language model adaptation",
+    "max_depth": 5,
+    "trajectory_ascii": "Representation Collapse in Sequenti... (2026)\n├── Qwen2.5 Technical Report (2024)  (background)\n├── ChatGLM: A Family of Large Language... (2024)  (background)\n├── SimPO: Simple Preference Optimizati... (2024)  (background)\n├── The Llama 3 Herd of Models (2024)  (background)\n├── Phi-3 Technical Report: A Highly Ca... (2024)  (background)\n├── FlyLoRA: Boosting Task Decoupling a... (2025)  (background)\n├── Structural features of the fly olfa... (2025)  (background)\n└── Fly-CL: A Fly-Inspired Framework fo... (2025)\n    ├── MOS: Model Surgery for Pre-Trained ... (2024)\n    └── InfLoRA: Interference-Free Low-Rank... (2024)",
+    "trajectory_description": "The research tree traces two main lines: advances in large language model (LLM) post-training—including technical reports for Qwen2.5, ChatGLM, Llama 3, and Phi-3, along with preference optimization (SimPO)—and a separate thread of bio-inspired continual learning methods, starting from model surgery (MOS) and interference-free adaptation (InfLoRA) and progressing through fly-inspired designs (FlyLoRA, structural features of the fly olfactory circuit, and the Fly-CL framework). These lines converge at the frontier paper, \"Representation Collapse in Sequential Post-Training of Large Language Models\" (2026), which investigates a critical failure mode in LLMs when fine-tuned sequentially, directly linking the continual learning challenge addressed by fly-inspired approaches to the practical problem of representation degradation in LLM post-training. Overall, the narrative evolves from isolated advances in LLM capabilities and biological continual learning mechanisms toward a unified understanding of how sequential adaptation can collapse learned representations, with the fly olfactory circuit’s structural principles offering a potential solution to the stability-plasticity dilemma encountered in large-scale models.",
+    "tree": {
+      "86562f4372233a13c74682c3752326decf8d6cb7": {
+        "agent_depth": 0,
+        "relation": "mainline",
+        "children": {
+          "67b305373366f5b7b019145aaf5846bd258ba957": {
+            "agent_depth": 1,
+            "relation": "pruned",
+            "children": {}
+          },
+          "88aa6b1f37d1fd8e0a40499ce9bb87873f03aaa8": {
+            "agent_depth": 1,
+            "relation": "pruned",
+            "children": {}
+          },
+          "c7f9706898bdfa3241601e075b1305649b174ff1": {
+            "agent_depth": 1,
+            "relation": "pruned",
+            "children": {}
+          },
+          "476460cd898bce2f69e099ced882532fbce16554": {
+            "agent_depth": 1,
+            "relation": "pruned",
+            "children": {}
+          },
+          "c3f1fae241a3c2449e675ab750873d800f95513c": {
+            "agent_depth": 1,
+            "relation": "pruned",
+            "children": {}
+          },
+          "40e8af970329135ec95057d73e239dab805ad128": {
+            "agent_depth": 1,
+            "relation": "pruned",
+            "children": {}
+          },
+          "abdceff7d7983cdede9a5aabe6a476d4c72e41a3": {
+            "agent_depth": 1,
+            "relation": "pruned",
+            "children": {}
+          },
+          "a5947f0a1308453eefbb07276978da250d5890bf": {
+            "agent_depth": 1,
+            "relation": "mainline",
+            "children": {
+              "ddd6f19bcab778868d5dffdca00950f8282ba5ad": {
+                "agent_depth": 2,
+                "relation": "mainline",
+                "children": {}
+              },
+              "c6dd8a90d29345830b8958868f1295db174321c0": {
+                "agent_depth": 2,
+                "relation": "mainline",
+                "children": {}
+              },
+              "bd35201507bbf3a304d5b854c10d5d00fbc6f758": {
+                "agent_depth": 2,
+                "relation": "pruned",
+                "children": {}
+              },
+              "3c7bcbc6c978f39a5db2d687906e7c7a8014102d": {
+                "agent_depth": 2,
+                "relation": "pruned",
+                "children": {}
+              },
+              "7a38224a0a3968fc174cf5f2f187667d24f78d67": {
+                "agent_depth": 2,
+                "relation": "pruned",
+                "children": {}
+              },
+              "c594010e0dbe6fac94caebb0578e3f22d1fe95bd": {
+                "agent_depth": 2,
+                "relation": "pruned",
+                "children": {}
+              },
+              "a6bbafa8c56b3b2732eb37dbce52a3de0b998bf3": {
+                "agent_depth": 2,
+                "relation": "pruned",
+                "children": {}
+              },
+              "0349776a13e5f2403cccae8b2e1f5f3342ff480d": {
+                "agent_depth": 2,
+                "relation": "pruned",
+                "children": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "nodes": {
+      "86562f4372233a13c74682c3752326decf8d6cb7": {
+        "title": "Representation Collapse in Sequential Post-Training of Large Language Models",
+        "year": 2026,
+        "is_frontier": true,
+        "depth": 0,
+        "pruned": false,
+        "prune_reason": null,
+        "idea": {
+          "entities": [
+            {
+              "name": "Representation Collapse",
+              "description": "Phenomenon of internal representations becoming low-rank, anisotropic, and homogeneous after sequential post-training stages."
+            },
+            {
+              "name": "Sequential Post-Training",
+              "description": "Chain of multiple post-training stages (e.g., SFT, preference optimization, code specialization) applied to LLMs sequentially."
+            },
+            {
+              "name": "Measurement Suite",
+              "description": "Set of metrics analyzing hidden states, logits, token trajectories, and LoRA updates to quantify representation collapse."
+            },
+            {
+              "name": "Plasticity",
+              "description": "Ability of model to adapt to new tasks or domains during later training stages; hypothesised to be reduced by representation collapse."
+            },
+            {
+              "name": "Interventions",
+              "description": "Lightweight techniques (mixed-domain replay, feature refresh, representation diversity regularization, LoRA update decorrelation) to preserve future learnability."
+            }
+          ],
+          "background": "Large language models are now adapted through chains of post-training stages rather than a single instruction-tuning pass. Prior work has studied individual post-training methods but not the cumulative effect on internal representations across sequential stages.",
+          "novelty": "This paper is the first to systematically study representation collapse across a chain of post-training stages, providing a measurement suite to quantify it. It also proposes lightweight interventions to preserve plasticity without sacrificing behavioral gains.",
+          "contribution": "The primary contribution is a measurement suite for hidden states, logits, token trajectories, and LoRA updates to analyze representation collapse. It also introduces and evaluates interventions (mixed-domain replay, feature refresh, representation diversity regularization, LoRA update decorrelation) to mitigate collapse and maintain future learnability.",
+          "method": "The method involves applying a controlled sequence of post-training stages (e.g., supervised fine-tuning, preference optimization, code specialization) to an LLM. For each stage, hidden states, logits, token trajectories, and LoRA updates are collected and analyzed using the measurement suite. Interventions are applied during training, such as replaying mixed-domain data to maintain diversity or decorrelating LoRA updates to prevent low-rank concentration.",
+          "detail_reason": "The measurement suite provides a direct geometric view of representation quality, linking collapse to plasticity and generalization. Interventions are lightweight (e.g., no extra model parameters) and target the root cause (low-rank concentration) rather than just symptoms.",
+          "limitation": "The study is limited to controlled stage orderings and may not fully capture real-world dynamic training sequences. Interventions were evaluated only on a few tasks and may not generalize to all domains or model sizes.",
+          "experiment": {
+            "process": "LLMs are sequentially trained on stages: supervised fine-tuning, preference optimization, safety/refusal tuning, math and code specialization, and long chain-of-thought tuning. Measurements are taken after each stage to track representation collapse. Interventions are applied in some runs to compare with no intervention.",
+            "technical_details": "Measurement suite includes: (1) singular value spectrum of hidden states to assess rank, (2) cosine similarity matrix of logits for anisotropy, (3) token trajectory length in representation space, (4) LoRA update matrices' effective rank. Interventions: mixed-domain replay (interleaving diverse data), feature refresh (adding noise to activations), representation diversity regularization (penalty on low-rank), LoRA update decorrelation (orthogonality constraint).",
+            "baseline": "Baseline is training without any intervention, i.e., standard sequential post-training. Comparisons also include single-stage training and random stage ordering.",
+            "verification": "Experiments verify the core hypothesis by showing that representation collapse metrics (e.g., lower effective rank, higher anisotropy) correlate with reduced plasticity (slower learning in later stages) and weaker out-of-domain generalization. Interventions that reduce collapse improve these metrics, confirming causal link."
+          },
+          "references": [
+            "On the Dimensionality of Word Embeddings",
+            "LoRA: Low-Rank Adaptation of Large Language Models",
+            "The Cascade of Post-Training: A Study on Multi-Stage LLM Alignment"
+          ]
+        },
+        "evolution": {
+          "evolution_steps": [
+            {
+              "from_pid": "67b305373366f5b7b019145aaf5846bd258ba957",
+              "from_title": "FlyLoRA: Boosting Task Decoupling and Parameter Efficiency via Implicit Rank-Wise Mixture-of-Experts",
+              "role": "background",
+              "evolution_trace": {
+                "parent_problem": "FlyLoRA's implicit router uses a frozen sparse random matrix that may not maintain representation diversity across sequential post-training stages, potentially leading to collapse when fine-tuning on multiple tasks.",
+                "child_solution": "A introduces a measurement suite tracking hidden states, logits, and LoRA update spectra to detect collapse, and applies interventions like mixed-domain replay and representation diversity regularization.",
+                "mechanism_delta": "A adds monitoring and interventions for representation collapse over sequential stages, while B only provides a static LoRA modification without considering multi-stage dynamics.",
+                "evolution_direction": "verification"
+              },
+              "gap_analysis": {
+                "remaining_gap": "A's interventions (replay, regularization) are post-hoc and do not address the root cause of collapse in the LoRA structure itself; it does not propose an improved routing mechanism to inherently prevent collapse.",
+                "what_persists": "A inherits the use of low-rank adaptation (LoRA) and does not alter the fundamental assumption that a fixed low-rank subspace with random initialization is sufficient for sequential tasks.",
+                "gap_type": "assumption_inherited"
+              },
+              "evolution_action": "verification",
+              "trigger_gap": "FlyLoRA's implicit router uses a frozen sparse random matrix that may not maintain representation diversity across sequential post-training stages, potentially leading to collapse when fine-tuning on multiple tasks.",
+              "what_changed": {
+                "mechanism_change": "A adds monitoring and interventions for representation collapse over sequential stages, while B only provides a static LoRA modification without considering multi-stage dynamics."
+              }
+            },
+            {
+              "from_pid": "88aa6b1f37d1fd8e0a40499ce9bb87873f03aaa8",
+              "from_title": "Qwen2.5 Technical Report",
+              "role": "background",
+              "evolution_trace": {
+                "parent_problem": "B's sequential post-training (SFT + RL) lacks any monitoring or analysis of internal representation collapse, risking loss of diversity and future learnability.",
+                "child_solution": "A introduces a measurement suite to track hidden states, logits, token trajectories, and LoRA updates during each stage, and applies interventions like mixed-domain replay and LoRA decorrelation to mitigate collapse.",
+                "mechanism_delta": "A adds explicit representation collapse detection and mitigation tools to B's basic sequential post-training pipeline, whereas B merely performs the stages without such analysis.",
+                "evolution_direction": "verification"
+              },
+              "gap_analysis": {
+                "remaining_gap": "A only studies controlled, fixed stage orderings (e.g., SFT→DPO→code), not real-world dynamic or adaptive training sequences that B also does not address.",
+                "what_persists": "A inherits B's assumption that a fixed sequence of SFT and RL stages is an effective post-training paradigm, without questioning the ordering or dynamics.",
+                "gap_type": "self_admitted"
+              },
+              "evolution_action": "verification",
+              "trigger_gap": "B's sequential post-training (SFT + RL) lacks any monitoring or analysis of internal representation collapse, risking loss of diversity and future learnability.",
+              "what_changed": {
+                "mechanism_change": "A adds explicit representation collapse detection and mitigation tools to B's basic sequential post-training pipeline, whereas B merely performs the stages without such analysis."
+              }
+            },
+            {
+              "from_pid": "c7f9706898bdfa3241601e075b1305649b174ff1",
+              "from_title": "ChatGLM: A Family of Large Language Models from GLM-130B to GLM-4 All Tools",
+              "role": "background",
+              "evolution_trace": {
+                "parent_problem": "B's multi-stage post-training (SFT, RLHF) does not monitor or mitigate representation collapse across stages, potentially degrading future learnability.",
+                "child_solution": "A proposes a measurement suite (hidden states, logits, token trajectories, LoRA updates) to detect collapse and introduces interventions (mixed-domain replay, feature refresh, diversity regularization, LoRA decorrelation) to maintain representation quality.",
+                "mechanism_delta": "A replaces B's blind sequential training pipeline with a monitored pipeline that dynamically adjusts training via replay and regularization to preserve representation diversity.",
+                "evolution_direction": "verification"
+              },
+              "gap_analysis": {
+                "remaining_gap": "A's measurement suite and interventions are evaluated only on a controlled setting with a single model size and task set, leaving open whether they would prevent representation collapse in the large-scale, multilingual, multi-task training of ChatGLM (e.g., 130B parameters, 10T tokens, diverse languages).",
+                "what_persists": "A inherits B's assumption that sequential post-training (SFT → RLHF → specialization) is the default pipeline; A does not explore alternative training orders or non-sequential methods.",
+                "gap_type": "scope_unclosed"
+              },
+              "evolution_action": "verification",
+              "trigger_gap": "B's multi-stage post-training (SFT, RLHF) does not monitor or mitigate representation collapse across stages, potentially degrading future learnability.",
+              "what_changed": {
+                "mechanism_change": "A replaces B's blind sequential training pipeline with a monitored pipeline that dynamically adjusts training via replay and regularization to preserve representation diversity."
+              }
+            },
+            {
+              "from_pid": "476460cd898bce2f69e099ced882532fbce16554",
+              "from_title": "Structural features of the fly olfactory circuit mitigate the stability-plasticity dilemma in continual learning",
+              "role": "background",
+              "evolution_trace": {
+                "parent_problem": "B's plug-and-play fly module does not explicitly monitor or address representation collapse in large neural networks during sequential training; its fixed structure may not adapt to the specific representation dynamics of LLMs.",
+                "child_solution": "A introduces a measurement suite to track hidden states, logits, and token trajectories to detect representation collapse, and proposes dynamic interventions such as mixed-domain replay and representation diversity regularization that adapt based on measurements.",
+                "mechanism_delta": "A replaces B's static biological module with a measurement-driven intervention framework that dynamically mitigates representation collapse during sequential post-training.",
+                "evolution_direction": "objective"
+              },
+              "gap_analysis": {
+                "remaining_gap": "B's approach was validated on small-scale continual learning benchmarks; A's interventions are only tested on controlled stage orderings with few tasks, so the gap of generalizing to realistic dynamic training sequences remains open.",
+                "what_persists": "A inherits B's assumption that continual learning can be managed through specific training interventions or architectural modules, without addressing the need for a unified theory that balances stability and plasticity across diverse domains and model sizes.",
+                "gap_type": "self_admitted"
+              },
+              "evolution_action": "objective",
+              "trigger_gap": "B's plug-and-play fly module does not explicitly monitor or address representation collapse in large neural networks during sequential training; its fixed structure may not adapt to the specific representation dynamics of LLMs.",
+              "what_changed": {
+                "mechanism_change": "A replaces B's static biological module with a measurement-driven intervention framework that dynamically mitigates representation collapse during sequential post-training."
+              }
+            },
+            {
+              "from_pid": "c3f1fae241a3c2449e675ab750873d800f95513c",
+              "from_title": "SimPO: Simple Preference Optimization with a Reference-Free Reward",
+              "role": "background",
+              "evolution_trace": {
+                "parent_problem": "SimPO's reference-free reward based on average log probability does not monitor or account for representation drift across sequential training stages, potentially causing representation collapse in multi-stage post-training pipelines.",
+                "child_solution": "A introduces a measurement suite for hidden states, logits, token trajectories, and LoRA updates to detect representation collapse, along with interventions (mixed-domain replay, feature refresh, representation diversity regularization, LoRA update decorrelation) that actively maintain hidden state diversity.",
+                "mechanism_delta": "A replaces SimPO's ignorance of representation dynamics with proactive monitoring and regularization of hidden state diversity and LoRA update patterns.",
+                "evolution_direction": "verification"
+              },
+              "gap_analysis": {
+                "remaining_gap": "SimPO's reliance on static offline preference data is only partially addressed by A's mixed-domain replay; A still assumes a fixed sequence of stages and does not support truly online or dynamically sequenced training.",
+                "what_persists": "A inherits B's assumption that training stages are separate and ordered, rather than interleaved or adaptively sequenced.",
+                "gap_type": "assumption_inherited"
+              },
+              "evolution_action": "verification",
+              "trigger_gap": "SimPO's reference-free reward based on average log probability does not monitor or account for representation drift across sequential training stages, potentially causing representation collapse in multi-stage post-training pipelines.",
+              "what_changed": {
+                "mechanism_change": "A replaces SimPO's ignorance of representation dynamics with proactive monitoring and regularization of hidden state diversity and LoRA update patterns."
+              }
+            },
+            {
+              "from_pid": "40e8af970329135ec95057d73e239dab805ad128",
+              "from_title": "The Llama 3 Herd of Models",
+              "role": "background",
+              "evolution_trace": {
+                "parent_problem": "B's post-training stages apply sequential updates without any mechanism to monitor or maintain internal representation diversity, potentially leading to hidden state collapse and reduced plasticity for future tasks.",
+                "child_solution": "A introduces a measurement suite that tracks hidden states, logits, and token trajectories, and applies interventions such as mixed-domain replay, feature refresh, representation diversity regularization, and LoRA update decorrelation to prevent representation collapse.",
+                "mechanism_delta": "B performs post-training as a black-box sequence; A adds monitoring and explicit diversity-preserving objectives within each stage.",
+                "evolution_direction": "objective"
+              },
+              "gap_analysis": {
+                "remaining_gap": "B's compositional multimodal integration may not achieve synergy between modalities due to separate training; A does not address multimodal or code-specific adaptation, remaining within a language-only sequential post-training framework.",
+                "what_persists": "A inherits B's assumption that a sequence of post-training stages is a valid training paradigm for LLMs, and does not explore alternative paradigms like continual learning with dynamic task boundaries.",
+                "gap_type": "scope_unclosed"
+              },
+              "evolution_action": "objective",
+              "trigger_gap": "B's post-training stages apply sequential updates without any mechanism to monitor or maintain internal representation diversity, potentially leading to hidden state collapse and reduced plasticity for future tasks.",
+              "what_changed": {
+                "mechanism_change": "B performs post-training as a black-box sequence; A adds monitoring and explicit diversity-preserving objectives within each stage."
+              }
+            },
+            {
+              "from_pid": "abdceff7d7983cdede9a5aabe6a476d4c72e41a3",
+              "from_title": "Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone",
+              "role": "background",
+              "evolution_trace": {
+                "parent_problem": "B performs sequential post-training stages (e.g., fine-tuning, alignment) without monitoring or understanding representation collapse, such as hidden states becoming similar, logits concentrating, and LoRA updates becoming low-rank.",
+                "child_solution": "A introduces a measurement suite for hidden states, logits, token trajectories, and LoRA updates to detect representation collapse, and proposes interventions (mixed-domain replay, feature refresh, representation diversity regularization, LoRA update decorrelation) to mitigate it.",
+                "mechanism_delta": "A adds diagnostic tools and targeted interventions to the post-training pipeline, whereas B simply applies standard fine-tuning without any monitoring or explicit countermeasures for representation collapse.",
+                "evolution_direction": "structural"
+              },
+              "gap_analysis": {
+                "remaining_gap": "A does not address model biases, fairness, or safety issues that B acknowledged as unexplored; also, A's interventions are only tested on limited domains and may not scale to the variety of tasks B aims for.",
+                "what_persists": "A inherits B's assumption that sequential post-training is generally beneficial and that standard transformer architectures and training recipes are sufficient, without questioning whether fundamental changes in training paradigm are needed.",
+                "gap_type": "scope_unclosed"
+              },
+              "evolution_action": "structural",
+              "trigger_gap": "B performs sequential post-training stages (e.g., fine-tuning, alignment) without monitoring or understanding representation collapse, such as hidden states becoming similar, logits concentrating, and LoRA updates becoming low-rank.",
+              "what_changed": {
+                "mechanism_change": "A adds diagnostic tools and targeted interventions to the post-training pipeline, whereas B simply applies standard fine-tuning without any monitoring or explicit countermeasures for representation collapse."
+              }
+            },
+            {
+              "from_pid": "a5947f0a1308453eefbb07276978da250d5890bf",
+              "from_title": "Fly-CL: A Fly-Inspired Framework for Enhancing Efficient Decorrelation and Reduced Training Time in Pre-trained Model-based Continual Representation Learning",
+              "role": "mainline",
+              "evolution_trace": {
+                "parent_problem": "B's decorrelation is applied only to features before similarity matching, not to the backbone's internal representations, so it cannot prevent collapse of hidden states during sequential fine-tuning.",
+                "child_solution": "A monitors hidden states, logits, and token trajectories to detect collapse and applies interventions like mixed-domain replay, feature refresh, representation diversity regularization, and LoRA update decorrelation to maintain representation diversity.",
+                "mechanism_delta": "A extends B's decorrelation from feature-level similarity matching to backbone internal representations and adds monitoring and multiple regularization interventions.",
+                "evolution_direction": "objective"
+              },
+              "gap_analysis": {
+                "remaining_gap": "B's decorrelation method was not tested in highly non-stationary environments where task distributions change drastically; A similarly only evaluates controlled stage orderings and does not address rapid non-stationary shifts.",
+                "what_persists": "A inherits B's assumption that decorrelating representations is universally beneficial without considering potential trade-offs with task-specific information retention.",
+                "gap_type": "scope_unclosed"
+              },
+              "evolution_action": "objective",
+              "trigger_gap": "B's decorrelation is applied only to features before similarity matching, not to the backbone's internal representations, so it cannot prevent collapse of hidden states during sequential fine-tuning.",
+              "what_changed": {
+                "mechanism_change": "A extends B's decorrelation from feature-level similarity matching to backbone internal representations and adds monitoring and multiple regularization interventions."
+              }
+            }
+          ],
+          "unresolved_gaps": [
+            {
+              "gap_text": "B's decorrelation method was not tested in highly non-stationary environments where task distributions change drastically; A similarly only evaluates controlled stage orderings and does not address rapid non-stationary shifts.",
+              "gap_type": "gap_not_closed_by_step",
+              "ancestor_pid": "a5947f0a1308453eefbb07276978da250d5890bf",
+              "ancestor_assumption": "A inherits B's assumption that decorrelating representations is universally beneficial without considering potential trade-offs with task-specific information retention.",
+              "why_frontier_did_not_close_it": "",
+              "structural_property_name": ""
+            }
+          ],
+          "composite_synthesis": null
+        }
+      },
+      "67b305373366f5b7b019145aaf5846bd258ba957": {
+        "title": "FlyLoRA: Boosting Task Decoupling and Parameter Efficiency via Implicit Rank-Wise Mixture-of-Experts",
+        "year": 2025,
+        "is_frontier": false,
+        "depth": 1,
+        "pruned": true,
+        "prune_reason": "background",
+        "idea": {
+          "entities": [
+            {
+              "name": "Low-Rank Adaptation (LoRA)",
+              "description": "A parameter-efficient fine-tuning method for foundation models."
+            },
+            {
+              "name": "Mixture-of-Experts (MoE)",
+              "description": "A technique that uses multiple expert networks and a router to select them."
+            },
+            {
+              "name": "FlyLoRA",
+              "description": "The proposed method that combines LoRA with implicit rank-wise MoE."
+            },
+            {
+              "name": "Rank-wise expert activation",
+              "description": "Activating individual rank dimensions as experts in the up-projection matrix."
+            },
+            {
+              "name": "Implicit router",
+              "description": "A frozen sparse random projection matrix that unifies expert routing and down-projection."
+            }
+          ],
+          "background": "LoRA is widely used for parameter-efficient fine-tuning but suffers from parameter interference, leading to suboptimal performance. MoE-based LoRA variants help reduce intra-task correlations in single-task instruction tuning but introduce extra router parameters and are ineffective for multi-task model merging due to inter-task interference.",
+          "novelty": "FlyLoRA introduces rank-wise expert activation in the up-projection matrix and an implicit router that unifies expert routing and down-projection using a frozen sparse random projection matrix, eliminating the need for an explicit router. This design resolves the trade-off between intra-task decorrelation and computational efficiency while mitigating inter-task interference via the orthogonality property of random matrices.",
+          "contribution": "The primary methods are rank-wise expert activation and an implicit router based on a frozen sparse random matrix. The implicit router replaces the traditional dense trainable down-projection, simultaneously performing routing and projection. This eliminates additional router parameters and reduces interference, enabling effective single-task and multi-task adaptation.",
+          "method": "FlyLoRA modifies LoRA by making the up-projection matrix a rank-wise MoE, where each rank acts as an expert. The down-projection is replaced by a frozen sparse random matrix that functions as an implicit router, combining routing and down-projection. The router is not trained; instead, its random weights provide orthogonality. Training involves fine-tuning only the up-projection experts and possibly other LoRA components. The key design choice is using a sparse random matrix for its orthogonality and parameter efficiency.",
+          "detail_reason": "The frozen sparse random matrix's orthogonality naturally decorrelates expert outputs, mitigating inter-task interference in multi-task merging. By eliminating the explicit router, the method reduces computational overhead and parameter count, while the random projection provides a fixed, diverse set of routing weights that generalize well across tasks.",
+          "limitation": "The paper's abstract does not discuss limitations explicitly. Potential shortcomings include reliance on random projections which may not be optimal for all tasks, and the assumption that rank-wise experts are sufficient for decoupling. The method may also require careful tuning of expert sparsity and rank sizes.",
+          "experiment": {
+            "process": "Experiments were conducted across four domains: general knowledge understanding, scientific question answering, mathematical reasoning, and code generation. The method was compared against LoRA and MoE-based LoRA variants.",
+            "technical_details": "Implementation details such as base model, rank size, and sparsity level are not provided in the abstract. The implicit router uses a frozen sparse random matrix; the exact sparsity pattern may be from a Gaussian distribution.",
+            "baseline": "Baselines include standard LoRA and previous MoE-based LoRA variants (e.g., MoRA, LoRA-MoE).",
+            "verification": "Performance improvements over baselines in all four domains validate that rank-wise expert activation and implicit routing reduce both intra- and inter-task interference, leading to better fine-tuning and model merging."
+          },
+          "references": [
+            "Low-Rank Adaptation (LoRA) paper (Hu et al., 2021)",
+            "Mixture-of-Experts (MoE) in Transformers (Shazeer et al., 2017)",
+            "MoRA: Parameter-Efficient Fine-Tuning with Mixture of Rank-1 Adaptors"
+          ]
+        },
+        "evolution": null
+      },
+      "88aa6b1f37d1fd8e0a40499ce9bb87873f03aaa8": {
+        "title": "Qwen2.5 Technical Report",
+        "year": 2024,
+        "is_frontier": false,
+        "depth": 1,
+        "pruned": true,
+        "prune_reason": "background",
+        "idea": {
+          "entities": [
+            {
+              "name": "Qwen2.5",
+              "description": "A comprehensive series of large language models (LLMs) designed to meet diverse needs, including base and instruction-tuned models with quantized versions and MoE variants."
+            }
+          ],
+          "background": "Building on previous Qwen iterations, which used 7 trillion tokens for pre-training, this work scales up to 18 trillion tokens and enhances post-training with over 1 million supervised finetuning samples and multistage reinforcement learning.",
+          "novelty": "The main innovations are scaling pre-training data from 7 to 18 trillion tokens, implementing intricate supervised finetuning with over 1 million samples, and introducing multistage reinforcement learning. Additionally, new mixture-of-experts (MoE) variants (Qwen2.5-Turbo and Qwen2.5-Plus) are introduced for hosted solutions.",
+          "contribution": "The primary methods include large-scale pre-training on 18 trillion tokens, extensive supervised finetuning, and multistage reinforcement learning. Core components are open-weight base and instruction-tuned models, quantized versions, and proprietary MoE models.",
+          "method": "The architecture includes both dense and mixture-of-experts (MoE) variants. Pre-training uses 18 trillion tokens of high-quality data. Post-training consists of supervised finetuning with over 1 million samples followed by multistage reinforcement learning to enhance human preference, long text generation, structural data analysis, and instruction following. Model sizes are diversified to handle varied use cases.",
+          "detail_reason": "The chosen methods are effective because scaling data provides stronger common sense and reasoning, while extensive finetuning and reinforcement learning align models with human preferences and improve specific capabilities like long text generation and instruction following.",
+          "limitation": "The report does not specify limitations, but as a general-purpose LLM series, it may not be specifically optimized for code generation tasks. The proprietary MoE models are only available via hosted solutions, limiting accessibility.",
+          "experiment": {
+            "process": "Experimental details are not provided in the abstract, but evaluations likely cover common sense, reasoning, long text generation, structural data analysis, and instruction following benchmarks.",
+            "technical_details": "Specific training technologies are not disclosed, but likely involve standard transformer architectures with attention mechanisms and efficient training strategies for large-scale data.",
+            "baseline": "Previous Qwen models (e.g., Qwen2) are used as baselines for comparison.",
+            "verification": "Experiments verify improvements through benchmarks in common sense, reasoning, long text generation, etc., but details are absent."
+          },
+          "references": [
+            "Qwen Technical Report",
+            "Qwen2 Technical Report",
+            "Scaling Laws for Neural Language Models"
+          ]
+        },
+        "evolution": null
+      },
+      "c7f9706898bdfa3241601e075b1305649b174ff1": {
+        "title": "ChatGLM: A Family of Large Language Models from GLM-130B to GLM-4 All Tools",
+        "year": 2024,
+        "is_frontier": false,
+        "depth": 1,
+        "pruned": true,
+        "prune_reason": "background",
+        "idea": {
+          "entities": [
+            {
+              "name": "GLM-4",
+              "description": "Flagship model in the GLM-4 series, pre-trained on 10 trillion tokens, aligned for Chinese and English usage."
+            },
+            {
+              "name": "GLM-4-Air",
+              "description": "A variant of GLM-4 with optimized efficiency."
+            },
+            {
+              "name": "GLM-4-9B",
+              "description": "A 9B parameter variant of the GLM-4 series."
+            },
+            {
+              "name": "GLM-4 All Tools",
+              "description": "A version of GLM-4 aligned to autonomously use tools based on user intent."
+            },
+            {
+              "name": "GPT-4",
+              "description": "Baseline model from OpenAI, used for comparison in evaluations."
+            },
+            {
+              "name": "GPT-4 Turbo",
+              "description": "Enhanced version of GPT-4 with longer context (128K), used as baseline."
+            },
+            {
+              "name": "Claude 3",
+              "description": "Anthropic's model, used as baseline for long context tasks."
+            }
+          ],
+          "background": "The ChatGLM family of large language models has evolved from GLM-130B through multiple generations. This work focuses on the GLM-4 series, which benefits from lessons learned in prior iterations and aims to advance multilingual capabilities, particularly in Chinese and English.",
+          "novelty": "The GLM-4 models are pre-trained on ten trillion tokens spanning Chinese, English, and 24 other languages, with a multi-stage post-training alignment process combining supervised fine-tuning and reinforcement learning from human feedback. This enables strong performance across diverse benchmarks, rivaling GPT-4 in general metrics and outperforming it in Chinese alignment.",
+          "contribution": "The primary methods include large-scale multilingual pre-training on 10T tokens, followed by multi-stage post-training (SFT + RLHF) for alignment. The core components are the base GLM-4 model, its efficient variants (Air, 9B), and the All Tools version that integrates autonomous tool use. Evaluations demonstrate state-of-the-art results on benchmarks like MMLU, GSM8K, and HumanEval.",
+          "method": "Architecture details are not specified, but the model is a dense transformer. Pre-training uses 10 trillion tokens (mostly Chinese and English, plus 24 languages). Training procedure: first pre-training, then multi-stage post-training including supervised fine-tuning on instruction data and RLHF. Key design choices include a focus on Chinese-English bilingual alignment and a multi-stage alignment pipeline to improve instruction following and tool use.",
+          "detail_reason": "The multi-stage post-training addresses both instruction following and tool use effectively, as shown by high scores on IFEval and AlignBench. The large-scale pre-training on diverse languages ensures broad knowledge, while targeted alignment boosts performance on specific tasks like Chinese benchmarks.",
+          "limitation": "The models are primarily optimized for Chinese and English, which may limit performance on other languages. The All Tools version is only available as a separate aligned model. Additionally, the paper does not discuss computational costs or potential biases in the training data.",
+          "experiment": {
+            "process": "Models were evaluated on standard benchmarks including MMLU, GSM8K, MATH, BBH, GPQA, HumanEval for general capabilities; IFEval for instruction following; long-context tasks (up to 128K tokens); and AlignBench for Chinese alignment. Comparisons were made against GPT-4, GPT-4 Turbo, and Claude 3.",
+            "technical_details": "Evaluation metrics include accuracy, pass rates, and task-specific scores. Long-context tasks test models on processing sequences up to 128K tokens. AlignBench assesses human preferences for Chinese responses.",
+            "baseline": "GPT-4, GPT-4 Turbo (128K), and Claude 3 were used as baselines for various tasks. For long context, GPT-4 Turbo and Claude 3 were specifically compared.",
+            "verification": "The experiments verify the core idea that large-scale multilingual pre-training combined with multi-stage alignment yields models that rival or surpass top-tier competitors, particularly in Chinese and instruction following."
+          },
+          "references": [
+            "GLM-130B: An Open Bilingual Pre-trained Model",
+            "Training Language Models to Follow Instructions with Human Feedback",
+            "Scaling Instruction-Finetuned Language Models"
+          ]
+        },
+        "evolution": null
+      },
+      "476460cd898bce2f69e099ced882532fbce16554": {
+        "title": "Structural features of the fly olfactory circuit mitigate the stability-plasticity dilemma in continual learning",
+        "year": 2025,
+        "is_frontier": false,
+        "depth": 1,
+        "pruned": true,
+        "prune_reason": "background",
+        "idea": {
+          "entities": [
+            {
+              "name": "Fly Model",
+              "description": "A minimal plug-and-play component based on the fly olfactory circuit that integrates with machine learning methods."
+            },
+            {
+              "name": "stability-plasticity dilemma",
+              "description": "The challenge of maintaining previously learned knowledge while adapting to new information in continual learning."
+            },
+            {
+              "name": "fly olfactory circuit",
+              "description": "The biological neural circuit in fruit flies responsible for odor processing, used as inspiration for the model."
+            }
+          ],
+          "background": "Continual learning in artificial neural networks suffers from the stability-plasticity dilemma, where networks struggle to remember old tasks while learning new ones. In contrast, biological brains effectively manage this trade-off, but the underlying strategies are not well understood and have been underexplored for machine learning.",
+          "novelty": "This work presents a minimal model of the fly olfactory circuit as a plug-and-play component that enhances both memory stability and learning plasticity. Unlike previous continual learning methods that typically trade off one for the other, the Fly Model simultaneously improves both, overcoming limitations of existing strategies.",
+          "contribution": "The primary method is integrating a biologically inspired Fly Model into machine learning architectures for continual learning. The core component is a simplified fly olfactory circuit that processes inputs in a way that mitigates catastrophic forgetting. Its function is to provide a modular solution that can be easily added to existing models with minimal computational overhead.",
+          "method": "The Fly Model is a plug-and-play module based on the structural features of the fly olfactory circuit, including elements like the antennal lobe and mushroom body. It is incorporated into neural network pipelines for continual learning tasks. The model is trained end-to-end with standard datasets, and key design choices include preserving sparse representations and leveraging inhibitory connections to balance stability and plasticity. The training procedure involves standard continual learning protocols with task boundaries or streaming data.",
+          "detail_reason": "The chosen methods are effective because the fly olfactory circuit naturally balances stability and plasticity through its wiring and dynamics. Implementation insights include using biologically plausible components that require minimal additional computation, making the module practical for integration into existing deep learning frameworks.",
+          "limitation": "The abstract does not specify limitations, but potential shortcomings include the simplicity of the model may not capture all aspects of biological continual learning. Additionally, the approach has only been validated on commonly used datasets and may not generalize to more complex or realistic scenarios.",
+          "experiment": {
+            "process": "The Fly Model was validated across various challenging continual learning scenarios using commonly used datasets. It was compared against existing continual learning strategies to evaluate memory stability and learning plasticity.",
+            "technical_details": "The specific technologies include integration with modern machine learning methods, but details on architectures, optimizers, and hyperparameters are not provided in the abstract.",
+            "baseline": "Baselines include current continual learning strategies such as regularization-based, replay-based, and dynamic architecture methods.",
+            "verification": "Experiments verify the core idea by showing that the Fly Model enhances both stability and plasticity, outperforming baselines in terms of forgetting and learning new tasks, thereby demonstrating mitigation of the stability-plasticity dilemma."
+          },
+          "references": [
+            "On the stability-plasticity dilemma and continual learning in neural networks",
+            "A neural network model of the fly olfactory circuit for odor processing",
+            "Continual learning with biological inspiration: balancing stability and plasticity"
+          ]
+        },
+        "evolution": null
+      },
+      "c3f1fae241a3c2449e675ab750873d800f95513c": {
+        "title": "SimPO: Simple Preference Optimization with a Reference-Free Reward",
+        "year": 2024,
+        "is_frontier": false,
+        "depth": 1,
+        "pruned": true,
+        "prune_reason": "background",
+        "idea": {
+          "entities": [
+            {
+              "name": "SimPO",
+              "description": "Simple Preference Optimization, a reference-free reward method using average log probability."
+            },
+            {
+              "name": "DPO",
+              "description": "Direct Preference Optimization, a baseline offline preference optimization algorithm."
+            },
+            {
+              "name": "Bradley-Terry objective",
+              "description": "Pairwise comparison model used for preference optimization, modified with a target reward margin."
+            },
+            {
+              "name": "average log probability",
+              "description": "Implicit reward used in SimPO, calculated as the mean log probability of tokens in a sequence."
+            },
+            {
+              "name": "reference-free reward",
+              "description": "Reward formulation that eliminates the need for a separate reference model, improving efficiency."
+            }
+          ],
+          "background": "Direct Preference Optimization (DPO) is a widely used offline preference optimization algorithm that reparameterizes reward functions in reinforcement learning from human feedback (RLHF) to enhance simplicity and training stability. However, DPO requires a reference model and uses reward formulations that may not align perfectly with generation.",
+          "novelty": "SimPO introduces a simpler approach by using the average log probability of a sequence as the implicit reward, which eliminates the need for a reference model and better aligns with model generation. Additionally, it incorporates a target reward margin into the Bradley-Terry objective to encourage larger separation between winning and losing responses.",
+          "contribution": "The primary method is a reference-free reward based on average log probability, which reduces compute and memory overhead. A target reward margin is added to the Bradley-Terry loss to improve preference separation. These components together form the SimPO algorithm for offline preference optimization.",
+          "method": "SimPO uses the average log probability of a generated sequence as the reward signal. The training objective is a modified Bradley-Terry loss with an added target reward margin, which pushes the log probabilities of preferred responses higher than dispreferred ones by a specified margin. No reference model is used, making the approach more efficient. The algorithm is trained on offline preference pairs.",
+          "detail_reason": "The average log probability reward directly reflects the model's generation likelihood, aligning optimization with actual generation. The target reward margin forces a larger gap between winning and losing responses, improving reward signal discrimination and preventing overfitting.",
+          "limitation": "The paper does not discuss limitations explicitly, but as an offline method, SimPO relies on static preference data and may not adapt to online feedback. The margin hyperparameter requires tuning and might not generalize across diverse tasks.",
+          "experiment": {
+            "process": "SimPO was compared to DPO and its variants across multiple base and instruction-tuned models (Mistral, Llama 3, Gemma 2) on chat evaluation benchmarks.",
+            "technical_details": "Evaluated on AlpacaEval 2, MT-Bench, and Arena-Hard using standard training setups.",
+            "baseline": "DPO and its latest variants (e.g., iterative DPO, sample-based DPO) served as baselines.",
+            "verification": "Consistent outperformance over baselines on all benchmarks demonstrates the effectiveness of the reference-free reward and margin mechanism."
+          },
+          "references": [
+            "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+            "Training Language Models to Follow Instructions with Human Feedback",
+            "Llama 2: Open Foundation and Fine-Tuned Chat Models"
+          ]
+        },
+        "evolution": null
+      },
+      "40e8af970329135ec95057d73e239dab805ad128": {
+        "title": "The Llama 3 Herd of Models",
+        "year": 2024,
+        "is_frontier": false,
+        "depth": 1,
+        "pruned": true,
+        "prune_reason": "background",
+        "idea": {
+          "entities": [
+            {
+              "name": "Llama 3",
+              "description": "A herd of foundation language models supporting multilinguality, coding, reasoning, and tool usage; includes a dense Transformer with 405B parameters and 128K context window."
+            },
+            {
+              "name": "Llama Guard 3",
+              "description": "A model for input and output safety, released alongside Llama 3."
+            },
+            {
+              "name": "GPT-4",
+              "description": "Leading language model used as a baseline for comparison; Llama 3 delivers comparable quality."
+            }
+          ],
+          "background": "Foundation models power modern AI systems; prior work includes models like GPT-4. Llama 3 aims to provide a competitive open-source alternative with broad capabilities including coding.",
+          "novelty": "Llama 3 introduces a 405B-parameter dense Transformer with a 128K context window, natively supporting multilinguality, coding, reasoning, and tool usage. It also adopts a compositional approach to integrate image, video, and speech, achieving competitive multimodal performance.",
+          "contribution": "The paper releases pre-trained and post-trained versions of the 405B model and Llama Guard 3 for safety. It demonstrates that a compositional multimodal integration can match state-of-the-art on vision and speech tasks.",
+          "method": "The architecture is a dense Transformer with 405B parameters and up to 128K token context. Training involves pre-training and post-training stages. For multimodal capabilities, a compositional approach is used, integrating separate image, video, and speech components with the language model.",
+          "detail_reason": "The dense architecture likely improves efficiency and scalability for the large parameter count. The compositional approach avoids full retraining, enabling reuse of existing models and faster iteration.",
+          "limitation": "Multimodal models (image, video, speech) are still under development and not broadly released. The paper does not detail performance on coding-specific benchmarks, and the compositional integration may not fully match end-to-end trained models.",
+          "experiment": {
+            "process": "Extensive empirical evaluation comparing Llama 3 to leading models like GPT-4 on a plethora of tasks, including coding, reasoning, and tool usage. Additionally, experiments on image, video, and speech recognition tasks were conducted.",
+            "technical_details": "Evaluation likely uses standard benchmarks and metrics. For multimodal tasks, a compositional approach integrates separate pretrained encoders with the language model.",
+            "baseline": "GPT-4 is used as a primary baseline for language tasks. For multimodal tasks, state-of-the-art models in each domain are used as baselines.",
+            "verification": "The experiments verify that Llama 3 achieves comparable quality to GPT-4 on language tasks and that the compositional approach performs competitively on multimodal tasks."
+          },
+          "references": [
+            "Llama 2: Open Foundation and Fine-Tuned Chat Models",
+            "GPT-4 Technical Report",
+            "Attention Is All You Need"
+          ]
+        },
+        "evolution": null
+      },
+      "abdceff7d7983cdede9a5aabe6a476d4c72e41a3": {
+        "title": "Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone",
+        "year": 2024,
+        "is_frontier": false,
+        "depth": 1,
+        "pruned": true,
+        "prune_reason": "background",
+        "idea": {
+          "entities": [
+            {
+              "name": "phi-3-mini",
+              "description": "3.8B parameter language model trained on 3.3T tokens, rivals Mixtral 8x7B and GPT-3.5"
+            },
+            {
+              "name": "phi-3-small",
+              "description": "7B parameter model trained on 4.8T tokens, achieves 75% on MMLU"
+            },
+            {
+              "name": "phi-3-medium",
+              "description": "14B parameter model trained on 4.8T tokens, achieves 78% on MMLU"
+            },
+            {
+              "name": "phi-3.5-MoE",
+              "description": "16x3.8B MoE model with 6.6B active parameters, excels in code and math"
+            },
+            {
+              "name": "phi-3.5-Vision",
+              "description": "Multimodal variant in phi-3.5 series"
+            }
+          ],
+          "background": "The work extends phi-2, using filtered web and synthetic data. Existing models like Mixtral 8x7B and GPT-3.5 serve as baselines, while Llama 3.1 is compared for similar-scale MoE.",
+          "novelty": "phi-3-mini achieves performance rivaling much larger models despite being small enough for phone deployment. The phi-3.5 series introduces MoE and vision capabilities, with phi-3.5-MoE outperforming similar-scale open-source models on code and reasoning.",
+          "contribution": "Primary methods include scaling up the phi-2 dataset to 3.3T tokens, training a 3.8B parameter model, and further aligning for safety and chat. The phi-3.5 series adds multilingual, multimodal, and long-context capabilities via MoE and vision models.",
+          "method": "Architecture: decoder-only transformer with 3.8B parameters for phi-3-mini; phi-3.5-MoE uses 16 experts with 6.6B active parameters. Training: 3.3T tokens for mini, 4.8T for small and medium, using heavily filtered web data and synthetic data. Alignment: additional fine-tuning for robustness, safety, and chat format.",
+          "detail_reason": "High-quality data filtering and synthetic data generation enable small models to compete with larger ones. MoE architecture efficiently increases capacity without proportional compute, explaining phi-3.5-MoE's superior code performance.",
+          "limitation": "The paper does not explore model biases or failure cases. The phone deployment claim may require quantization or pruning not detailed. Scaling laws for compute-optimal training are not discussed.",
+          "experiment": {
+            "process": "Models evaluated on MMLU and MT-bench, with comparisons to Mixtral 8x7B, GPT-3.5, and Llama 3.1. Internal testing also mentioned.",
+            "technical_details": "MMLU accuracy, MT-bench scores reported for each model. Training token counts and parameter scales noted.",
+            "baseline": "Mixtral 8x7B, GPT-3.5, Llama 3.1 (for phi-3.5-MoE).",
+            "verification": "High scores on benchmarks and internal tests demonstrate that small models can match larger ones, validating the data scaling approach."
+          },
+          "references": [
+            "Phi-2: A small language model that achieves state-of-the-art performance",
+            "Mixtral of Experts",
+            "Llama 3.1: A foundation model for open-source AI"
+          ]
+        },
+        "evolution": null
+      },
+      "a5947f0a1308453eefbb07276978da250d5890bf": {
+        "title": "Fly-CL: A Fly-Inspired Framework for Enhancing Efficient Decorrelation and Reduced Training Time in Pre-trained Model-based Continual Representation Learning",
+        "year": 2025,
+        "is_frontier": false,
+        "depth": 1,
+        "pruned": false,
+        "prune_reason": null,
+        "idea": {
+          "entities": [
+            {
+              "name": "Fly-CL",
+              "description": "A bio-inspired framework for continual representation learning that uses a fly olfactory circuit analogy to reduce multicollinearity and training time."
+            },
+            {
+              "name": "Fly olfactory circuit",
+              "description": "The biological system in flies that inspires the decorrelation mechanism in Fly-CL."
+            },
+            {
+              "name": "Multicollinearity",
+              "description": "A problem in similarity matching where features are highly correlated, hindering effective learning."
+            },
+            {
+              "name": "Pretrained model",
+              "description": "A nearly-frozen model used as a backbone, reframing parameter updates as similarity matching."
+            },
+            {
+              "name": "Similarity-matching",
+              "description": "The paradigm used to mitigate catastrophic forgetting by matching features instead of updating parameters."
+            }
+          ],
+          "background": "Continual representation learning often uses a nearly-frozen pretrained model and reframes parameter updates as a similarity-matching problem to avoid catastrophic forgetting. However, directly using pretrained features can suffer from multicollinearity, and advanced methods are computationally expensive for real-time applications.",
+          "novelty": "Fly-CL introduces a biologically inspired design from the fly olfactory circuit to progressively resolve multicollinearity with low time complexity. It significantly reduces training time while achieving performance comparable to or exceeding state-of-the-art methods, and is compatible with various pretrained backbones.",
+          "contribution": "The primary methods involve a bio-inspired decorrelation mechanism that enhances efficient similarity matching. The core components are the fly olfactory circuit analogy and a theoretical analysis showing progressive multicollinearity reduction. The framework also includes extensive simulations across network architectures and data regimes.",
+          "method": "Fly-CL adopts a pretrained backbone and applies a decorrelation step inspired by the fly olfactory circuit before similarity matching. The training procedure involves freezing the backbone and only updating a lightweight decorrelation module, leading to low time complexity. Key design choices include a progressive decorrelation process that iteratively reduces feature correlations.",
+          "detail_reason": "The fly olfactory circuit naturally achieves efficient decorrelation through lateral inhibition and sparse coding, which translates to reduced multicollinearity in feature spaces. This biological inspiration leads to faster convergence and lower computational cost without sacrificing performance.",
+          "limitation": "The paper does not explicitly discuss limitations, but potential shortcomings include dependency on the pretrained backbone quality and possible constraints in highly non-stationary environments. The biological inspiration may not generalize to all continual learning scenarios.",
+          "experiment": {
+            "process": "Extensive simulation experiments are conducted across diverse network architectures (e.g., ResNet, Vision Transformer) and data regimes (varying task sequences) to evaluate Fly-CL against state-of-the-art continual learning methods.",
+            "technical_details": "The implementation uses PyTorch and integrates Fly-CL with popular pretrained backbones. The decorrelation module is computationally lightweight and trained with standard optimization.",
+            "baseline": "Baselines include state-of-the-art continual learning methods such as EWC, SI, DER++, and others. The comparison focuses on accuracy, forgetting, and training time.",
+            "verification": "Experiments verify that Fly-CL reduces multicollinearity progressively, leading to better similarity matching and lower training time, while maintaining or improving accuracy compared to baselines."
+          },
+          "references": [
+            "Continual Learning with Pretrained Models: A Survey",
+            "Decorrelation in Neural Networks: A Review",
+            "Bio-inspired Continual Learning: From Flies to Machines"
+          ]
+        },
+        "evolution": {
+          "evolution_steps": [
+            {
+              "from_pid": "ddd6f19bcab778868d5dffdca00950f8282ba5ad",
+              "from_title": "MOS: Model Surgery for Pre-Trained Model-Based Class-Incremental Learning",
+              "role": "mainline",
+              "evolution_trace": {
+                "parent_problem": "B's self-refined retrieval relies on the pretrained model's inherent discriminability for adapter matching, which degrades when features are correlated or when tasks overlap, leading to poor retrieval accuracy.",
+                "child_solution": "A adds a progressive decorrelation step inspired by the fly olfactory circuit that iteratively reduces feature correlations before similarity matching, improving discriminability of representations.",
+                "mechanism_delta": "A replaces B's reliance on raw PTM features for retrieval with a dedicated decorrelation module that transforms features into a more orthogonal space.",
+                "evolution_direction": "structural"
+              },
+              "gap_analysis": {
+                "remaining_gap": "A still depends on the pretrained backbone's quality and may fail if the backbone's features are not sufficiently informative or if the data distribution is highly non-stationary, as the decorrelation module alone cannot compensate for poor initial representations.",
+                "what_persists": "A inherits B's assumption that a fixed pretrained backbone provides a sufficiently good feature space for continual learning, only modifying retrieval but not the backbone itself.",
+                "gap_type": "self_admitted"
+              },
+              "evolution_action": "structural",
+              "trigger_gap": "B's self-refined retrieval relies on the pretrained model's inherent discriminability for adapter matching, which degrades when features are correlated or when tasks overlap, leading to poor retrieval accuracy.",
+              "what_changed": {
+                "mechanism_change": "A replaces B's reliance on raw PTM features for retrieval with a dedicated decorrelation module that transforms features into a more orthogonal space."
+              }
+            },
+            {
+              "from_pid": "c6dd8a90d29345830b8958868f1295db174321c0",
+              "from_title": "InfLoRA: Interference-Free Low-Rank Adaptation for Continual Learning",
+              "role": "mainline",
+              "evolution_trace": {
+                "parent_problem": "B's subspace projection for interference-free updates requires storing gradient subspace information for all previous tasks, leading to memory growth with number of tasks and inability to handle tasks with highly overlapping feature spaces due to orthogonality constraints.",
+                "child_solution": "A introduces a bio-inspired decorrelation mechanism that progressively reduces feature correlations across tasks, avoiding explicit subspace storage and reducing interference by decorrelating features rather than enforcing orthogonal updates.",
+                "mechanism_delta": "A replaces B's gradient subspace projection with a lightweight decorrelation module inspired by fly olfactory circuits, freezing the backbone and updating only the decorrelation module, while B injects low-rank matrices and projects updates into orthogonal subspaces.",
+                "evolution_direction": "structural"
+              },
+              "gap_analysis": {
+                "remaining_gap": "A still assumes task boundaries are known and tasks are encountered sequentially, similar to B, and does not handle task-free continual learning or online streaming without clear task divisions.",
+                "what_persists": "A inherits B's assumption of a fixed pretrained backbone that is frozen and shared across tasks, and both methods operate under the continual learning paradigm with known task boundaries.",
+                "gap_type": "assumption_inherited"
+              },
+              "evolution_action": "structural",
+              "trigger_gap": "B's subspace projection for interference-free updates requires storing gradient subspace information for all previous tasks, leading to memory growth with number of tasks and inability to handle tasks with highly overlapping feature spaces due to orthogonality constraints.",
+              "what_changed": {
+                "mechanism_change": "A replaces B's gradient subspace projection with a lightweight decorrelation module inspired by fly olfactory circuits, freezing the backbone and updating only the decorrelation module, while B injects low-rank matrices and projects updates into orthogonal subspaces."
+              }
+            }
+          ],
+          "unresolved_gaps": [
+            {
+              "gap_text": "A still depends on the pretrained backbone's quality and may fail if the backbone's features are not sufficiently informative or if the data distribution is highly non-stationary, as the decorrelation module alone cannot compensate for poor initial representations.",
+              "gap_type": "scope_self_admitted",
+              "ancestor_pid": "ddd6f19bcab778868d5dffdca00950f8282ba5ad",
+              "ancestor_assumption": "A inherits B's assumption that a fixed pretrained backbone provides a sufficiently good feature space for continual learning, only modifying retrieval but not the backbone itself.",
+              "why_frontier_did_not_close_it": "",
+              "structural_property_name": ""
+            },
+            {
+              "gap_text": "A still assumes task boundaries are known and tasks are encountered sequentially, similar to B, and does not handle task-free continual learning or online streaming without clear task divisions.",
+              "gap_type": "assumption_inherited",
+              "ancestor_pid": "c6dd8a90d29345830b8958868f1295db174321c0",
+              "ancestor_assumption": "A inherits B's assumption of a fixed pretrained backbone that is frozen and shared across tasks, and both methods operate under the continual learning paradigm with known task boundaries.",
+              "why_frontier_did_not_close_it": "",
+              "structural_property_name": ""
+            }
+          ],
+          "composite_synthesis": {
+            "what_A_combines": "A takes decorrelation module concept for pretrained features from pred[0], and lightweight frozen backbone update from pred[1]",
+            "is_obvious_composition": false,
+            "obviousness_reason": "The combination requires designing a novel bio-inspired decorrelation mechanism that is lightweight and efficient, which is not a straightforward concatenation of existing methods. No prior work combines fly olfactory circuit-inspired decorrelation with frozen backbone continual learning.",
+            "novel_combination": "Efficient decorrelation and reduced training time due to bio-inspired lightweight decorrelation module that works with a frozen backbone",
+            "composite_remaining_gap": "",
+            "redundant_preds": []
+          }
+        }
+      },
+      "bd35201507bbf3a304d5b854c10d5d00fbc6f758": {
+        "title": "Offline Reinforcement Learning with OOD State Correction and OOD Action Suppression",
+        "year": 2024,
+        "is_frontier": false,
+        "depth": 2,
+        "pruned": true,
+        "prune_reason": "Offline reinforcement learning, different problem domain.",
+        "idea": null,
+        "evolution": null
+      },
+      "3c7bcbc6c978f39a5db2d687906e7c7a8014102d": {
+        "title": "LLM-Empowered State Representation for Reinforcement Learning",
+        "year": 2024,
+        "is_frontier": false,
+        "depth": 2,
+        "pruned": true,
+        "prune_reason": "Reinforcement learning with LLMs, unrelated to continual learning.",
+        "idea": null,
+        "evolution": null
+      },
+      "7a38224a0a3968fc174cf5f2f187667d24f78d67": {
+        "title": "Latent Reward: LLM-Empowered Credit Assignment in Episodic Reinforcement Learning",
+        "year": 2024,
+        "is_frontier": false,
+        "depth": 2,
+        "pruned": true,
+        "prune_reason": "Reinforcement learning credit assignment, not continual learning.",
+        "idea": null,
+        "evolution": null
+      },
+      "c594010e0dbe6fac94caebb0578e3f22d1fe95bd": {
+        "title": "Doubly Mild Generalization for Offline Reinforcement Learning",
+        "year": 2024,
+        "is_frontier": false,
+        "depth": 2,
+        "pruned": true,
+        "prune_reason": "Offline reinforcement learning generalization, different problem.",
+        "idea": null,
+        "evolution": null
+      },
+      "a6bbafa8c56b3b2732eb37dbce52a3de0b998bf3": {
+        "title": "Hokoff: Real Game Dataset from Honor of Kings and its Offline Reinforcement Learning Benchmarks",
+        "year": 2024,
+        "is_frontier": false,
+        "depth": 2,
+        "pruned": true,
+        "prune_reason": "Benchmark/dataset for offline RL, no method overlap with continual learning.",
+        "idea": null,
+        "evolution": null
+      },
+      "0349776a13e5f2403cccae8b2e1f5f3342ff480d": {
+        "title": "Stop Wandering, Find the Keys: LLMs Discriminate Key States for Efficient Multi-Agent Exploration",
+        "year": 2024,
+        "is_frontier": false,
+        "depth": 2,
+        "pruned": true,
+        "prune_reason": "Multi-agent reinforcement learning exploration, unrelated to continual learning.",
+        "idea": null,
+        "evolution": null
+      },
+      "ddd6f19bcab778868d5dffdca00950f8282ba5ad": {
+        "title": "MOS: Model Surgery for Pre-Trained Model-Based Class-Incremental Learning",
+        "year": 2024,
+        "is_frontier": false,
+        "depth": 2,
+        "pruned": false,
+        "prune_reason": null,
+        "idea": {
+          "entities": [
+            {
+              "name": "Class-Incremental Learning (CIL)",
+              "description": "A continual learning scenario where models must learn new classes without forgetting previously learned ones."
+            },
+            {
+              "name": "Pre-trained Models (PTMs)",
+              "description": "Large models pre-trained on diverse data, used as a base for downstream tasks."
+            },
+            {
+              "name": "MOdel Surgery (MOS)",
+              "description": "Proposed method to mitigate catastrophic forgetting in PTM-based CIL by addressing parameter and retrieval level forgetting."
+            },
+            {
+              "name": "task-specific adapters",
+              "description": "Lightweight modules trained for each new task to adapt the PTM."
+            },
+            {
+              "name": "adapter merging",
+              "description": "Technique to combine task-specific adapters to bridge gaps while preserving task-specific information."
+            },
+            {
+              "name": "self-refined adapter retrieval",
+              "description": "Training-free inference mechanism that leverages the model's inherent ability to retrieve the correct adapter."
+            }
+          ],
+          "background": "Class-Incremental Learning (CIL) requires models to continually acquire new classes without forgetting old ones. Pre-trained Models (PTMs) have shown excellent performance, but catastrophic forgetting still occurs. Existing work uses lightweight components to adjust the PTM, but forgetting persists at parameter and retrieval levels.",
+          "novelty": "MOS introduces adapter merging to mitigate parameter-level forgetting by bridging gaps between components while preserving task-specific info, and a training-free self-refined adapter retrieval mechanism to address retrieval-level forgetting during inference.",
+          "contribution": "Primary methods include training task-specific adapters and merging them to reduce parameter drift, and a self-refined retrieval mechanism that uses the model's inherent ability for better adapter matching without additional training.",
+          "method": "For each new task, a task-specific adapter is trained while keeping the PTM frozen. After training, adapters are merged (e.g., via averaging) to combine knowledge and reduce parameter drift. During inference, a self-refined retrieval mechanism selects the most appropriate adapter by leveraging the model's own predictions (e.g., confidence scores) without further training. The merged adapters are then applied to the PTM for prediction.",
+          "detail_reason": "Adapter merging effectively reduces forgetting by preventing parameter drift while retaining task-specific information through weighted combination. The self-refined retrieval mechanism avoids the need for a separate retrieval model and reduces mismatch by using the inherent discriminability of the PTM.",
+          "limitation": "The method assumes tasks are clearly separated and may struggle with highly overlapping or non-stationary data distributions. The self-refined retrieval relies on the PTM's inherent ability, which may be limited if the model is not sufficiently expressive.",
+          "experiment": {
+            "process": "Experiments are conducted on standard CIL benchmarks (e.g., CIFAR-100, ImageNet subsets) with multiple tasks. The model is trained sequentially on each task, and performance is measured in terms of average accuracy and forgetting.",
+            "technical_details": "PTM backbone (e.g., ViT or ResNet) is frozen; adapters are lightweight bottleneck modules. Adapter merging uses average or weighted sum. Self-refined retrieval uses output confidence to select adapter without backpropagation.",
+            "baseline": "Compared against methods like LwF, EWC, iCaRL, and other PTM-based CIL approaches (e.g., L2P, DualPrompt).",
+            "verification": "The core idea is verified by showing that MOS achieves higher average accuracy and lower forgetting compared to baselines. Ablation studies confirm the contribution of each component."
+          },
+          "references": []
+        },
+        "evolution": null
+      },
+      "c6dd8a90d29345830b8958868f1295db174321c0": {
+        "title": "InfLoRA: Interference-Free Low-Rank Adaptation for Continual Learning",
+        "year": 2024,
+        "is_frontier": false,
+        "depth": 2,
+        "pruned": false,
+        "prune_reason": null,
+        "idea": {
+          "entities": [
+            {
+              "name": "InfLoRA",
+              "description": "Interference-Free Low-Rank Adaptation, a parameter-efficient fine-tuning method for continual learning."
+            },
+            {
+              "name": "Continual Learning",
+              "description": "Learning multiple tasks sequentially while maintaining performance on old tasks."
+            },
+            {
+              "name": "Parameter-Efficient Fine-Tuning (PEFT)",
+              "description": "Freezing pretrained model and injecting small learnable parameters for task adaptation."
+            },
+            {
+              "name": "Low-Rank Adaptation (LoRA)",
+              "description": "A PEFT method that uses low-rank matrices to adapt pretrained weights."
+            }
+          ],
+          "background": "Continual learning requires models to learn tasks sequentially while balancing stability (retaining old tasks) and plasticity (adapting to new tasks). Parameter-efficient fine-tuning (PEFT) methods have shown promise but often fail to eliminate interference from new tasks on old ones, hindering the stability-plasticity tradeoff.",
+          "novelty": "InfLoRA introduces interference-free low-rank adaptation that reparameterizes pretrained weights within a subspace specifically designed to eliminate interference between tasks. This ensures that updating parameters for a new task does not degrade performance on previous tasks.",
+          "contribution": "The primary method involves injecting a small number of low-rank parameters to reparameterize pretrained weights. Fine-tuning these injected parameters is equivalent to fine-tuning within a subspace that is constructed to be orthogonal or non-interfering with previous tasks. The core component is the subspace design that enforces interference-free updates.",
+          "method": "InfLoRA freezes the pretrained model and injects low-rank matrices A and B (as in LoRA) but modifies the update to lie in a subspace that is orthogonal to the gradient subspaces of previous tasks. This is achieved by projecting the low-rank update using a memory of previous task subspaces. Training proceeds sequentially: for each new task, compute the update within the allowed subspace, then expand the subspace memory. Inference uses the original pretrained weights plus accumulated low-rank updates.",
+          "detail_reason": "The method is effective because constraining parameter updates to an interference-free subspace prevents catastrophic forgetting. The subspace is derived from the singular value decomposition of past task gradients, ensuring that new updates do not overlap with directions important for old tasks. This allows the model to maintain high plasticity for new tasks while preserving stability.",
+          "limitation": "InfLoRA assumes that task boundaries are known and that tasks are encountered sequentially. It requires storing subspace information (e.g., singular vectors) for all previous tasks, which may become memory-intensive for a large number of tasks. Additionally, the method may not handle task ordering effects or tasks with highly overlapping feature spaces.",
+          "experiment": {
+            "process": "Experiments are conducted on standard continual learning benchmarks (e.g., Split CIFAR-100, Split ImageNet) with a pretrained backbone (e.g., ViT). The model is trained sequentially on task splits. Evaluation metrics include average accuracy and forgetting.",
+            "technical_details": "InfLoRA uses low-rank matrices with rank r (e.g., r=4). Subspace construction employs gradient-based projection or SVD on accumulated gradients. Training uses cross-entropy loss with standard optimizers. The subspace is updated after each task.",
+            "baseline": "Baselines include full fine-tuning, LoRA, and other PEFT methods like ProMPT and AdaptFormer, as well as classic continual learning methods like EWC and MAS.",
+            "verification": "The core idea is verified by comparing the interference-free subspace updates with standard LoRA updates: results show lower forgetting and better average accuracy, confirming that eliminating interference improves stability without sacrificing plasticity."
+          },
+          "references": [
+            "LoRA: Low-Rank Adaptation of Large Language Models",
+            "Learning to Prompt for Continual Learning",
+            "Continual Learning with Parameter-Efficient Fine-Tuning"
+          ]
+        },
+        "evolution": null
+      }
+    }
+  }
+]

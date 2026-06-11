@@ -1,0 +1,72 @@
+{
+  "direction": {
+    "direction_id": "d_1",
+    "type": "convergent_gap",
+    "priority": 0.9,
+    "mode": "single_tree",
+    "title": "Self-Supervised Role Identity Acquisition from Interaction History",
+    "rationale": "All branches in this tree assume explicit character profiles must be provided. The field needs a method that can infer role identity autonomously from interaction data without curated profiles.",
+    "evidence_tree_ids": [
+      "0"
+    ],
+    "evidence_branch_ids": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "meta_gap": "No existing method in this lineage can establish role-play consistency without requiring explicit character profiles as input.",
+    "shared_mechanism": "All branches inherit the assumption that character profiles are static, externally-provided inputs.",
+    "trend": "",
+    "trend_endpoint": "",
+    "implied_next_problem": "",
+    "source_tree_id": "",
+    "target_tree_id": "",
+    "source_branch_id": "",
+    "target_branch_id": "",
+    "what_to_transfer": "",
+    "active_battle": "",
+    "common_failure_mode": "",
+    "non_obvious_property": "Property: role identity must be represented as a latent variable that can be learned from conversational context alone, without any external profile annotations. Obvious composition that fails: Persona-Plug (explicit persona injection) + a persona extraction module (e.g., PersonaChat extraction). This fails because extraction modules still require explicit persona descriptions in the training data, and cannot generalize to unseen characters with no predefined profile. Why prior work has not formalized this property: The field has treated profile injection as a necessary input rather than a learned representation, so no method has attempted to infer role identity purely from interaction dynamics without any profile annotations at all."
+  },
+  "chain_output": {
+    "per_trend_predictions": [
+      {
+        "direction": "Develop a self-supervised mechanism that enables role-playing language agents to infer and maintain a consistent role identity purely from interaction history, eliminating the need for explicit character profiles.",
+        "rationale": "Current role-playing agents rely on static, externally-provided profiles, which are costly to create and limit adaptability. The convergent gap across all branches indicates that no method has addressed automatic role acquisition. Recent advances in self-supervised learning and temporal consistency provide the tools to infer roles from the agent's own behavior, but the key challenge is designing a mechanism that couples role inference and generation in a way that ensures consistency without supervision.",
+        "builds_on": "Thinking in Character: Advancing Role-Playing Agents with Role-Aware Reasoning",
+        "builds_on_pid": "t0__0a646808002d3a629c60330178cb5b85fa6c77dd",
+        "persistent_gap": "No existing method can establish role-play consistency without requiring explicit character profiles as input.",
+        "why_still_open": "All branches inherit the assumption that profiles are static and externally-provided; no prior work has proposed a mechanism to dynamically acquire and maintain role identity from interaction history alone, without any supervised signals.",
+        "candidate_action": "relax_assumption",
+        "bridge_keep": "Role-aware reasoning and dynamic per-step role activation (as in RIA and RSO), which are effective for consistency when a profile is available.",
+        "bridge_remove": "The assumption that explicit, high-quality character profiles must be provided externally as input.",
+        "bridge_add": "A self-supervised temporal consistency mechanism that infers a latent role vector from the agent's own generated responses. The mechanism works as follows: (1) During a conversation, the agent maintains a latent role state h that is updated after each response via a consistency function that minimizes the discrepancy between the response and a reconstruction conditioned on h and context. (2) The role vector is learned via a fixed-point iteration: starting from an initial guess (e.g., zero vector), the agent generates a response, then uses the response to update h via an encoder that maps (context, response) to a new h, and repeats until convergence. (3) The consistency loss is defined as the negative log-likelihood of the response under the current h, plus a regularization that ensures h changes slowly (temporal smoothness). The converged h is then used as the role representation for subsequent generations. This process requires no external profiles; the role is entirely derived from the agent's own actions.",
+        "non_obvious_property": "Property: The role identity is the unique fixed point of a self-consistency operator T that maps a candidate role vector h to the role that maximizes the likelihood of the agent's observed responses in a context, under the constraint that the role is a sufficient statistic for the agent's behavior. Prior work (e.g., RIA) assumes a fixed profile, so it cannot exploit this self-consistency because it treats the profile as given and does not need to infer it. A reviewer might propose a composition like 'self-training + role-play', but self-training requires labeled data or a teacher model, which are unavailable here. Our operator T is specifically designed for autoregressive language models: it uses the model's own output distribution to define a contraction mapping, and convergence is guaranteed by the properties of the model's likelihood function. No two-module composition (e.g., contrastive learning + role-play, or VAE + role-play) yields this fixed-point property because they do not couple role inference and generation in a loop that is contractive. Only a mechanism that uses the model's own predictions as both the target and the update rule can achieve this.",
+        "obvious_composition_check": "Shortest summary: 'self-consistent iterative role inference via fixed-point iteration'. A reviewer might claim it is 'expectation-maximization (EM) + role-play', but EM requires a probabilistic graphical model with latent variables and a separate E-step; our operator is deterministic and directly uses the model's output probabilities without a separate inference network. The composition 'EM + role-play' would not capture the specific contractive property that ensures convergence, nor would it operate on the same level of granularity (per-response role updates). Thus, the summary is materially wrong—the load-bearing piece is the use of the model's own likelihood as a contraction mapping, which is not present in standard EM or self-training.",
+        "forest_mode": "single_tree",
+        "source_trend_ids": [
+          "0"
+        ],
+        "source_branch_ids": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "is_cross_tree": false,
+        "is_cross_branch": true,
+        "forest_direction_type": "convergent_gap",
+        "forest_meta_gap": "No existing method in this lineage can establish role-play consistency without requiring explicit character profiles as input.",
+        "forest_shared_mechanism": "All branches inherit the assumption that character profiles are static, externally-provided inputs.",
+        "forest_implied_next_problem": "",
+        "forest_what_to_transfer": "",
+        "forest_active_battle": "",
+        "forest_common_failure_mode": ""
+      }
+    ]
+  },
+  "synthetic_root": "t0__0a646808002d3a629c60330178cb5b85fa6c77dd"
+}

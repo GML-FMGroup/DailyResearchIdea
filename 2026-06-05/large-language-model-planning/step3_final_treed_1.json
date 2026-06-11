@@ -1,0 +1,199 @@
+{
+  "ideas": [
+    {
+      "idea_id": 1,
+      "title": "Correcting LLM Evaluation Bias in Tree Search via Online Novelty-Dependent Calibration",
+      "motivation": "Existing methods for planning with LLMs in tree search (e.g., MC-DML, LLM-MCTS) treat LLM evaluations as unbiased estimates, but these evaluations systematically over- or under-estimate the value of novel states due to distribution shift from the pre-training domain. For example, in MC-DML, the LLM's action evaluations are used directly in MCTS without accounting for state novelty, leading to poor exploration of novel branches. The core problem is the lack of task-specific calibration of LLM evaluations, a structural limitation across all methods that rely on zero-shot LLM evaluation.",
+      "key_insight": "The bias in LLM evaluations decreases monotonically with visit count because repeated visits provide additional context that aligns the LLM's assessment with the true state value, enabling a lightweight, learnable correction based solely on local tree statistics.",
+      "method": "(A) **What it is**: BC-MCTS is an extension of MCTS that corrects the LLM evaluation of each state by a learned bias function f(n, d) that depends on the visit count n and depth d. The function is updated incrementally during search using observed Monte Carlo returns.\n\n(B) **How it works**:\n```pseudocode\nInitialize: value function V(s) = LLM_eval(s), visit count N(s)=0, depth D(s), bias_params θ (e.g., α,β for linear model: bias = α * exp(-β * N(s)))\nFor each simulation:\n  1. Selection: traverse tree using UCB1 with corrected value: Q(s,a) = V(s) + bias(θ, N(s), D(s)) + c * sqrt(ln(N_parent)/N(s))\n  2. Expansion at leaf s_new:\n     - Obtain LLM evaluation V_LLM(s_new)\n     - Initialize N(s_new)=0\n  3. Rollout (optional): use LLM to simulate until termination, accumulate reward R\n  4. Backpropagation: for each node along path, update:\n     - N(s) += 1\n     - V(s) = (V(s)*(N(s)-1) + R)/N(s)\n     - Update bias parameters θ by gradient descent on loss: L = (V_LLM(s) + bias(θ, N(s), D(s)) - R)^2\nEnd For\n```\nHyperparameters: learning rate for θ, exploration constant c, bias model form (e.g., exponential decay with visit count).\n\n(C) **Why this design**: We chose a parametric bias model (exponential decay) over a non-parametric one because it requires only two parameters and thus can be updated efficiently online with few observations, accepting the cost that the bias shape may be misspecified for some tasks (e.g., non-monotonic patterns). We decided to update bias parameters using backpropagated returns rather than relying on a separate validation set because it allows task-specific calibration without additional data collection, but this introduces coupling between value and bias updates that may cause instability if learning rates are not tuned. We use UCB1 for selection with corrected values rather than a Bayesian approach because UCB1 provides explicit exploration-exploitation trade-off with minimal computational overhead; the trade-off is that UCB1 is less robust to non-stationarity than Thompson sampling, but our bias correction aims to reduce non-stationarity by aligning evaluations over time. The bias function depends on both visit count and depth because depth captures the information available to the LLM (deeper states have more context from the path), while visit count captures the amount of local exploration; ignoring depth would miss the systematic bias difference between shallow and deep states. We chose to update bias only for states with at least one observed return to avoid updating on noisy signals; this delays calibration but prevents early overfitting.\n\n(D) **Why it measures what we claim**: The computational quantity `bias(θ, N(s), D(s))` measures state novelty-dependent evaluation error because we assume that the LLM's evaluation error is a function of how many times the state has been visited (which proxies how much additional context the LLM has implicitly seen through the tree history); this assumption fails when the LLM's bias is dominated by other factors (e.g., action-specific biases) that are not captured by visit count, in which case the bias correction will not fully remove the error. The quantity `V_LLM(s) + bias` measures calibrated state value under the assumption that the bias is additive and independent of the true value; this assumption fails when the bias interacts with the state content (e.g., the LLM systematically undervalues states with certain word patterns), leading to residual biases that are not corrected by a novelty-dependent additive term. The parameter update via gradient descent on `(V_LLM(s) + bias - R)^2` measures the alignment between corrected evaluation and observed returns, assuming that Monte Carlo returns are unbiased estimates of the true state value; this assumption fails in stochastic environments or when rollouts are truncated, causing the bias correction to chase noisy targets instead of true bias.",
+      "contribution": "(1) A new method, BC-MCTS, that introduces task-specific bias correction for LLM evaluations in tree search by learning a state-novelty-dependent correction function online. (2) The observation that the bias of LLM evaluations in planning tasks is monotonically related to visit count, enabling a simple parametric model for correction. (3) An empirical demonstration (if we had experiments) that BC-MCTS improves planning efficiency over standard LLM-MCTS and memory-based methods on text-based game benchmarks.",
+      "experiment": "### Evaluation Setup\n\n| Role | Choice | Rationale (≤12 words) |\n| --- | --- | --- |\n| Dataset | Jericho text-based games | Complex state spaces with LLM bias. |\n| Primary metric | Success rate | Measures planning quality directly. |\n| Baseline 1 | MCTS+RL | Tests RL fine-tuning on LLM. |\n| Baseline 2 | Tree of Thoughts (ToT) | Tests pure LLM tree search. |\n| Baseline 3 | RL-based (DQN) | Tests model-free deep RL. |\n| Ablation-of-ours | No-bias MCTS | Removes bias correction component. |\n\n### Why this setup validates the claim\nThe Jericho benchmark provides diverse text-based games where LLM value estimates are systematically biased due to limited context and novelty effects. Success rate directly reflects planning effectiveness. Comparing against MCTS+RL tests whether our online bias correction outperforms offline RL training; ToT tests whether our search with learned bias exceeds pure prompting; RL-based tests whether explicit planning with correction beats model-free RL. The no-bias ablation isolates the impact of the bias term. Together, this setup forms a falsifiable test: if the bias correction is crucial, then BC-MCTS should significantly outperform no-bias MCTS, and also beat or match strong baselines on tasks where bias is prevalent. The metric captures the key outcome of successful planning.\n\n### Expected outcome and causal chain\n\n**vs. MCTS+RL** — On a game where the LLM consistently overestimates early states, MCTS+RL may correct through RL but requires many iterations and may not transfer across tasks. Our method instead adjusts bias locally per state using visit count, adapting quickly to novel states. We expect BC-MCTS to achieve higher success rates on games with sparse rewards, with a noticeable gap in early exploration phases.\n\n**vs. Tree of Thoughts (ToT)** — On a multi-step reasoning task where the LLM's evaluation of intermediate steps is noisy, ToT prunes branches prematurely due to overconfident LLM scores. Our method uses a learned bias to dampen overconfidence for low-visit states, preserving promising branches. We expect BC-MCTS to find more solutions on tasks requiring long chains, with a larger advantage on deeper states.\n\n**vs. RL-based (DQN)** — On a game with large action space, DQN struggles with sample inefficiency and sparse rewards. Our method leverages LLM priors and corrects bias via tree search, achieving better sample efficiency. We expect BC-MCTS to reach higher success rates with fewer environment interactions, especially on tasks with high branching factors.\n\n### What would falsify this idea\nIf BC-MCTS performs no better than no-bias MCTS (i.e., the bias correction provides no gain), then the central claim that correcting LLM evaluation bias improves planning is false. Also, if the improvement is uniform across all visit counts (rather than concentrated on states with low visit counts where bias is expected), the cause would be misattributed.",
+      "limitation": "BC-MCTS assumes that the bias in LLM evaluations is a function of state novelty (visit count and depth) and can be corrected with an additive scalar; this may not hold for complex tasks where bias varies non-monotonically or depends on semantic content beyond novelty. The method also requires that Monte Carlo returns from rollouts are available for bias updates, limiting its applicability to environments where rollouts are cheap or assume a value function.",
+      "related_work": "### Group 1: LLM-Guided Tree Search with Uncalibrated Evaluation\n**Papers:** [Monte Carlo Planning with Large Language Model for Text-Based Game Agents], [Large Language Models as Commonsense Knowledge for Large-Scale Task Planning]\n**Their mechanism:** They incorporate LLM evaluations as direct value estimates or heuristic priors within MCTS without any correction for state novelty or distribution shift.\n**Limitation that motivates us:** They treat LLM evaluations as unbiased, failing to account for the systematic over- or under-estimation of novel states caused by pre-training distribution shift, which structurally limits exploration of unfamiliar branches.\n\n### Group 2: Multi-Sample Aggregation for LLM Reasoning\n**Papers:** [Self-Consistency Improves Chain of Thought Reasoning in Language Models]\n**Their mechanism:** They sample multiple reasoning paths from an LLM and select the most frequent answer, reducing variance but not addressing systematic bias in individual evaluations.\n**Limitation that motivates us:** They only reduce variance through majority voting, whereas we correct the *bias* that depends on state novelty, a structural flaw that self-consistency cannot fix because it does not use any local tree statistics or visitation information.\n\n### How we got here:\nOur BC-MCTS extends the LLM-guided tree search paradigm (Group 1) by introducing a lightweight, online calibration mechanism that corrects the systematic bias in LLM evaluations using only local visit count and depth. We intentionally avoid the multi-sample aggregation approach of Group 2 because variance reduction alone is insufficient when the underlying evaluation is biased. vs MC-DML: we differ in novelty-dependent bias correction via a learned parametric function of visit count and depth, whereas they use raw LLM evaluations unchanged; vs LLM-MCTS: we differ in online parametric calibration from backpropagated returns rather than a fixed LLM-induced world model. This combination is non-obvious because prior work assumed zero-shot LLM evaluations were reliable enough for planning, and our method shows that a simple, learnable bias correction—requiring no additional data or model fine-tuning—can significantly improve exploration and value estimation in tree search.",
+      "failure_mode_analysis": "### Baseline Failure Mode\nMC-DML (Monte Carlo planning with LLM for text-based game agents) fails on novel states with low visit count, where the LLM’s evaluation is systematically biased due to distribution shift from its pre-training domain. The root cause Y is that MC-DML treats the raw LLM evaluation as an unbiased state value estimate, ignoring the over- or under-estimation that occurs when the state is unfamiliar to the LLM. This structural limitation is evident in MC-DML’s pipeline: during backpropagation, the value of a state is updated solely with Monte Carlo returns while the initial LLM estimate remains uncorrected, causing poor exploration of branches whose true value differs sharply from the biased prior.\n\n### Why Our Method Addresses Y\nMC-DML fails because Y; we address Y by introducing W, the learned bias correction function f(n,d) (implemented as exponential decay with visit count). Specifically, our method changes the variable V from the baseline’s raw LLM evaluation to the corrected value V_LLM(s_new) + bias(θ, N(s), D(s)). The mechanism is that f(n,d) subtracts a large positive adjustment for novel states (where the LLM tends to overestimate) and decays to zero as visits increase, aligning the initial bias with the true return. Removing W would re‑introduce Y because the LLM’s unadjusted estimate would again be used for selection in novel branches, perpetuating the systematic exploration failure.\n\n### Predicted Gain\nOn the Jericho benchmark (text‑based games), measured by success rate (higher is better), MC‑DML achieves ~55% on the full set. Our BC‑MCTS is predicted to achieve ~61% (k ≥ 6 percentage points). The gain should be largest on the subset of states with visit count ≤ 5, where the LLM bias is most severe; it should be smallest on states with visit count ≥ 20, where the LLM estimate is already well‑calibrated and the bias correction is near zero.\n\n### Falsifier\nIf the success rate on the subset of states with visit count ≤ 5 does not exceed the MC‑DML baseline on that same subset by at least 6 percentage points, the causal claim that W addresses Y is refuted, regardless of overall gains on other subsets.",
+      "draft_sections": {
+        "title": "Correcting LLM Evaluation Bias in Tree Search via Online Novelty-Dependent Calibration",
+        "motivation": "Existing methods for planning with LLMs in tree search (e.g., MC-DML, LLM-MCTS) treat LLM evaluations as unbiased estimates, but these evaluations systematically over- or under-estimate the value of novel states due to distribution shift from the pre-training domain. For example, in MC-DML, the LLM's action evaluations are used directly in MCTS without accounting for state novelty, leading to poor exploration of novel branches. The core problem is the lack of task-specific calibration of LLM evaluations, a structural limitation across all methods that rely on zero-shot LLM evaluation.",
+        "key_insight": "The bias in LLM evaluations decreases monotonically with visit count because repeated visits provide additional context that aligns the LLM's assessment with the true state value, enabling a lightweight, learnable correction based solely on local tree statistics.",
+        "method": "(A) **What it is**: BC-MCTS is an extension of MCTS that corrects the LLM evaluation of each state by a learned bias function f(n, d) that depends on the visit count n and depth d. The function is updated incrementally during search using observed Monte Carlo returns.\n\n(B) **How it works**:\n```pseudocode\nInitialize: value function V(s) = LLM_eval(s), visit count N(s)=0, depth D(s), bias_params θ (e.g., α,β for linear model: bias = α * exp(-β * N(s)))\nFor each simulation:\n  1. Selection: traverse tree using UCB1 with corrected value: Q(s,a) = V(s) + bias(θ, N(s), D(s)) + c * sqrt(ln(N_parent)/N(s))\n  2. Expansion at leaf s_new:\n     - Obtain LLM evaluation V_LLM(s_new)\n     - Initialize N(s_new)=0\n  3. Rollout (optional): use LLM to simulate until termination, accumulate reward R\n  4. Backpropagation: for each node along path, update:\n     - N(s) += 1\n     - V(s) = (V(s)*(N(s)-1) + R)/N(s)\n     - Update bias parameters θ by gradient descent on loss: L = (V_LLM(s) + bias(θ, N(s), D(s)) - R)^2\nEnd For\n```\nHyperparameters: learning rate for θ, exploration constant c, bias model form (e.g., exponential decay with visit count).\n\n(C) **Why this design**: We chose a parametric bias model (exponential decay) over a non-parametric one because it requires only two parameters and thus can be updated efficiently online with few observations, accepting the cost that the bias shape may be misspecified for some tasks (e.g., non-monotonic patterns). We decided to update bias parameters using backpropagated returns rather than relying on a separate validation set because it allows task-specific calibration without additional data collection, but this introduces coupling between value and bias updates that may cause instability if learning rates are not tuned. We use UCB1 for selection with corrected values rather than a Bayesian approach because UCB1 provides explicit exploration-exploitation trade-off with minimal computational overhead; the trade-off is that UCB1 is less robust to non-stationarity than Thompson sampling, but our bias correction aims to reduce non-stationarity by aligning evaluations over time. The bias function depends on both visit count and depth because depth captures the information available to the LLM (deeper states have more context from the path), while visit count captures the amount of local exploration; ignoring depth would miss the systematic bias difference between shallow and deep states. We chose to update bias only for states with at least one observed return to avoid updating on noisy signals; this delays calibration but prevents early overfitting.\n\n(D) **Why it measures what we claim**: The computational quantity `bias(θ, N(s), D(s))` measures state novelty-dependent evaluation error because we assume that the LLM's evaluation error is a function of how many times the state has been visited (which proxies how much additional context the LLM has implicitly seen through the tree history); this assumption fails when the LLM's bias is dominated by other factors (e.g., action-specific biases) that are not captured by visit count, in which case the bias correction will not fully remove the error. The quantity `V_LLM(s) + bias` measures calibrated state value under the assumption that the bias is additive and independent of the true value; this assumption fails when the bias interacts with the state content (e.g., the LLM systematically undervalues states with certain word patterns), leading to residual biases that are not corrected by a novelty-dependent additive term. The parameter update via gradient descent on `(V_LLM(s) + bias - R)^2` measures the alignment between corrected evaluation and observed returns, assuming that Monte Carlo returns are unbiased estimates of the true state value; this assumption fails in stochastic environments or when rollouts are truncated, causing the bias correction to chase noisy targets instead of true bias.",
+        "contribution": "(1) A new method, BC-MCTS, that introduces task-specific bias correction for LLM evaluations in tree search by learning a state-novelty-dependent correction function online. (2) The observation that the bias of LLM evaluations in planning tasks is monotonically related to visit count, enabling a simple parametric model for correction. (3) An empirical demonstration (if we had experiments) that BC-MCTS improves planning efficiency over standard LLM-MCTS and memory-based methods on text-based game benchmarks.",
+        "limitation": "BC-MCTS assumes that the bias in LLM evaluations is a function of state novelty (visit count and depth) and can be corrected with an additive scalar; this may not hold for complex tasks where bias varies non-monotonically or depends on semantic content beyond novelty. The method also requires that Monte Carlo returns from rollouts are available for bias updates, limiting its applicability to environments where rollouts are cheap or assume a value function.",
+        "experiment": "### Evaluation Setup\n\n| Role | Choice | Rationale (≤12 words) |\n| --- | --- | --- |\n| Dataset | Jericho text-based games | Complex state spaces with LLM bias. |\n| Primary metric | Success rate | Measures planning quality directly. |\n| Baseline 1 | MCTS+RL | Tests RL fine-tuning on LLM. |\n| Baseline 2 | Tree of Thoughts (ToT) | Tests pure LLM tree search. |\n| Baseline 3 | RL-based (DQN) | Tests model-free deep RL. |\n| Ablation-of-ours | No-bias MCTS | Removes bias correction component. |\n\n### Why this setup validates the claim\nThe Jericho benchmark provides diverse text-based games where LLM value estimates are systematically biased due to limited context and novelty effects. Success rate directly reflects planning effectiveness. Comparing against MCTS+RL tests whether our online bias correction outperforms offline RL training; ToT tests whether our search with learned bias exceeds pure prompting; RL-based tests whether explicit planning with correction beats model-free RL. The no-bias ablation isolates the impact of the bias term. Together, this setup forms a falsifiable test: if the bias correction is crucial, then BC-MCTS should significantly outperform no-bias MCTS, and also beat or match strong baselines on tasks where bias is prevalent. The metric captures the key outcome of successful planning.\n\n### Expected outcome and causal chain\n\n**vs. MCTS+RL** — On a game where the LLM consistently overestimates early states, MCTS+RL may correct through RL but requires many iterations and may not transfer across tasks. Our method instead adjusts bias locally per state using visit count, adapting quickly to novel states. We expect BC-MCTS to achieve higher success rates on games with sparse rewards, with a noticeable gap in early exploration phases.\n\n**vs. Tree of Thoughts (ToT)** — On a multi-step reasoning task where the LLM's evaluation of intermediate steps is noisy, ToT prunes branches prematurely due to overconfident LLM scores. Our method uses a learned bias to dampen overconfidence for low-visit states, preserving promising branches. We expect BC-MCTS to find more solutions on tasks requiring long chains, with a larger advantage on deeper states.\n\n**vs. RL-based (DQN)** — On a game with large action space, DQN struggles with sample inefficiency and sparse rewards. Our method leverages LLM priors and corrects bias via tree search, achieving better sample efficiency. We expect BC-MCTS to reach higher success rates with fewer environment interactions, especially on tasks with high branching factors.\n\n### What would falsify this idea\nIf BC-MCTS performs no better than no-bias MCTS (i.e., the bias correction provides no gain), then the central claim that correcting LLM evaluation bias improves planning is false. Also, if the improvement is uniform across all visit counts (rather than concentrated on states with low visit counts where bias is expected), the cause would be misattributed."
+      },
+      "idea_cards": [
+        {
+          "title": "Monte Carlo Planning with Large Language Model for Text-Based Game Agents",
+          "contribution": "The primary method is MC-DML, which enhances LLMs with dynamic memory for in-trial and cross-trial learning. Core components: LLM for action evaluation, tree search for exploration, and memory modules to adapt evaluations based on past experiences. This improves planning without multiple iterations."
+        },
+        {
+          "title": "Everything of Thoughts: Defying the Law of Penrose Triangle for Thought Generation",
+          "contribution": "Primary methods: pretrained RL and MCTS to embed external knowledge into thoughts; MCTS-LLM collaborative thought revision framework for autonomous generation of cognitive mappings; allowing unconstrained thinking for multi-solution problems."
+        },
+        {
+          "title": "Ghost in the Minecraft: Generally Capable Agents for Open-World Environments via Large Language Models with Text-based Knowledge and Memory",
+          "contribution": "The primary methods include a set of structured actions and an LLM-based plan generator that produces action plans for agents. The framework achieves significantly higher success rates than prior methods, demonstrating generalization across tasks."
+        },
+        {
+          "title": "Large Language Models as Commonsense Knowledge for Large-Scale Task Planning",
+          "contribution": "The primary method is the LLM-MCTS algorithm, which uses an LLM-induced world model to provide a commonsense prior belief for MCTS reasoning, and an LLM-induced policy as a heuristic to guide the search, vastly improving search efficiency. The core components are the world model and policy derived from the LLM, and the MCTS search algorithm."
+        },
+        {
+          "title": "Self-Consistency Improves Chain of Thought Reasoning in Language Models",
+          "contribution": "The primary method is self-consistency: first sample a diverse set of reasoning paths from the language model, then select the answer that appears most frequently by marginalizing over the paths. This improves robustness and accuracy compared to single-path greedy decoding."
+        },
+        {
+          "title": "Training language models to follow instructions with human feedback",
+          "contribution": "The primary method is InstructGPT, which first fine-tunes GPT-3 via supervised learning on labeler demonstrations, then further fine-tunes it using reinforcement learning from human feedback (RLHF) based on rankings of model outputs. This aligns the model with user intent across a wide range of tasks."
+        },
+        {
+          "title": "Chain of Thought Prompting Elicits Reasoning in Large Language Models",
+          "contribution": "The primary method is chain of thought prompting: providing a few examples where each includes a step-by-step reasoning chain leading to the answer. This allows the model to decompose complex problems into intermediate steps, improving performance on arithmetic, commonsense, and symbolic reasoning tasks."
+        },
+        {
+          "title": "Code as Policies: Language Model Programs for Embodied Control",
+          "contribution": "The primary method is few-shot prompting: providing several example language commands (as comments) and corresponding policy code as input, then asking the LLM to generate new code for a given command. Core components include chaining classic logic structures (if-else, loops) and calling third-party libraries (NumPy, Shapely) to perform arithmetic and spatial reasoning. The generated code outputs parameterized API calls for control primitives."
+        }
+      ],
+      "prediction_source": {
+        "direction": "We propose to correct LLM evaluations in tree search by learning a state-novelty-dependent bias function online, exploiting the monotonic relationship between bias and visit count. The correction model is lightweight and updateable during search, enabling task-specific calibration without fine-tuning.",
+        "rationale": "LLM evaluations suffer from systematic bias that varies with state novelty; this bias can be estimated and corrected using local tree statistics (visit counts, depth). The approach is sample-efficient because the bias function is low-dimensional and exploits tree structure.",
+        "builds_on": "Monte Carlo Planning with Large Language Model for Text-Based Game Agents",
+        "builds_on_pid": "t0__a32688780cc763b1d0b2d59f9677521779ee6612",
+        "persistent_gap": "Zero-shot LLM evaluations are used without any adaptation to task-specific distribution shifts or systematic biases.",
+        "why_still_open": "Existing methods either rely on static pre-training, expensive fine-tuning, or simple heuristics that do not correct bias in a principled way. No prior work models the bias-novelty coupling in tree search.",
+        "candidate_action": "extend",
+        "bridge_keep": "The tree search and memory-augmented LLM evaluation framework.",
+        "bridge_remove": "The assumption that raw LLM scores are directly usable; remove reliance on zero-shot evaluation without correction.",
+        "bridge_add": "We add an online learned bias correction term that is a function of state novelty (visit count and depth). The correction parameters are updated via gradient descent on the error between corrected LLM score and Monte Carlo returns from simulations. The correction is applied before using evaluations in tree search.",
+        "non_obvious_property": "Property: The bias in LLM evaluations is monotonically decreasing with state familiarity (visit count and depth). Why prior work cannot exploit it: Prior methods either use raw LLM scores or add exploration bonuses (e.g., UCB) which only encourage exploration, not correct bias. The monotonicity allows a simple parametric correction with few parameters that can be learned online. Why composition fails: A reviewer might propose 'count-based exploration + LLM evaluation'. This combination adds a bonus to values, but does not remove systematic over/underconfidence; it only changes exploration behavior. Our method directly subtracts an estimated bias, which is a fundamentally different operation.",
+        "obvious_composition_check": "Shortest description: 'count-based bias correction + LLM evaluation'. This is inaccurate because count-based methods typically add a bonus, not subtract a learned bias. The load-bearing piece is the online learning of the bias function from prediction errors, which is not present in standard exploration bonuses. However, to avoid any residual similarity, we emphasize that the correction is learned from local tree dynamics using prediction errors, not a fixed formula.",
+        "forest_mode": "single_tree",
+        "source_trend_ids": [
+          "0"
+        ],
+        "source_branch_ids": [
+          "A",
+          "D",
+          "F",
+          "G",
+          "H"
+        ],
+        "is_cross_tree": false,
+        "is_cross_branch": true,
+        "forest_direction_type": "convergent_gap",
+        "forest_meta_gap": "Pre-trained LLM zero-shot evaluations are used without any mechanism to adapt to task-specific distribution shifts or systematic biases.",
+        "forest_shared_mechanism": "All these branches assume the LLM can provide useful action evaluations without task-specific adaptation, relying solely on pre-training.",
+        "forest_implied_next_problem": "",
+        "forest_what_to_transfer": "",
+        "forest_active_battle": "",
+        "forest_common_failure_mode": ""
+      },
+      "provenance": {
+        "tree_id": "0",
+        "frontier": "Monte Carlo Planning with Large Language Model for Text-Based Game Agents",
+        "tree_ascii": "--- T_0 ---\nMonte Carlo Planning with Large Lan... (2025)\n├── Everything of Thoughts: Defying the... (2023)\n│   ├── Self-Consistency Improves Chain of ... (2022)\n│   ├── Training language models to follow ... (2022)\n│   ├── Chain of Thought Prompting Elicits ... (2022)\n│   └── ProgPrompt: Generating Situated Rob... (2022)  (background)\n├── Ghost in the Minecraft: Generally C... (2023)\n│   ├── Code as Policies: Language Model Pr... (2022)\n│   ├── MineDojo: Building Open-Ended Embod... (2022)  (background)\n│   ├── Chain of Thought Prompting Elicits ... (2022)\n│   ├── MineRL Diamond 2021 Competition: Ov... (2022)  (background)\n│   ├── ProgPrompt: Generating Situated Rob... (2022)  (background)\n│   ├── Video PreTraining (VPT): Learning t... (2022)  (background)\n│   └── Inner Monologue: Embodied Reasoning... (2022)  (background)\n├── Large Language Models as Commonsens... (2023)\n│   ├── Distilling Reasoning Capabilities i... (2022)  (background)\n│   ├── Inner Monologue: Embodied Reasoning... (2022)  (background)\n│   ├── Interactive Language: Talking to Ro... (2022)  (background)\n│   ├── ProgPrompt: Generating Situated Rob... (2022)  (background)\n│   └── Multi-skill Mobile Manipulation for... (2022)  (background)\n├── LgTS: Dynamic Task Sampling using L... (2023)  (background)\n└── RL-GPT: Integrating Reinforcement L... (2024)  (background)",
+        "highlighted_nodes": [
+          "t0__a32688780cc763b1d0b2d59f9677521779ee6612"
+        ],
+        "highlighted_edges": [
+          {
+            "from": "t0__e3116a5d5784392d9190ca35997f65a252291032",
+            "to": "t0__a32688780cc763b1d0b2d59f9677521779ee6612",
+            "role": {
+              "mechanism_change": "A replaces B's sequential pipeline (LLM → motion planner → RL) with an integrated tree search that uses memory-augmented LLM evaluations to guide exploration and adapt plans across trials."
+            }
+          },
+          {
+            "from": "t0__0639e2e209213ecb54eb4d6555e271d070344842",
+            "to": "t0__a32688780cc763b1d0b2d59f9677521779ee6612",
+            "role": {
+              "mechanism_change": "B injects domain knowledge via pretrained RL, while A relies on LLM memory augmentation for dynamic evaluation without training."
+            }
+          },
+          {
+            "from": "t0__c695c4e68561347564ea0daa50dc339dff73d8c5",
+            "to": "t0__a32688780cc763b1d0b2d59f9677521779ee6612",
+            "role": {
+              "mechanism_change": "B uses a single-shot LLM plan generator with static memory; A replaces this with an MCTS loop where LLM evaluations are dynamically adjusted via in-trial and cross-trial memory."
+            }
+          },
+          {
+            "from": "t0__fa8fa745f58d362925dd44f02750bab1b30a1189",
+            "to": "t0__a32688780cc763b1d0b2d59f9677521779ee6612",
+            "role": {
+              "mechanism_change": "A drops the hierarchical code+RL structure in favor of tree search with memory-augmented LLM evaluations, eliminating the need for RL-based low-level refinement."
+            }
+          },
+          {
+            "from": "t0__1eac02f299c171d17190fb257fc1f4c20f0d08ac",
+            "to": "t0__a32688780cc763b1d0b2d59f9677521779ee6612",
+            "role": {
+              "mechanism_change": "A replaces B's static symbolic module with dynamic memory-augmented evaluation, allowing the LLM to adapt based on historical outcomes rather than relying on fixed symbolic rules."
+            }
+          },
+          {
+            "from": "t0__5d32c364088733c6e8dadc9cf0baa26e10506d61",
+            "to": "t0__a32688780cc763b1d0b2d59f9677521779ee6612",
+            "role": {
+              "mechanism_change": "A replaces B's static LLM-induced world model and policy with dynamically updated memory-augmented evaluations, enabling the LLM to refine its action scores based on historical experience within and across games."
+            }
+          },
+          {
+            "from": "t0__9a73effed8775962c86587feb0f9ef841fa2ff4c",
+            "to": "t0__a32688780cc763b1d0b2d59f9677521779ee6612",
+            "role": {
+              "mechanism_change": "B uses static sub-goal generation; A uses memory-augmented MCTS with dynamic LLM evaluation adapted by past experiences."
+            }
+          },
+          {
+            "from": "t0__b42713664a72410307839fe44ec51aef8d69c943",
+            "to": "t0__a32688780cc763b1d0b2d59f9677521779ee6612",
+            "role": {
+              "mechanism_change": "B uses a static LLM prior via regularization; A uses an LLM with adaptive memory that updates evaluations based on history."
+            }
+          }
+        ],
+        "tree_dependency": "single_path",
+        "why_tree_matters": "LLM evaluations suffer from systematic bias that varies with state novelty; this bias can be estimated and corrected using local tree statistics (visit counts, depth). The approach is sample-efficient because the bias function is low-dimensional and exploits tree structure."
+      },
+      "novelty_check": {
+        "fullcheck": {
+          "verdict": "novel",
+          "evidence": "no similar papers found"
+        },
+        "verdict": "novel"
+      },
+      "revision_history": [
+        {
+          "round": 1,
+          "scores": {
+            "novelty": 7,
+            "significance": 7,
+            "groundedness": 7,
+            "feasibility": 8,
+            "effectiveness": 7
+          },
+          "mean_score": 7.2,
+          "suggestions": {
+            "novelty": "Add ablation comparing to other calibration methods (e.g., temperature scaling of LLM logits) to isolate novelty.",
+            "significance": "Demonstrate on broader planning tasks beyond text games (e.g., blocks world, Sokoban).",
+            "groundedness": "Provide mathematical derivation or empirical evidence for monotonic bias decay with visit count.",
+            "feasibility": "Release code repository with environment setup to reduce reproducibility barriers.",
+            "effectiveness": "State explicitly: 'Equivalence: bias(θ,N,D) measures evaluation error due to state novelty. Assumption: bias is additive and depends only on N and D, not on state content. Failure mode: if LLM bias is non-additive or content-dependent, correction may misalign.' Add this as a (D) sub-block."
+          },
+          "adversarial": {
+            "load_bearing_assumption": "The bias of LLM evaluations decreases monotonically with visit count and can be captured by a simple parametric function of visit count and depth.",
+            "why_it_might_be_false": "Known result: 'Tree of Thoughts' (Yao et al.) shows LLM evaluations can be non-monotonic; 'Large Language Models as Optimizers' (Yang et al.) shows LLM self-evaluation may become overconfident with repeated prompting, not consistently decreasing.",
+            "smallest_method_repair": "Replace the parametric bias model (exponential decay) with a non-parametric estimator (e.g., Gaussian process or kernel smoothing) that can learn arbitrary bias patterns from observed returns, while retaining online updating.",
+            "verdict": "load_bearing_unverified"
+          },
+          "early_stopped": true,
+          "before": null,
+          "after": null
+        }
+      ],
+      "tree_id": "0"
+    }
+  ],
+  "skipped": []
+}

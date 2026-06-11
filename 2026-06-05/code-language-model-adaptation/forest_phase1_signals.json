@@ -1,0 +1,149 @@
+[
+  {
+    "tree_id": "0",
+    "frontier_title": "Representation Collapse in Sequential Post-Training of Large Language Models",
+    "frontier_year": 2026,
+    "frontier_pid": "86562f4372233a13c74682c3752326decf8d6cb7",
+    "residual_gaps": [
+      {
+        "gap_text": "The implicit router's frozen sparse random matrix fails to dynamically adapt its routing subspace to prevent representation collapse across multiple post-training stages, leaving the property of dynamic subspace adaptation for diversity preservation unestablished.",
+        "structural_property_name": "dynamic subspace adaptation for diversity preservation",
+        "ancestor_assumption_blocking_it": "FlyLoRA (background) assumes that a fixed low-rank subspace with random initialization is sufficient for sequential tasks.",
+        "why_evolution_did_not_close_it": "The evolution action 'verification' only identifies representation collapse but does not alter the LoRA or router architecture; the static random matrix remains.",
+        "why_not_resolved": "The shared assumption that a fixed routing mechanism suffices for sequential tasks persists because verification does not introduce structural changes to the LoRA architecture."
+      },
+      {
+        "gap_text": "The sequential post-training pipeline (SFT then RL) lacks any mechanism to reorder or interleave stages based on representation collapse signals, failing to establish collapse-aware stage ordering.",
+        "structural_property_name": "collapse-aware stage ordering",
+        "ancestor_assumption_blocking_it": "Qwen2.5 (background) assumes that a fixed sequence of SFT and RL stages is an effective post-training paradigm.",
+        "why_evolution_did_not_close_it": "The evolution action 'verification' adds monitoring but does not challenge the fixed stage ordering; the pipeline remains sequential.",
+        "why_not_resolved": "The frontier inherits the assumption that a fixed order is sufficient and only adds diagnostics, not dynamic scheduling."
+      },
+      {
+        "gap_text": "The blind multi-stage post-training (SFT, RLHF) does not adapt stage order or content based on representation diversity indicators, leaving dynamic stage scheduling based on diversity unestablished.",
+        "structural_property_name": "dynamic stage scheduling based on diversity",
+        "ancestor_assumption_blocking_it": "ChatGLM (background) assumes that sequential post-training (SFT to RLHF to specialization) is the default pipeline.",
+        "why_evolution_did_not_close_it": "Verification action only adds monitoring without restructuring the scheduling.",
+        "why_not_resolved": "The shared assumption of a fixed pipeline persists due to the lack of structural modification."
+      },
+      {
+        "gap_text": "The plug-and-play Fly Model's fixed structure cannot adjust its intervention trigger threshold across different tasks or collapse severities, failing to establish adaptive intervention thresholding.",
+        "structural_property_name": "adaptive intervention thresholding",
+        "ancestor_assumption_blocking_it": "Structural features of the fly olfactory circuit (background) assumes that a static biological module is sufficient for continual learning.",
+        "why_evolution_did_not_close_it": "The evolution action 'objective' changes the goal to measurement-driven intervention but does not propose a mechanism for automatic threshold adjustment.",
+        "why_not_resolved": "The frontier's intervention framework still uses fixed thresholds and does not incorporate dynamic adaptation."
+      },
+      {
+        "gap_text": "SimPO's reference-free reward based on average log probability ignores representation drift across stages, and the frontier's mixed-domain replay still assumes a fixed stage sequence, leaving online representation drift avoidance unestablished.",
+        "structural_property_name": "online representation drift avoidance",
+        "ancestor_assumption_blocking_it": "SimPO (background) assumes that training stages are separate and ordered, rather than interleaved or adaptively sequenced.",
+        "why_evolution_did_not_close_it": "Verification action adds regularization but does not change the reliance on static offline preference data or stage ordering.",
+        "why_not_resolved": "The frontier does not enable online or interleaved training; it only post-processes drift."
+      },
+      {
+        "gap_text": "The post-training pipeline applies sequential updates without monitoring cross-modal representation diversity, leaving multimodal representation diversity preservation unestablished.",
+        "structural_property_name": "multimodal representation diversity preservation",
+        "ancestor_assumption_blocking_it": "The Llama 3 Herd of Models (background) assumes that a sequence of post-training stages is a valid training paradigm for LLMs, and does not explore alternative paradigms like continual learning with dynamic task boundaries.",
+        "why_evolution_did_not_close_it": "Objective action adds diversity objectives but only for language, ignoring multimodal aspects.",
+        "why_not_resolved": "The frontier remains language-only and does not extend to multimodal scenarios."
+      },
+      {
+        "gap_text": "The diagnostic tools and interventions were only tested on a single model size (3.8B), failing to establish scalable representation collapse monitoring across model scales.",
+        "structural_property_name": "scalable representation collapse monitoring across model scales",
+        "ancestor_assumption_blocking_it": "Phi-3 Technical Report (background) assumes that standard transformer architectures and training recipes are sufficient, without questioning whether fundamental architectural changes are needed for larger models.",
+        "why_evolution_did_not_close_it": "Structural action adds diagnostics but does not validate scalability; the same architecture is used.",
+        "why_not_resolved": "The frontier's evaluation is limited to one model size and does not demonstrate scalability."
+      },
+      {
+        "gap_text": "The decorrelation mechanism applied to backbone representations assumes a fixed strength, failing to establish task-adaptive decorrelation that balances diversity and information retention.",
+        "structural_property_name": "task-adaptive decorrelation",
+        "ancestor_assumption_blocking_it": "Fly-CL (2025) assumes that decorrelating representations is universally beneficial without considering potential trade-offs with task-specific information.",
+        "why_evolution_did_not_close_it": "Objective action extends decorrelation to backbone but does not make it adaptive; the strength remains fixed.",
+        "why_not_resolved": "The frontier inherits the assumption that decorrelation is always beneficial and does not introduce adaptive mechanisms."
+      }
+    ],
+    "shared_residual_gaps": [
+      {
+        "gap_text": "The frontier inherits the assumption across multiple branches that a fixed stage ordering (e.g., SFT, RL) is sufficient, leaving the property of collapse-driven adaptive stage scheduling unestablished.",
+        "structural_property_name": "collapse-driven adaptive stage scheduling",
+        "branches_affected": [
+          "B",
+          "C",
+          "E",
+          "F",
+          "G"
+        ],
+        "common_assumption": "Sequential fixed order post-training (SFT, RL, etc.) is an effective paradigm without need for dynamic scheduling."
+      }
+    ],
+    "recent_actions": [
+      {
+        "branch_label": "A",
+        "role": "background",
+        "action": "verification",
+        "from_title": "FlyLoRA: Boosting Task Decoupling and Parameter Efficiency via Implicit Rank-Wise Mixture-of-Experts (background)",
+        "what_changed": "A adds monitoring and interventions for representation collapse over sequential stages, while B only provides a static LoRA modification without considering multi-stage dynamics."
+      },
+      {
+        "branch_label": "B",
+        "role": "background",
+        "action": "verification",
+        "from_title": "Qwen2.5 Technical Report (background)",
+        "what_changed": "A adds explicit representation collapse detection and mitigation tools to B's basic sequential post-training pipeline, whereas B merely performs the stages without such analysis."
+      },
+      {
+        "branch_label": "C",
+        "role": "background",
+        "action": "verification",
+        "from_title": "ChatGLM: A Family of Large Language Models from GLM-130B to GLM-4 All Tools (background)",
+        "what_changed": "A replaces B's blind sequential training pipeline with a monitored pipeline that dynamically adjusts training via replay and regularization to preserve representation diversity."
+      },
+      {
+        "branch_label": "D",
+        "role": "background",
+        "action": "objective",
+        "from_title": "Structural features of the fly olfactory circuit mitigate the stability-plasticity dilemma in continual learning (background)",
+        "what_changed": "A replaces B's static biological module with a measurement-driven intervention framework that dynamically mitigates representation collapse during sequential post-training."
+      },
+      {
+        "branch_label": "E",
+        "role": "background",
+        "action": "verification",
+        "from_title": "SimPO: Simple Preference Optimization with a Reference-Free Reward (background)",
+        "what_changed": "A replaces SimPO's ignorance of representation dynamics with proactive monitoring and regularization of hidden state diversity and LoRA update patterns."
+      },
+      {
+        "branch_label": "F",
+        "role": "background",
+        "action": "objective",
+        "from_title": "The Llama 3 Herd of Models (background)",
+        "what_changed": "B performs post-training as a black-box sequence; A adds monitoring and explicit diversity-preserving objectives within each stage."
+      }
+    ],
+    "action_distribution": {
+      "verification": 4,
+      "objective": 3,
+      "structural": 3
+    },
+    "mainline_count": 0,
+    "frontier_solves": "The primary contribution is a measurement suite for hidden states, logits, token trajectories, and LoRA updates to analyze representation collapse. It also introduces and evaluates interventions (mixed-domain replay, feature refresh, representation diversity regularization, LoRA update decorrelation) to mitigate collapse and maintain future learnability.",
+    "frontier_method": "The method involves applying a controlled sequence of post-training stages (e.g., supervised fine-tuning, preference optimization, code specialization) to an LLM. For each stage, hidden states, logits, token trajectories, and LoRA updates are collected and analyzed using the measurement suite. Inter",
+    "frontier_activity": {
+      "year": 2026,
+      "depth_to_oldest": 2,
+      "competing_frontiers": []
+    },
+    "obvious_composition_flag": false,
+    "composite_signal": null,
+    "frontier_what_persists": [
+      "A inherits the use of low-rank adaptation (LoRA) and does not alter the fundamental assumption that a fixed low-rank subspace with random initialization is sufficient for sequential tasks.",
+      "A inherits B's assumption that a fixed sequence of SFT and RL stages is an effective post-training paradigm, without questioning the ordering or dynamics.",
+      "A inherits B's assumption that sequential post-training (SFT → RLHF → specialization) is the default pipeline; A does not explore alternative training orders or non-sequential methods.",
+      "A inherits B's assumption that continual learning can be managed through specific training interventions or architectural modules, without addressing the need for a unified theory that balances stabil",
+      "A inherits B's assumption that training stages are separate and ordered, rather than interleaved or adaptively sequenced.",
+      "A inherits B's assumption that a sequence of post-training stages is a valid training paradigm for LLMs, and does not explore alternative paradigms like continual learning with dynamic task boundaries",
+      "A inherits B's assumption that sequential post-training is generally beneficial and that standard transformer architectures and training recipes are sufficient, without questioning whether fundamental",
+      "A inherits B's assumption that decorrelating representations is universally beneficial without considering potential trade-offs with task-specific information retention."
+    ]
+  }
+]
