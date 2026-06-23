@@ -1,0 +1,17 @@
+arxiv_id,hf_paper_title,idea_github_url
+2606.12384,APPO: Agentic Procedural Policy Optimization,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-15/Surprise-Driven%20Persona%20Updates%20for%20Lifelong%20Role-Playing%20Ag.md
+2606.12384,APPO: Agentic Procedural Policy Optimization,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-15/Temporal%20Variational%20Persona%20Maintaining%20Long-Range%20Consiste.md
+2606.06036,"Memory is Reconstructed, Not Retrieved: Graph Memory for LLM",https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-15/Amortized%20Role-Playing%20via%20Low-Rank%20Behavioral%20Primitive%20Mix.md
+2606.06036,"Memory is Reconstructed, Not Retrieved: Graph Memory for LLM",https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-15/Dynamic%20Role%20Adaptation%20via%20Amortized%20Bayesian%20Inference%20for.md
+2606.14502,From Chatbot to Digital Colleague: The Paradigm Shift Toward,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-15/Dynamic%20Drift%20Budget%20Constraint%20for%20Long-Term%20Persona%20Consis.md
+2606.14502,From Chatbot to Digital Colleague: The Paradigm Shift Toward,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-15/Counterfactually%20Consistent%20Online%20Character%20Embedding%20Adapt.md
+2606.12291,Measuring Epistemic Resilience of LLMs Under Misleading Medi,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-15/Black-Box%20Adversarial%20Attacks%20via%20Output%20Distribution%20Diverg.md
+2606.12291,Measuring Epistemic Resilience of LLMs Under Misleading Medi,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-15/FAISA%20Fisher-Adjusted%20Importance%20Sampling%20for%20Variance-Reduc.md
+2606.13707,Orchestra-o1: Omnimodal Agent Orchestration,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-15/Consistency-Driven%20Adaptive%20Verification%20for%20Multi-Agent%20Orc.md
+2606.13707,Orchestra-o1: Omnimodal Agent Orchestration,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-15/Geometric-Symbolic%20Latent%20Verification%20for%20Adaptive%20Replanni.md
+2606.13141,Rethinking RAG in Long Videos: What to Retrieve and How to U,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-15/Temporal%20Adaptive%20Chunking%20via%20Predictive%20Uncertainty%20for%20Vi.md
+2606.13141,Rethinking RAG in Long Videos: What to Retrieve and How to U,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-15/Retrieval-Anchored%20Diagonal%20Distillation%20for%20Grounded%20Video%20.md
+2606.12683,From AGI to ASI,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-15/Betting-Based%20Confidence%20Sequences%20for%20Adversarially%20Robust%20.md
+2606.12683,From AGI to ASI,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-15/Compositional%20Reward%20Estimation%20via%20Primitive%20Decomposition%20.md
+2606.14702,OmniVideo-100K: A Dataset for Audio-Visual Reasoning through,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-15/Compositional%20Closure%20via%20Invariant%20Augmentation%20for%20Audio-V.md
+2606.14702,OmniVideo-100K: A Dataset for Audio-Visual Reasoning through,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-15/Cross-Modal%20Event%20Aligned%20Reward%20for%20Step-Level%20Credit%20Assig.md

@@ -1,0 +1,17 @@
+arxiv_id,hf_paper_title,idea_github_url
+2606.17861,GameCraft-Bench: Can Agents Build Playable Games,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-17/Closing%20the%20Hallucination%20Loop%20in%20Game%20Code%20Generation%20via%20F.md
+2606.18023,LoopCoder-v2: Only Loop Once for Efficient Test-Time,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-17/Execution-Grounded%20Iterative%20Refinement%20for%20Small%20Language%20M.md
+2606.17200,ACE-Ego-0: Unifying Egocentric Human and Robotic Data,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-17/Grammar-Guided%20Evolutionary%20Bootstrapping%20for%20Multi-Agent%20Se.md
+2606.17200,ACE-Ego-0: Unifying Egocentric Human and Robotic Data,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-17/LambdaAlignment%20Type-Preserving%20Self-Modification%20for%20Aligne.md
+2606.17200,ACE-Ego-0: Unifying Egocentric Human and Robotic Data,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-17/Self-Consistency%20Driven%20Autotelic%20Agent%20Learning%20Step-Level%20.md
+2606.18216,Zone of Proximal Policy Optimization: Teacher in Prompts,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-17/Next-State%20Perplexity%20Minimization%20Self-Supervised%20Reward%20fo.md
+2606.18216,Zone of Proximal Policy Optimization: Teacher in Prompts,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-17/LARA%20Latent%20Action%20Rule%20Augmentation%20for%20Constraint-Aware%20Te.md
+2606.16428,LectraAgents: A Multi-Agent Framework for Adaptive AI-Assist,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-17/DyRA%20Decentralized%20Role%20and%20Topology%20Adaptation%20for%20Multi-Ag.md
+2606.16428,LectraAgents: A Multi-Agent Framework for Adaptive AI-Assist,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-17/Decentralized%20Adaptive%20Trust-based%20Aggregation%20for%20Robust%20Mu.md
+2606.17628,OPD-Evolver: Cultivating Holistic Agent Evolver via On-Polic,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-17/Logit%20Factorization%20Distillation%20Training%20MoE%20Students%20from%20.md
+2606.17628,OPD-Evolver: Cultivating Holistic Agent Evolver via On-Polic,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-17/Joint%20Clustering%20of%20Multi-Teacher%20Representations%20for%20Knowle.md
+2606.18195,Learning from the Self-future: On-policy Self-distillation f,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-17/PARIS%20Paraphrase-Augmented%20Response%20Invariance%20Self-Distilla.md
+2606.18195,Learning from the Self-future: On-policy Self-distillation f,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-17/FISH%20Fisher%20Information%20Self-distillation%20via%20Hidden%20States%20.md
+2606.15236,"Show the Signal, Hide the Noise: Spectral Forcing for Pixel-",https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-17/Iterative%20Layout%20Decomposition%20for%20Diffusion%20Models%20via%20Stru.md
+2606.15236,"Show the Signal, Hide the Noise: Spectral Forcing for Pixel-",https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-17/Lipschitz-Adaptive%20Gaussian%20Splatting%20for%20Diffusion-Based%203D.md
+2606.15236,"Show the Signal, Hide the Noise: Spectral Forcing for Pixel-",https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-17/Structured%20Noise%20Initialization%20for%20Compositional%20Layout%20in%20.md

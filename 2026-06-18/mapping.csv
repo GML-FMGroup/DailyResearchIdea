@@ -1,0 +1,27 @@
+arxiv_id,hf_paper_title,idea_github_url
+2606.16533,Kairos: A Native World Model Stack for Physical AI,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-18/Adaptive%20Diffusion%20World%20Models%20via%20Uncertainty-Guided%20Onlin.md
+2606.16533,Kairos: A Native World Model Stack for Physical AI,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-18/Advantage-Weighted%20World%20Model%20Updates%20for%20Closed-Loop%20Polic.md
+2606.18943,Physics-IQ Verified,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-18/BottleRec%20Distributionally%20Robust%20Action%20Recovery%20via%20Bottle.md
+2606.05985,Beyond Alignment: Value Diversity as a Collective Property i,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-18/Conservation-Based%20Inference%20of%20Cultural%20Value%20Shifts%20from%20M.md
+2606.18322,SAE Interventions are Unreliable: Post-Intervention Recovery,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-18/Consistency-Regularized%20Sparse%20Autoencoders%20for%20Human-Aligne.md
+2606.18375,PAIWorld: A 3D-Consistent World Foundation Model for Robotic,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-18/Continuous-Time%20Temporal%20Alignment%20for%20Asynchronous%20Video-Ac.md
+2606.14383,IndustryBench-MIPU: Benchmarking Multi-Image Attribute Value,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-18/CounterConsist%20Counterfactual%20Consistency%20Training%20for%20Multi.md
+2606.18543,CEO-Bench: Can Agents Play the Long Game?,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-18/CPS-OCI%20A%20Framework%20for%20Evaluating%20Long-Horizon%20Agents%20with%20.md
+2606.14383,IndustryBench-MIPU: Benchmarking Multi-Image Attribute Value,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-18/CVP-Net%20Compositional%20Visual%20Primitives%20for%20Open-Vocabulary%20.md
+2606.18543,CEO-Bench: Can Agents Play the Long Game?,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-18/DRIFT%20Detecting%20Preference%20Drift%20via%20Cumulative%20Regret%20Monit.md
+2606.14383,IndustryBench-MIPU: Benchmarking Multi-Image Attribute Value,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-18/FACTOR%20Factorization-based%20Attribute%20Composition%20for%20Transpa.md
+2606.18375,PAIWorld: A 3D-Consistent World Foundation Model for Robotic,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-18/FACTOR%20Factorized%20Action-Conditional%20Video%20and%20Action%20Dynami.md
+2606.19338,Beyond the Current Observation: Evaluating Multimodal Large ,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-18/Forward-Inverse%20Consistency%20as%20Intrinsic%20Reward%20for%20Autonomo.md
+2606.17539,Reinforcing Dual-Path Reasoning in Spatial Vision Language M,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-18/Geometric%20Consistency%20Self-Supervision%20for%20Deterministic%20Par.md
+2606.18943,Physics-IQ Verified,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-18/Hamiltonian%20Video%20World%20Models%20Enforcing%20Physical%20Conservati.md
+2606.19005,Sumi: Open Uniform Diffusion Language Model from Scratch,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-18/Hybrid%20Discrete-Continuous%20Diffusion%20via%20Shared%20Transformer%20.md
+2606.18375,PAIWorld: A 3D-Consistent World Foundation Model for Robotic,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-18/Language-Conditioned%20Dual%20Flow%20Matching%20with%20Interleaved%20FiL.md
+2606.17539,Reinforcing Dual-Path Reasoning in Spatial Vision Language M,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-18/Latent%20Plan%20Consistency%20Enabling%20Sim-to-Real%20Transfer%20for%20Pa.md
+2606.17539,Reinforcing Dual-Path Reasoning in Spatial Vision Language M,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-18/Learning%20Task-Agnostic%20Action%20Representations%20via%20Contrastiv.md
+2606.18363,Guava: An Effective and Universal Harness for Embodied Manip,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-18/Meta-Affordance%20Zero-Shot%20Task%20Generalization%20for%203D%20Motion%20.md
+2606.18322,SAE Interventions are Unreliable: Post-Intervention Recovery,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-18/Piecewise%20Linear%20Sparse%20Autoencoders%20with%20Sparsity-Coupled%20D.md
+2606.18101,Trust the Right Teacher: Quality-Aware Self-Distillation for,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-18/Projective%20Invariance%20as%20a%20Structural%20Prior%20for%20Domain-Invar.md
+2606.18543,CEO-Bench: Can Agents Play the Long Game?,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-18/Robustness%20Margins%20for%20Long-Horizon%20Agent%20Plans%20under%20Stocha.md
+2606.19338,Beyond the Current Observation: Evaluating Multimodal Large ,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-18/TempProg%20Self-Supervised%20Progress%20Verifier%20via%20Temporal%20Cont.md
+2606.18363,Guava: An Effective and Universal Harness for Embodied Manip,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-18/Topological%20Affordance%20Embedding%20for%20Deformable%20Object%20Manip.md
+2606.05985,Beyond Alignment: Value Diversity as a Collective Property i,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-18/ValueALIGN%20Contraction-Mapped%20Multi-Modal%20Grounding%20for%20Stab.md

@@ -1,0 +1,21 @@
+arxiv_id,hf_paper_title,idea_github_url
+2606.13392,MiniMax Sparse Attention,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-12/Sample-Adaptive%20Hierarchical%20Sparse%20Attention%20for%20Diffusion%20.md
+2606.13392,MiniMax Sparse Attention,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-12/Normalized%20Linear%20Attention%20with%20Permutation-Equivariant%20Cal.md
+2606.13392,MiniMax Sparse Attention,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-12/Spectral-Adaptive%20Hierarchical%20Sparse%20Attention%20for%20Efficien.md
+2606.13681,EvoArena: Tracking Memory Evolution for Robust LLM Agents in,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-12/PARCA%20Paraphrase-Aware%20Reward%20Calibration%20for%20LLM%20Planning%20i.md
+2606.09426,"WeaveBench: A Long-Horizon, Real-World Benchmark for Compute",https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-12/Graph-based%20Formal%20Benchmark%20Generation%20for%20Computer-Use%20Age.md
+2606.09426,"WeaveBench: A Long-Horizon, Real-World Benchmark for Compute",https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-12/CausalAgentEval%20Self-Validating%20Benchmark%20Evaluation%20via%20Cau.md
+2606.13673,SpatialClaw: Rethinking Action Interface for Agentic Spatial,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-12/Metric%20Consistency%20Regularization%20for%20Unified%20Spatial%20Reason.md
+2606.13673,SpatialClaw: Rethinking Action Interface for Agentic Spatial,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-12/Relation-Contrastive%20Spatial%20Representation%20Learning%20for%20Geo.md
+2606.13473,MaxProof: Scaling Mathematical Proof with Generative-Verifie,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-12/ProofCheck%20Intrinsic%20Verification%20of%20Natural%20Language%20Proofs.md
+2606.13473,MaxProof: Scaling Mathematical Proof with Generative-Verifie,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-12/Concept-Augmented%20Monte%20Carlo%20Tree%20Search%20for%20Neural%20Theorem.md
+2606.13473,MaxProof: Scaling Mathematical Proof with Generative-Verifie,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-12/Proof-Theoretic%20Invariant%20Neural%20Theorem%20Prover%20Guaranteeing.md
+2606.13679,InterleaveThinker: Reinforcing Agentic Interleaved Generatio,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-12/DISCO%20Disentangled%20Identity%20and%20Surprise%20Composition%20for%20Mul.md
+2606.13679,InterleaveThinker: Reinforcing Agentic Interleaved Generatio,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-12/DCPA%20Dynamic%20Cultural%20Persona%20Adaptation%20for%20Multi-Agent%20Tex.md
+2606.13679,InterleaveThinker: Reinforcing Agentic Interleaved Generatio,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-12/Cross-Cultural%20Latent%20Alignment%20for%20Fair%20Text-to-Image%20Gener.md
+2606.08063,Robust-U1: Can MLLMs Self-Recover Corrupted Visual Content f,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-12/Gradient%20Variance-Guided%20Parameter%20Specialization%20for%20Unifie.md
+2606.08063,Robust-U1: Can MLLMs Self-Recover Corrupted Visual Content f,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-12/Covariance-Coupled%20Gradient%20Regularization%20for%20Robust%20Multim.md
+2606.12087,FORT-Searcher: Synthesizing Shortcut-Resistant Search Tasks ,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-12/OPAS%20Online%20Poset%20Adaptation%20for%20Search%20via%20Bayesian%20Nonpara.md
+2606.12087,FORT-Searcher: Synthesizing Shortcut-Resistant Search Tasks ,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-12/Corpus-Adaptive%20Protocol%20Synthesis%20for%20Search%20Agents%20via%20Inf.md
+2606.13578,LabVLA: Grounding Vision-Language-Action Models in Scientifi,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-12/Effect-Contrastive%20Action%20Factorization%20Zero-Shot%20Cross-Morp.md
+2606.13578,LabVLA: Grounding Vision-Language-Action Models in Scientifi,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-12/Causal%20Invariant%20Policy%20Learning%20via%20Counterfactual%20Language.md
