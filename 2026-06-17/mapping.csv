@@ -1,4 +1,4 @@
-arxiv_id,hf_paper_title,idea_github_url
+arxiv_id,idea_title,idea_github_url
 2606.17861,GameCraft-Bench: Can Agents Build Playable Games,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-17/Closing%20the%20Hallucination%20Loop%20in%20Game%20Code%20Generation%20via%20F.md
 2606.18023,LoopCoder-v2: Only Loop Once for Efficient Test-Time,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-17/Execution-Grounded%20Iterative%20Refinement%20for%20Small%20Language%20M.md
 2606.17200,ACE-Ego-0: Unifying Egocentric Human and Robotic Data,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-17/Grammar-Guided%20Evolutionary%20Bootstrapping%20for%20Multi-Agent%20Se.md

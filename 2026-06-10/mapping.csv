@@ -1,4 +1,4 @@
-arxiv_id,hf_paper_title,idea_github_url
+arxiv_id,idea_title,idea_github_url
 2606.09967,ABot-Earth 0.5: Generative 3D Earth Model,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-10/CompoNeRF%20%20Category-Agnostic%20Generative%203D%20Scene%20Synthesis%20via%20Composable%20Proto-Shape%20Implicit%20Field.md
 2606.09967,ABot-Earth 0.5: Generative 3D Earth Model,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-10/Pose-Free%20View%20Synthesis%20via%20Relative%20Positional%20Cross-Attention.md
 2606.10651,Kwai Keye-VL-2.0 Technical Report,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-06-10/Gromov-Wasserstein%20Gated%20Mixture-of-Experts%20for%20Multimodal%20Learning%20under%20Missing%20Modalities.md
