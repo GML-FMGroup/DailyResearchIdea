@@ -1,5 +1,6 @@
 arxiv_id,hf_paper_title,idea_github_url
 2611.17048,Beyond Answering: Learning to Speak First and Act in Streaming Video,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-11-18/Recall-Gated%20Proactive%20Streaming%20A%20Trigger-Conditioned%20Memor.md
+2611.17621,AscendGYM: A Cost-Aware Kernel Optimization Benchmark for Real-World Workloads on Ascend NPUs,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-11-18/Shape-Stratified%20Calibration%20and%20Transfer-Consistency%20Certif.md
 2611.19800,Multi-Branch Transformer,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-11-18/Compositional%20KV%20Fusion%20for%20Multi-Branch%20Transformers.md
 2611.19800,Multi-Branch Transformer,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-11-18/Closure-Error%20Auditing%20for%20Token%20Aggregation%20in%20Fused-Cache%20.md
 2611.19800,Multi-Branch Transformer,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-11-18/Certified%20Drift%20Bounds%20for%20Fused%20and%20Selected%20KV%20Caches%20in%20L.md
@@ -8,6 +9,8 @@ arxiv_id,hf_paper_title,idea_github_url
 2611.21152,From Repositories to Training Environments: Scaling Long-Horizon Coding Agents with Environment Evolution Loop,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-11-18/Calibrating%20Proxy-Scored%20Environment%20Evolution%20with%20Probe-Ag.md
 2611.21152,From Repositories to Training Environments: Scaling Long-Horizon Coding Agents with Environment Evolution Loop,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-11-18/Coverage-Audited%20Environment%20Evolution%20for%20Repository-Level%20.md
 2611.21392,VideoNexus: Video Perception Beyond the Reasoning Context,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-11-18/Certified%20Evidence%20Closure%20for%20PlannerPerception%20Long%20Video%20.md
+2611.22055,Weight-Space Programming Doesn't Need Transformers,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-11-18/Closure-Certified%20Weight-Space%20Architecture%20Generation.md
+2611.22055,Weight-Space Programming Doesn't Need Transformers,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-11-18/Monotone%20Rationale-to-Behavior%20Certification%20for%20LLM-Designe.md
 2611.22115,TeleChat to Xing4: Advancing Frontier Agentic Models on Domestic Chips and Frameworks,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-11-18/Hardware-Calibrated%20Critical%20Batch%20Size%20Probing%20for%20Large-Sc.md
 2611.22115,TeleChat to Xing4: Advancing Frontier Agentic Models on Domestic Chips and Frameworks,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-11-18/Certified%20Scale-Invariant%20Loss%20Trajectories%20for%20Frontier%20LLM.md
 2611.22115,TeleChat to Xing4: Advancing Frontier Agentic Models on Domestic Chips and Frameworks,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-11-18/Factorial%20Interaction%20Ablation%20of%20Training-Efficiency%20Mechan.md
