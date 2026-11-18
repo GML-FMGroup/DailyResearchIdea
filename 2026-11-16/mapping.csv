@@ -1,6 +1,9 @@
 arxiv_id,hf_paper_title,idea_github_url
 2611.07226,Loopback Transformer: Towards a Unified View of Residual Looped Transformers,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-11-16/Full-Budget%20Parameter%20Accounting%20for%20Looped%20Transformers%20at%20.md
 2611.12901,Rethinking in Spikes: Mitigating Hallucinations in MDLMs with Step-Aware Decoding,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-11-16/Conformal%20Spike%20Routing%20for%20Multimodal%20Diffusion%20Language%20De.md
+2611.14487,Re-Search: Dissecting LLM Ideation Through a Two-Player Questioning Game,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-11-16/Monotone%20Belief%20Tracking%20for%20Binary-Oracle%20Research%20Ideation.md
+2611.14487,Re-Search: Dissecting LLM Ideation Through a Two-Player Questioning Game,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-11-16/Component-Attributed%20Oracle%20Feedback%20for%20Iterative%20Research%20.md
+2611.14487,Re-Search: Dissecting LLM Ideation Through a Two-Player Questioning Game,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-11-16/Maximum-Likelihood%20Identification%20of%20Exploration-Exploitatio.md
 2611.15789,VibePrevisBench: Evaluating Agentic Coding for 4D Scene Generation in Blender,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-11-16/Calibrated%20Reprojection%20Auditing%20of%20Proxy%20Video%20for%204D%20Scene.md
 2611.15789,VibePrevisBench: Evaluating Agentic Coding for 4D Scene Generation in Blender,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-11-16/Closure-Checked%20Scene%20Editing%20A%20Spatial-Fact%20Invariant%20Contr.md
 2611.17194,eDMD: Endpoint Distribution Matching for Few-Step Diffusion Distillation,https://github.com/GML-FMGroup/DailyResearchIdea/blob/main/2026-11-16/Certified%20Endpoint%20Descent%20for%20Few-Step%20Diffusion%20Distillati.md
